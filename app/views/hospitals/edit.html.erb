@@ -1,0 +1,36 @@
+<h1>医院信息编辑</h1>
+
+<% form_for(@hospital) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :name, "医院名称" %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :zone, "所在地区" %><br />
+    <%= f.text_field :zone %>
+  </p>
+  <p>
+    <%= f.label :address, "医院地址" %><br />
+    <%= f.text_field :address %>
+  </p>
+  <p>
+    <%= f.label :grade, "级别" %><br />
+    <%= f.text_field :grade %>
+  </p>
+  <p>
+    <%= f.label :contact, "联系人" %><br />
+    <%= f.text_field :contact %>
+  </p>
+  <p>
+    <%= f.label :tel, "联系人电话" %><br />
+    <%= f.text_field :tel %>
+  </p>
+  <p>
+    <%= f.submit '确定更新' %>
+  </p>
+<% end %>
+
+<%= link_to '详细信息', @hospital %> |
+<%= link_to '返回列表', hospitals_path %>

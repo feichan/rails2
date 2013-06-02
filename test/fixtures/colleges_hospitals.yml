@@ -1,0 +1,9 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  college_id: 1
+  hospital_id: 1
+
+two:
+  college_id: 1
+  hospital_id: 1

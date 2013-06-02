@@ -1,0 +1,67 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  stu_no: 1
+  name: MyString
+  sex: MyString
+  gradation: MyString
+  college: MyString
+  profession: MyString
+  class_name: MyString
+  grade: MyString
+  birthday: MyString
+  politics: MyString
+  nation: MyString
+  home: MyString
+  stu_class: MyString
+  college_year: MyString
+  study_year: MyString
+  incubat_direct: MyString
+  profession_direct: MyString
+  inter_date: MyString
+  email: MyString
+  identity_no: 1
+  profect: MyString
+  pinyin_name: MyString
+  profession_no: 1
+  stu_card_no: 1
+  phone: MyString
+  degree: MyString
+  trust_college: 1
+  proctis_action: MyString
+  hospital_id: 1
+  coach: MyString
+  coach_tel: MyString
+
+two:
+  stu_no: 1
+  name: MyString
+  sex: MyString
+  gradation: MyString
+  college: MyString
+  profession: MyString
+  class_name: MyString
+  grade: MyString
+  birthday: MyString
+  politics: MyString
+  nation: MyString
+  home: MyString
+  stu_class: MyString
+  college_year: MyString
+  study_year: MyString
+  incubat_direct: MyString
+  profession_direct: MyString
+  inter_date: MyString
+  email: MyString
+  identity_no: 1
+  profect: MyString
+  pinyin_name: MyString
+  profession_no: 1
+  stu_card_no: 1
+  phone: MyString
+  degree: MyString
+  trust_college: 1
+  proctis_action: MyString
+  hospital_id: 1
+  coach: MyString
+  coach_tel: MyString

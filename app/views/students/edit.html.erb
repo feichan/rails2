@@ -1,0 +1,171 @@
+<h1>编辑学生信息</h1>
+
+<% form_for(@student) do |f| %>
+  <%= f.error_messages %>
+
+   <p>
+    <%= f.label :stu_no, "学号" %><br />
+    <%= f.text_field :stu_no %>
+  </p>
+  <p>
+    <%= f.label :name, "姓名" %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :sex, "性别" %><br />
+    <%= f.text_field :sex %>
+  </p>
+  <p>
+    <%= f.label :gradation, "层次" %><br />
+    <%= f.text_field :gradation %>
+  </p>
+  <p>
+    <%= f.label :college_id, "学院" %><br />
+    <%= f.select :college_id, College.parents.collect{|c|[c.name, c.id]},{:include_blank => true},{:onchange => "get_professions(this.value)"}%>
+  </p>
+  <p>
+    <%= f.label :profession, "专业名称" %><br />
+    <%= f.select :profession, College.professions(@student.college_id).collect{|c|[c.profession, c.id]},:selected => @student.profession.to_i%>
+  </p>
+  <p>
+    <%= f.label :politics_class, "行政班" %><br />
+    <%= f.text_field :politics_class %>
+  </p>
+  <p>
+    <%= f.label :grade, "年级" %><br />
+    <%= f.select :grade, (1980..Time.now.year.to_i).collect{|t|[t,t]},:selected => @student.grade.to_i%>
+  </p>
+  <p>
+    <%= f.label :birthday, "出生日期" %><br />
+    <% s_year, s_month, s_day = @student.birthday.split('-') %>
+    <select name='birth_year'>
+      <% (1980..Time.now().year).each do |year|%>
+        <option value="<%= year%>" <%= s_year.to_i == year.to_i ? 'selected="selected"' : "" %>><%= year%></option>
+      <% end -%>
+    </select>
+    <select name='birth_month'>
+      <% (1..12).each do |month|%>
+        <option value="<%= month%>"<%= s_month.to_i == month.to_i ? 'selected="selected"' : "" %>><%= month%></option>
+      <% end -%>
+    </select>
+    <select name='birth_day'>
+      <% (1..31).each do |day|%>
+        <option value="<%= day%>"<%= s_day.to_i == day.to_i ? 'selected="selected"' : "" %>><%= day%></option>
+      <% end -%>
+    </select>
+  </p>
+  <p>
+    <%= f.label :politics, "政治面貌" %><br />
+    <%= f.text_field :politics %>
+  </p>
+  <p>
+    <%= f.label :nation, "民族" %><br />
+    <%= f.text_field :nation %>
+  </p>
+  <p>
+    <%= f.label :home, "户口所在地" %><br />
+    <%= f.text_field :home %>
+  </p>
+  <p>
+    <%= f.label :stu_class, "学生类别" %><br />
+    <%= f.text_field :stu_class %>
+  </p>
+  <p>
+    <%= f.label :college_year, "学制" %><br />
+    <%= f.text_field :college_year %>
+  </p>
+  <p>
+    <%= f.label :study_year, "学习年限" %><br />
+    <%= f.text_field :study_year %>
+  </p>
+  <p>
+    <%= f.label :incubat_direct, "培养方向" %><br />
+    <%= f.text_field :incubat_direct %>
+  </p>
+  <p>
+    <%= f.label :profession_direct, "专业方向" %><br />
+    <%= f.text_field :profession_direct %>
+  </p>
+  <p>
+    <%= f.label :inter_date, "入学日期" %><br />
+    <% in_year, in_month, in_day = @student.inter_date.split('-') %>
+    <select name='inter_year'>
+      <% (1980..Time.now().year).each do |year|%>
+        <option value="<%= year%>" <%= in_year.to_i == year.to_i ? 'selected="selected"' : "" %>><%= year%></option>
+      <% end -%>
+    </select>
+    <select name='inter_month'>
+      <% (1..12).each do |month|%>
+        <option value="<%= month%>"<%= in_month.to_i == month.to_i ? 'selected="selected"' : "" %>><%= month%></option>
+      <% end -%>
+    </select>
+    <select name='inter_day'>
+      <% (1..31).each do |day|%>
+        <option value="<%= day%>"<%= in_day.to_i == day.to_i ? 'selected="selected"' : "" %>><%= day%></option>
+      <% end -%>
+    </select>
+  </p>
+  <p>
+    <%= f.label :email, "电子邮箱地址" %><br />
+    <%= f.text_field :email %>
+  </p>
+  <p>
+    <%= f.label :identity_no, "身份证号" %><br />
+    <%= f.text_field :identity_no %>
+  </p>
+  <p>
+    <%= f.label :profect, "是否优秀实习生" %><br />
+    <%= f.text_field :profect %>
+  </p>
+  <p>
+    <%= f.label :pinyin_name, "姓名拼音" %><br />
+    <%= f.text_field :pinyin_name %>
+  </p>
+  <p>
+    <%= f.label :class_name, "教学班名称" %><br />
+    <%= f.text_field :class_name %>
+  </p>
+  
+  <p>
+    <%= f.label :profession_no, "专业代码" %><br />
+    <%= f.text_field :profession_no %>
+  </p>
+  <p>
+    <%= f.label :stu_card_no, "学生证号" %><br />
+    <%= f.text_field :stu_card_no %>
+  </p>
+  <p>
+    <%= f.label :phone, "手机号码" %><br />
+    <%= f.text_field :phone %>
+  </p>
+  <p>
+    <%= f.label :degree, "学位名称" %><br />
+    <%= f.text_field :degree %>
+  </p>
+  <p>
+    <%= f.label :trust_college, "托管学院" %><br />
+    <%= f.select :trust_college, College.parents.collect{|c|[c.name, c.id]}%>
+  </p>
+  <p>
+    <%= f.label :proctis_action, "实习方式" %><br />
+    <%= f.text_field :proctis_action %>
+  </p>
+<!--   <p>
+    <%= f.label :hospital_id, "实习单位" %><br />
+    <%= f.text_field :hospital_id %>
+  </p> -->
+  <p>
+    <%= f.label :coach, "辅导员" %><br />
+    <%= f.text_field :coach %>
+  </p>
+  <p>
+    <%= f.label :coach_tel, "辅导员联系电话" %><br />
+    <%= f.text_field :coach_tel %>
+  </p>
+  <p>
+    <%= f.submit '更新' %>
+  </p>
+<% end %>
+
+<%= link_to '详细信息', @student %> |
+<%= link_to '返回', students_path %>

@@ -1,0 +1,87 @@
+cn:
+  date:
+    order:
+    - :year
+    - :month
+    - :day
+  activerecord:
+    attributes:
+      role:
+        name: "角色名称"
+        code: "角色代码"
+      hospital:
+        name: "医院名称"
+        zone: "地区"
+        address: "地址"
+        grade: "级别"
+        contact: "联系人"
+        tel: "电话"
+      student:
+        stu_no: "学号"
+        name: "姓名"
+        sex: "性别"
+        gradation: "层次"
+        college: "学院"
+        profession: "专业名称"
+        politics_class: "行政班"
+        grade: "年级"
+        birthday: "出生日期"
+        politics: "政治面貌"
+        nation: "民族"
+        home: "户口所在地"
+        stu_class: "学生类别"
+        college_year: "学制"
+        study_year: "学习年限"
+        incubat_direct: "培养方向"
+        profession_direct: "专业方向"
+        inter_date: "入学日期"
+        email: "电子邮箱地址"
+        identity_no: "身份证号"
+        profect: "是否优秀实习生"
+        pinyin_name: "姓名拼音"
+        class_name: "教学班名称"
+        profession_no: "专业代码"
+        stu_card_no: "学生证号"
+        phone: "手机号码"
+        degree: "学位名称"
+        trust_college: "托管学院"
+        practis_action: "实习方式"
+        hospital_id: "实习单位"
+        coach: "辅导员"
+        coach_tel: "辅导员联系电话"
+      college:
+        name: "学院名称"
+        parent_id: "父级ID"
+        profession: "专业名称"
+      member:
+        account: "账号"
+        passwd: "密码"
+        auth: "权限"
+    errors:
+      template:
+        header:
+          one:   "请根据提示正确填写信息。"
+          other: "请根据提示正确填写信息。"
+        body:    "以下为错误信息："
+      models:
+        role:
+          attributes:
+            name:
+              blank: "不可为空"
+              taken: "角色名称不可重复"
+            code:
+              blank: "不可为空"
+              taken: "角色代码不可重复"
+              not_a_number: "角色代码必须为数字"
+        hospital:
+          attributes:
+            name:
+              blank: "不可为空"
+            address:
+              blank: "不可为空"
+        student:
+          attributes:
+            no:
+              blank: "学号"
+            address:
+              blank: "姓名"

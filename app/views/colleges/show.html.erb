@@ -1,0 +1,27 @@
+<% if @college.parent_id == 0%>
+<p>
+  <b>学院名称:</b>
+  <%=h @college.name %>
+</p>
+<p>
+  <b>专业名称:</b>
+  <ul>
+	  <% College.find_all_by_parent_id(@college.id).each do |prof|%>
+	  	<li><%= prof.profession %>&nbsp;<%= link_to '编辑专业', edit_college_path(prof) %></li>
+	  <% end -%>
+	</ul>
+</p>
+<%else%>
+<p>
+  <b>专业名称:</b>
+  <%=h @college.profession %>
+</p>
+
+<p>
+  <b>所在学院:</b>
+  <%=h College.find(@college.parent_id).name %>
+</p>
+<% end -%>
+
+<%= link_to '编辑学院', edit_college_path(@college) %> |
+<%= link_to '返回列表', colleges_path %>

@@ -1,0 +1,19 @@
+<% form_for(@student, :url=>{:action=>:confirm_add}) do |f| %>
+  <input type='hidden' name='id' value="<%= @student.id%>"/>
+
+  <p>
+    <%= f.label :stu_no, "学号" %><br />
+    <%= @student.stu_no %>
+  </p>
+  <p>
+    <%= f.label :name, "姓名" %><br />
+    <%= @student.name %>
+  </p>
+  <p>
+    <%= f.label :internship_grade, "实习成绩" %><br />
+    <%= f.text_field :internship_grade %>
+  </p>
+  <p>
+  	<%= f.submit "添加"%>
+  </p>
+<% end -%>

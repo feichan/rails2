@@ -1,0 +1,30 @@
+<h1>添加新信息</h1>
+
+<% form_for(@college) do |f| %>
+  <%= f.error_messages %>
+
+<% if @parent_id == "0"%>
+  <p>
+    <%= f.label :name, "学院名称" %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.hidden_field :parent_id, :value => @parent_id %>
+  </p>
+<%else%>
+  <p>
+    <%= f.label :profession, "专业名称" %><br />
+    <%= f.text_field :profession %>
+  </p>
+  <p>
+    <%= f.label :parent_id, "学院选择" %><br />
+    
+    <%= f.select(:parent_id, College.find_all_by_parent_id(0).collect {|p| [ p.name, p.id ] }, { :include_blank => false }) %>
+  </p>
+<%end%>
+  <p>
+    <%= f.submit '添加' %>
+  </p>
+<% end %>
+
+<%= link_to '返回列表', colleges_path %>

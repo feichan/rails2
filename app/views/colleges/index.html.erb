@@ -1,0 +1,20 @@
+<h1>学院列表</h1>
+
+<table>
+  <tr>
+    <th>学院名称</th>
+  </tr>
+
+<% @colleges.each do |college| %>
+  <tr>
+    <td><%=h college.name %></td>
+    <td><%= link_to '详细信息', college %></td>
+    <td><%= link_to '编辑', edit_college_path(college) %></td>
+    <td><%= link_to '删除', college, :confirm => '确定要删除吗？（所属的专业也会被删除。）', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+<%= link_to '添加学院', new_college_path(:parent_id => 0) %>
+<%= link_to '添加专业', new_college_path %>

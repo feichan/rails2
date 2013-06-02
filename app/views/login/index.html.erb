@@ -1,0 +1,17 @@
+
+<% form_for(:member, :url => login_action_path) do |f| %>
+  <%= f.error_messages %>
+  <p style="color:red"><%= flash[:error]%><p>
+  <p>
+    <%= f.label :account, "账号" %><br />
+    <%= f.text_field :account %>
+  </p>
+  <p>
+    <%= f.label :password, '密码' %><br />
+    <%= f.password_field :password %>
+  </p>
+
+  <p>
+    <%= f.submit '登陆' %>
+  </p>
+<% end %>

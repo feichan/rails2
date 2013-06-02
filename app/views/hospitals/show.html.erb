@@ -1,0 +1,31 @@
+<p>
+  <b>医院名称:</b>
+  <%=h @hospital.name %>
+</p>
+<p>
+  <b>所在地区:</b>
+  <%=h @hospital.zone %>
+</p>
+<p>
+  <b>医院地址:</b>
+  <%=h @hospital.address %>
+</p>
+
+<p>
+  <b>级别:</b>
+  <%=h @hospital.grade %>
+</p>
+
+<p>
+  <b>联系人:</b>
+  <%=h @hospital.contact %>
+</p>
+
+<p>
+  <b>联系人方式:</b>
+  <%=h @hospital.tel %>
+</p>
+
+
+<%= link_to '编辑', edit_hospital_path(@hospital) %> |
+<%= link_to '返回列表', hospitals_path %>

@@ -1,0 +1,30 @@
+<h1>医院列表</h1>
+
+<table>
+  <tr>
+    <th>医院名称</th>
+    <th>所在地区</th>
+    <th>医院地址</th>
+    <th>级别</th>
+    <th>联系人</th>
+    <th>联系人电话</th>
+  </tr>
+
+<% @hospitals.each do |hospital| %>
+  <tr>
+    <td><%=h hospital.name %></td>
+    <td><%=h hospital.zone %></td>
+    <td><%=h hospital.address %></td>
+    <td><%=h hospital.grade %></td>
+    <td><%=h hospital.contact %></td>
+    <td><%=h hospital.tel %></td>
+    <td><%= link_to '详细信息', hospital %></td>
+    <td><%= link_to '编辑', edit_hospital_path(hospital) %></td>
+    <td><%= link_to '删除', hospital, :confirm => '确定要删除吗？', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to '添加', new_hospital_path %>

@@ -1,0 +1,22 @@
+<h1>学生信息列表</h1>
+
+<table>
+  <tr>
+    <th>学号</th>
+    <th>姓名</th>
+    <th>学院</th>
+    <td>医院成绩</td>
+  </tr>
+
+<% @students.each do |student| %>
+  <tr>
+    <td><%=h student.stu_no %></td>
+    <td><%=h student.name %></td>
+    <td><%=h student.college.name %></td>
+    <td><%=h student.hostpital_grade.nil? ? "暂无" : student.hostpital_grade %></td>
+    <td><%= link_to '详细信息', :action=>:student_details, :id=>student %></td>
+    <td><%= link_to '填写实习成绩', :action=>:student_edit, :id=>student %></td>
+  </tr>
+<% end %>
+</table>
+<%= will_paginate @students %>

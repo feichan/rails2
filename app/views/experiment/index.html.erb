@@ -1,0 +1,51 @@
+<h1>学生信息列表</h1>
+<% form_for :student, :url => {:action => :index }, :html=>{:method => :get} do |f| -%>
+  <table>
+    <tr>
+      <th>选择学院</th>
+      <th>选择年级</th>
+    </tr>
+    <tr>
+      <td>
+        <select name="college">
+          <option value=""></option>
+          <%College.parents.each do |college|%>
+            <option value="<%= college.id%>" <%= college.id.to_i == session[:college].to_i ? 'selected="selected"' : "" %>><%=college.name%></option>
+          <% end -%>
+        </select>
+      </td>
+      <td>
+        <select name="grade">
+          <option value=""></option>
+          <%(1980..Time.now.year).each do |year|%>
+            <option value="<%= year%>" <%= year.to_i == session[:grade].to_i ? 'selected="selected"' : "" %>><%=year%></option>
+          <% end -%>
+        </select>
+      </td>
+      <td><input type="submit" value="检索"></td>
+    </tr>
+  </table>
+<% end -%>
+
+<table>
+  <tr>
+    <th>学号</th>
+    <th>姓名</th>
+    <th>学院</th>
+    <td>年级</td>
+    <td>实习成绩</td>
+  </tr>
+
+<% @students.each do |student| %>
+  <tr>
+    <td><%=h student.stu_no %></td>
+    <td><%=h student.name %></td>
+    <td><%=h student.college.name %></td>
+    <td><%=h student.grade %></td>
+    <td><%=h student.internship_grade.nil? ? "暂无" : student.internship_grade %></td>
+    <td><%= link_to '详细信息', :action=>:student_detials, :id=>student %></td>
+    <td><%= link_to '填写实习成绩', :action=>:student_edit, :id=>student %></td>
+  </tr>
+<% end %>
+</table>
+<%= will_paginate @students %>

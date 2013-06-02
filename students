@@ -1,0 +1,44 @@
+学号	no
+姓名	name
+性别	sex
+层次	gradation
+
+college_id
+学院	college
+专业名称	profession
+行政班	class
+
+年级	grade
+出生日期	birthday
+政治面貌	politics
+民族	nation
+户口所在地	home
+学生类别	stu_class
+学制	college_year
+学习年限	study_year
+培养方向	incubat_direct
+专业方向	profession_direct
+入学日期	inter_date
+电子邮箱地址	email
+身份证号	identity_no
+是否优秀实习生	profect
+姓名拼音	pinyin_name
+教学班名称	class_name
+专业代码	profession_no
+层次	gradation
+学生证号	stu_card_no
+手机号码	phone
+学位名称	degree
+托管学院	trust_college
+实习方式	practis_action
+
+hospital_id
+实习单位1	实习单位1级别	实习单位1地区	实习单位1地址	实习单位1联系人	实习单位1联系电话	
+实习单位2	实习单位2级别	实习单位2地区	实习单位2地址	实习单位2联系人	实习单位2联系电话	
+
+
+辅导员	coach
+辅导员联系电话 coach_tel
+
+C:\internship>ruby script/generate scaffold student stu_no:integer name:string sex:string gradation:string college:string profession:string class_name:string grade:string birthday:string politics:string nation:string home:string stu_class:string college_year:string study_year:string incubat_direct:string profession_direct:string inter_date:string email:string identity_no:integer profect:string pinyin_name:string profession_no:integer stu_card_no:integer phone:string degree:string trust_college:integer proctis_action:string hospital_id:integer coach:string coach_tel:string
+

@@ -1,0 +1,43 @@
+<script type="text/javascript">
+  function display_list (role_id) {
+    if (role_id == 4) {
+      $("#college_list").fadeIn()
+    } else if(role_id == 5){
+      $("#hospital_list").fadeIn()
+    }
+    else{
+      $("#college_list").hidden()
+    };
+  }
+</script>
+<h1>用户编辑</h1>
+
+<% form_for(@member) do |f| %>
+  <%= f.error_messages %>
+    <%= f.hidden_field :college_id %>
+  <p>
+    <%= f.label :account, "账号" %><br />
+    <%= f.text_field :account %>
+  </p>
+  <p>
+    <%= f.label :password, '密码' %><br />
+    <%= f.password_field :password %>
+  </p>
+  <p>
+    <%= f.label :auth, "权限" %><br />
+    <%= f.select :auth, @auth_list.collect{|auth| [ auth.last,auth.first]},{:include_blank => false},{:onchange=>"display_list(this.value)"} %>
+  </p>
+
+  <p style="display:none" id="college_list">
+    <%= f.select :college_id, College.parents.collect{|c|[c.name, c.id]},{:include_blank => true}%>
+  </p>
+  <p style="display:none" id="hospital_list">
+    <%= f.select :hospital_id, Hospital.all.collect{|c|[c.name, c.id]},{:include_blank => true}%>
+  </p>
+  <p>
+    <%= f.submit '更新' %>
+  </p>
+<% end %>
+
+<%= link_to '详细信息', @member %> |
+<%= link_to '返回用户列表', members_path %>

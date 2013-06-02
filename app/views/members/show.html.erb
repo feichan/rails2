@@ -1,0 +1,23 @@
+<p>
+  <b>账号:</b>
+  <%=h @member.account %>
+</p>
+
+<p>
+  <b>加密密码:</b>
+  <%=h @member.passwd %>
+</p>
+
+<p>
+  <b>权限:</b>
+  <%=h @auth_list[@member.auth] %>
+</p>
+<%if @member.auth==4%>
+	<p>
+		<b>所在学院:</b>
+		<%=h @member.college.name %>
+	</p>
+<%end%>
+
+<%= link_to '编辑', edit_member_path(@member) %> |
+<%= link_to '返回列表', members_path %>

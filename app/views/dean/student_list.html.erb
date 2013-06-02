@@ -1,0 +1,121 @@
+
+<h1>学生信息列表</h1>
+<% form_for :student, :url => {:action => :student_list }, :html=>{:method => :get} do |f| -%>
+  <table>
+    <tr>
+      <th>选择学院</th>
+      <th>选择年级</th>
+      <th>选择医院</th>
+    </tr>
+    <tr>
+      <td>
+        <select name="college">
+          <option value=""></option>
+          <%College.parents.each do |college|%>
+            <option value="<%= college.id%>" <%= college.id.to_i == session[:college].to_i ? 'selected="selected"' : "" %>><%=college.name%></option>
+          <% end -%>
+        </select>
+      </td>
+      <td>
+        <select name="grade">
+          <option value=""></option>
+          <%(1980..Time.now.year).each do |year|%>
+            <option value="<%= year%>" <%= year.to_i == session[:grade].to_i ? 'selected="selected"' : "" %>><%=year%></option>
+          <% end -%>
+        </select>
+      </td>
+      <td>
+        <select name="hospital">
+          <option value=""></option>
+          <%Hospital.all.each do |hosp|%>
+            <option value="<%= hosp.id%>" <%= hosp.id.to_i == session[:hospital].to_i ? 'selected="selected"' : "" %>><%=hosp.name%></option>
+          <% end -%>
+        </select>
+      </td>
+      <td><input type="submit" value="检索"></td>
+    </tr>
+  </table>
+<% end -%>
+
+<table>
+  <tr>
+    <th>学号</th>
+    <th>姓名</th>
+    <th>性别</th>
+    <th>学院</th>
+    <th>专业名称</th>
+    <th>年级</th>
+    <th>实习单位</th>
+    <th>实习成绩</th>
+    <th>医院成绩</th>
+<!--     <th>层次</th>
+    <th>行政班</th>
+    <th>出生日期</th>
+    <th>政治面貌</th>
+    <th>民族</th>
+    <th>户口所在地</th>
+    <th>学生类别</th>
+    <th>学制</th>
+    <th>学习年限</th>
+    <th>培养方向</th>
+    <th>专业方向</th>
+    <th>入学日期</th>
+    <th>电子邮箱地址</th>
+    <th>身份证号</th>
+    <th>是否优秀实习生</th>
+    <th>姓名拼音</th>
+    <th>教学班名称</th>
+    <th>专业代码</th>
+    <th>手机号码</th>
+    <th>学位名称</th>
+    <th>托管学院</th>
+    <th>实习方式</th>
+    <th>实习单位</th>
+    <th>辅导员</th>
+    <th>辅导员联系电话</th> -->
+  </tr>
+
+<% @students.each do |student| %>
+  <tr>
+    <td><%=h student.stu_no %></td>
+    <td><%=h student.name %></td>
+    <td><%=h student.sex %></td>
+    <td><%=h student.college.name %></td>
+    <td><%=h College.find(student.profession).profession %></td>
+    <td><%=h student.grade %></td>
+    <td><%=h student.hospital_id.nil? ? "未分配" : student.hospital.name %></td>
+    <td><%=h student.internship_grade %></td>
+    <td><%=h student.hostpital_grade %></td>
+<!--     <td><%=h student.gradation %></td>
+    <td><%=h student.politics_class %></td>
+    <td><%=h student.birthday %></td>
+    <td><%=h student.politics %></td>
+    <td><%=h student.nation %></td>
+    <td><%=h student.home %></td>
+    <td><%=h student.stu_class %></td>
+    <td><%=h student.college_year %></td>
+    <td><%=h student.study_year %></td>
+    <td><%=h student.incubat_direct %></td>
+    <td><%=h student.profession_direct %></td>
+    <td><%=h student.inter_date %></td>
+    <td><%=h student.email %></td>
+    <td><%=h student.identity_no %></td>
+    <td><%=h student.profect %></td>
+    <td><%=h student.pinyin_name %></td>
+    <td><%=h student.class_name %></td>
+    <td><%=h student.profession_no %></td>
+    <td><%=h student.stu_card_no %></td>
+    <td><%=h student.phone %></td>
+    <td><%=h student.degree %></td>
+    <td><%=h student.trust_college %></td>
+    <td><%=h student.proctis_action %></td>
+    <td><%=h student.hospital_id %></td>
+    <td><%=h student.coach %></td>
+    <td><%=h student.coach_tel %></td> -->
+    <td><%= link_to '详细信息', :controller => :dean, :action => :student_detail, :id => student %></td>
+    <!-- <td><%= link_to '分配医院', :controller => :dean, :action => :student_edit, :id => student %></td> -->
+  </tr>
+<% end %>
+</table>
+<%= will_paginate @students %>
+<br />
