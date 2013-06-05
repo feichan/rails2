@@ -1,4 +1,4 @@
-class CollegesController < ApplicationController
+class CollegesController < AdminController
   # GET /colleges
   # GET /colleges.xml
   def index

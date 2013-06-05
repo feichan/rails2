@@ -28138,3 +28138,189 @@ Rendering hospital/index
   [4;36;1mCollege Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `colleges`[0m
   [4;35;1mCollege Load (0.0ms)[0m   [0mSELECT * FROM `colleges` WHERE (`colleges`.`id` = 6) [0m
 Completed in 156ms (View: 141, DB: 0) | 200 OK [http://127.0.0.1/hospital]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (15.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (156.0ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (157.0ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateHospitals (20130530151237)
+  [4;35;1mSQL (63.0ms)[0m   [0mCREATE TABLE `hospitals` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `address` varchar(255), `grade` varchar(255), `contact` varchar(255), `tel` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (31.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20130530151237')[0m
+Migrating to AddZoneToHospitals (20130530151517)
+  [4;35;1mSQL (156.0ms)[0m   [0mALTER TABLE `hospitals` ADD `zone` varchar(255)[0m
+  [4;36;1mSQL (16.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20130530151517')[0m
+Migrating to CreateStudents (20130530164743)
+  [4;35;1mSQL (62.0ms)[0m   [0mCREATE TABLE `students` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `stu_no` int(11), `name` varchar(255), `sex` varchar(255), `gradation` varchar(255), `college` varchar(255), `profession` varchar(255), `class_name` varchar(255), `grade` varchar(255), `birthday` varchar(255), `politics` varchar(255), `nation` varchar(255), `home` varchar(255), `stu_class` varchar(255), `college_year` varchar(255), `study_year` varchar(255), `incubat_direct` varchar(255), `profession_direct` varchar(255), `inter_date` varchar(255), `email` varchar(255), `identity_no` varchar(255), `profect` varchar(255), `pinyin_name` varchar(255), `profession_no` int(11), `stu_card_no` varchar(255), `phone` varchar(255), `degree` varchar(255), `trust_college` int(11), `proctis_action` varchar(255), `hospital_id` int(11), `coach` varchar(255), `coach_tel` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (16.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20130530164743')[0m
+Migrating to AddColumnToStudents (20130530170907)
+  [4;35;1mSQL (125.0ms)[0m   [0mALTER TABLE `students` ADD `politics_class` varchar(255)[0m
+  [4;36;1mSQL (16.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20130530170907')[0m
+Migrating to AddCollegeIdToStudents (20130531235421)
+  [4;35;1mSQL (140.0ms)[0m   [0mALTER TABLE `students` ADD `college_id` int(11)[0m
+  [4;36;1mSQL (31.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20130531235421')[0m
+Migrating to CreateColleges (20130601000429)
+  [4;35;1mSQL (47.0ms)[0m   [0mCREATE TABLE `colleges` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `profession` varchar(255), `parent_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (32.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20130601000429')[0m
+Migrating to CreateMembers (20130601015240)
+  [4;35;1mSQL (62.0ms)[0m   [0mCREATE TABLE `members` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `account` varchar(255), `passwd` varchar(255), `auth` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (16.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20130601015240')[0m
+Migrating to AddColumnToMember (20130601020633)
+  [4;35;1mSQL (140.0ms)[0m   [0mALTER TABLE `members` ADD `salt` varchar(255)[0m
+  [4;36;1mSQL (16.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20130601020633')[0m
+Migrating to CreateCollegesHospitals (20130601105622)
+  [4;35;1mSQL (31.0ms)[0m   [0mCREATE TABLE `colleges_hospitals` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `college_id` int(11), `hospital_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (31.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20130601105622')[0m
+Migrating to AddColumnToStudent (20130601135720)
+  [4;35;1mSQL (156.0ms)[0m   [0mALTER TABLE `students` ADD `internship_grade` varchar(255)[0m
+  [4;36;1mSQL (16.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20130601135720')[0m
+Migrating to AddCollegeIdToMembers (20130601144625)
+  [4;35;1mSQL (156.0ms)[0m   [0mALTER TABLE `members` ADD `college_id` int(11) DEFAULT 0[0m
+  [4;36;1mSQL (32.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20130601144625')[0m
+Migrating to AddColumnToMembers (20130601154516)
+  [4;35;1mSQL (140.0ms)[0m   [0mALTER TABLE `members` ADD `hospital_id` int(11) DEFAULT 0[0m
+  [4;36;1mSQL (31.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20130601154516')[0m
+Migrating to AddHostpitalGradeToStudents (20130601161752)
+  [4;35;1mSQL (141.0ms)[0m   [0mALTER TABLE `students` ADD `hostpital_grade` varchar(255)[0m
+  [4;36;1mSQL (31.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20130601161752')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (31.0ms)[0m   [0;1mSHOW FIELDS FROM `colleges`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mdescribe `colleges`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `colleges`[0m
+  [4;35;1mSQL (16.0ms)[0m   [0mSHOW FIELDS FROM `colleges_hospitals`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mdescribe `colleges_hospitals`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `colleges_hospitals`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW FIELDS FROM `hospitals`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mdescribe `hospitals`[0m
+  [4;36;1mSQL (16.0ms)[0m   [0;1mSHOW KEYS FROM `hospitals`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mdescribe `members`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `members`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW FIELDS FROM `students`[0m
+  [4;35;1mSQL (15.0ms)[0m   [0mdescribe `students`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `students`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoginController#index (for 127.0.0.1 at 2013-06-02 12:43:28) [GET]
+Rendering template within layouts/application
+Rendering login/index
+Completed in 1812ms (View: 1812, DB: 0) | 200 OK [http://127.0.0.1/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2013-06-02 12:43:41) [GET]
+  [4;36;1mMember Load (0.0ms)[0m   [0;1mSELECT * FROM `members` LIMIT 0, 10[0m
+Rendering template within layouts/admin
+Rendering members/index
+Completed in 156ms (View: 47, DB: 0) | 200 OK [http://127.0.0.1/members]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#new (for 127.0.0.1 at 2013-06-02 12:43:45) [GET]
+  [4;35;1mMember Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Rendering template within layouts/admin
+Rendering members/new
+  [4;36;1mCollege Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `colleges`[0m
+  [4;35;1mCollege Load (0.0ms)[0m   [0mSELECT * FROM `colleges` WHERE (`colleges`.`parent_id` = 0) [0m
+  [4;36;1mHospital Load (0.0ms)[0m   [0;1mSELECT * FROM `hospitals` [0m
+Completed in 140ms (View: 93, DB: 32) | 200 OK [http://127.0.0.1/members/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#create (for 127.0.0.1 at 2013-06-02 12:43:59) [POST]
+  Parameters: {"commit"=>"添加", "authenticity_token"=>"DVqOUlfK1yy0zSnaudkO1X+koekEwU56sy9fqSeA1S4=", "member"=>{"hospital_id"=>"", "auth"=>"1", "account"=>"admin", "college_id"=>"", "password"=>"admin"}}
+  [4;35;1mMember Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mMember Load (47.0ms)[0m   [0mSELECT `members`.id FROM `members` WHERE (`members`.`account` = BINARY 'admin') LIMIT 1[0m
+  [4;36;1mMember Create (0.0ms)[0m   [0;1mINSERT INTO `members` (`salt`, `hospital_id`, `passwd`, `auth`, `updated_at`, `account`, `college_id`, `created_at`) VALUES(NULL, 0, '3cb7bd2dd32adb8296eb5af86e48e4228c557628', 1, '2013-06-02 04:43:59', 'admin', 0, '2013-06-02 04:43:59')[0m
+  [4;35;1mSQL (16.0ms)[0m   [0mCOMMIT[0m
+Redirected to http://127.0.0.1:5005/members/1
+Completed in 79ms (DB: 63) | 302 Found [http://127.0.0.1/members]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#show (for 127.0.0.1 at 2013-06-02 12:43:59) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mMember Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+  [4;35;1mMember Load (0.0ms)[0m   [0mSELECT * FROM `members` WHERE (`members`.`id` = 1) [0m
+Rendering template within layouts/admin
+Rendering members/show
+Completed in 31ms (View: 15, DB: 0) | 200 OK [http://127.0.0.1/members/1]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2013-06-02 12:44:05) [GET]
+  [4;36;1mMember Load (0.0ms)[0m   [0;1mSELECT * FROM `members` LIMIT 0, 10[0m
+Rendering template within layouts/admin
+Rendering members/index
+  [4;35;1mMember Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+Completed in 47ms (View: 15, DB: 16) | 200 OK [http://127.0.0.1/members]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AdminController#index (for 127.0.0.1 at 2013-06-02 12:44:32) [GET]
+Redirected to http://127.0.0.1:5005/
+Filter chain halted as [:login?] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://127.0.0.1/admin/index]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoginController#index (for 127.0.0.1 at 2013-06-02 12:44:32) [GET]
+Rendering template within layouts/application
+Rendering login/index
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoginController#action (for 127.0.0.1 at 2013-06-02 12:44:38) [POST]
+  Parameters: {"commit"=>"登陆", "authenticity_token"=>"DVqOUlfK1yy0zSnaudkO1X+koekEwU56sy9fqSeA1S4=", "member"=>{"account"=>"admin", "password"=>"admin"}}
+  [4;36;1mMember Columns (328.0ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+  [4;35;1mMember Load (0.0ms)[0m   [0mSELECT * FROM `members` WHERE (`members`.`account` = 'admin') LIMIT 1[0m
+Redirected to http://127.0.0.1:5005/admin/index
+Completed in 359ms (DB: 328) | 302 Found [http://127.0.0.1/login/action]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AdminController#index (for 127.0.0.1 at 2013-06-02 12:44:39) [GET]
+  [4;36;1mMember Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+  [4;35;1mMember Load (0.0ms)[0m   [0mSELECT * FROM `members` WHERE (`members`.`id` = 1) [0m
+Rendering template within layouts/admin
+Rendering admin/index
+Completed in 62ms (View: 31, DB: 0) | 200 OK [http://127.0.0.1/admin/index]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StudentsController#index (for 127.0.0.1 at 2013-06-02 12:44:44) [GET]
+  [4;36;1mMember Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+  [4;35;1mMember Load (0.0ms)[0m   [0mSELECT * FROM `members` WHERE (`members`.`id` = 1) [0m
+  [4;36;1mStudent Load (0.0ms)[0m   [0;1mSELECT * FROM `students` LIMIT 0, 10[0m
+Rendering template within layouts/admin
+Rendering students/index
+  [4;35;1mCollege Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `colleges`[0m
+  [4;36;1mCollege Load (0.0ms)[0m   [0;1mSELECT * FROM `colleges` WHERE (`colleges`.`parent_id` = 0) [0m
+Completed in 63ms (View: 31, DB: 0) | 200 OK [http://127.0.0.1/students]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AdminController#index (for 127.0.0.1 at 2013-06-02 12:44:52) [GET]
+  [4;35;1mMember Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+  [4;36;1mMember Load (0.0ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`id` = 1) [0m
+Rendering template within layouts/admin
+Rendering admin/index
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://127.0.0.1/admin/index]
