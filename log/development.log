@@ -28138,3 +28138,579 @@ Rendering hospital/index
   [4;36;1mCollege Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `colleges`[0m
   [4;35;1mCollege Load (0.0ms)[0m   [0mSELECT * FROM `colleges` WHERE (`colleges`.`id` = 6) [0m
 Completed in 156ms (View: 141, DB: 0) | 200 OK [http://127.0.0.1/hospital]
+  [4;36;1mSQL (62.5ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (46.9ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoginController#index (for 127.0.0.1 at 2013-06-05 14:09:52) [GET]
+Rendering template within layouts/application
+Rendering login/index
+Completed in 1391ms (View: 1391, DB: 109) | 200 OK [http://127.0.0.1/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoginController#action (for 127.0.0.1 at 2013-06-05 14:10:08) [POST]
+  Parameters: {"member"=>{"account"=>"fcicada", "password"=>"111"}, "commit"=>"登陆", "authenticity_token"=>"ndmZFNWzZ3QASvoN5/rXwxbkG1i9IoQ75Z87P1fieSg="}
+  [4;36;1mMember Columns (156.2ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+  [4;35;1mMember Load (62.5ms)[0m   [0mSELECT * FROM `members` WHERE (`members`.`account` = 'fcicada') LIMIT 1[0m
+Redirected to http://127.0.0.1:3000/admin/index
+Completed in 266ms (DB: 219) | 302 Found [http://127.0.0.1/login/action]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AdminController#index (for 127.0.0.1 at 2013-06-05 14:10:08) [GET]
+  [4;36;1mMember Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+  [4;35;1mMember Load (0.0ms)[0m   [0mSELECT * FROM `members` WHERE (`members`.`id` = 2) [0m
+Rendering template within layouts/admin
+Rendering admin/index
+Completed in 359ms (View: 328, DB: 0) | 200 OK [http://127.0.0.1/admin/index]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AdminController#index (for 127.0.0.1 at 2013-06-05 14:11:07) [GET]
+  [4;36;1mMember Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+  [4;35;1mMember Load (0.0ms)[0m   [0mSELECT * FROM `members` WHERE (`members`.`id` = 2) [0m
+Rendering template within layouts/admin
+Rendering admin/index
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://127.0.0.1/admin/index]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HospitalsController#index (for 127.0.0.1 at 2013-06-05 14:11:08) [GET]
+  [4;36;1mMember Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+  [4;35;1mMember Load (0.0ms)[0m   [0mSELECT * FROM `members` WHERE (`members`.`id` = 2) [0m
+  [4;36;1mHospital Load (31.2ms)[0m   [0;1mSELECT * FROM `hospitals` [0m
+Rendering template within layouts/admin
+Rendering hospitals/index
+  [4;35;1mHospital Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `hospitals`[0m
+Completed in 109ms (View: 31, DB: 31) | 200 OK [http://127.0.0.1/hospitals]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2013-06-05 14:11:18) [GET]
+  [4;36;1mMember Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+  [4;35;1mMember Load (0.0ms)[0m   [0mSELECT * FROM `members` WHERE (`members`.`id` = 2) [0m
+  [4;36;1mMember Load (0.0ms)[0m   [0;1mSELECT * FROM `members` LIMIT 0, 10[0m
+Rendering template within layouts/admin
+Rendering members/index
+Completed in 109ms (View: 94, DB: 0) | 200 OK [http://127.0.0.1/members]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#edit (for 127.0.0.1 at 2013-06-05 14:11:26) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mMember Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+  [4;36;1mMember Load (0.0ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`id` = 2) [0m
+  [4;35;1mMember Load (0.0ms)[0m   [0mSELECT * FROM `members` WHERE (`members`.`id` = 3) [0m
+Rendering template within layouts/admin
+Rendering members/edit
+  [4;36;1mCollege Columns (46.9ms)[0m   [0;1mSHOW FIELDS FROM `colleges`[0m
+  [4;35;1mCollege Load (0.0ms)[0m   [0mSELECT * FROM `colleges` WHERE (`colleges`.`parent_id` = 0) [0m
+  [4;36;1mHospital Load (0.0ms)[0m   [0;1mSELECT * FROM `hospitals` [0m
+  [4;35;1mHospital Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `hospitals`[0m
+Completed in 125ms (View: 62, DB: 47) | 200 OK [http://127.0.0.1/members/3/edit]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2013-06-05 14:11:29) [GET]
+  [4;36;1mMember Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+  [4;35;1mMember Load (0.0ms)[0m   [0mSELECT * FROM `members` WHERE (`members`.`id` = 2) [0m
+  [4;36;1mMember Load (0.0ms)[0m   [0;1mSELECT * FROM `members` LIMIT 0, 10[0m
+Rendering template within layouts/admin
+Rendering members/index
+Completed in 62ms (View: 47, DB: 0) | 200 OK [http://127.0.0.1/members]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#edit (for 127.0.0.1 at 2013-06-05 14:11:32) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mMember Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+  [4;36;1mMember Load (0.0ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`id` = 2) [0m
+  [4;35;1mMember Load (0.0ms)[0m   [0mSELECT * FROM `members` WHERE (`members`.`id` = 3) [0m
+Rendering template within layouts/admin
+Rendering members/edit
+  [4;36;1mCollege Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `colleges`[0m
+  [4;35;1mCollege Load (0.0ms)[0m   [0mSELECT * FROM `colleges` WHERE (`colleges`.`parent_id` = 0) [0m
+  [4;36;1mHospital Load (0.0ms)[0m   [0;1mSELECT * FROM `hospitals` [0m
+  [4;35;1mHospital Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `hospitals`[0m
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/members/3/edit]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#update (for 127.0.0.1 at 2013-06-05 14:11:39) [PUT]
+  Parameters: {"member"=>{"hospital_id"=>"2", "college_id"=>"", "account"=>"yiyuan", "auth"=>"5", "password"=>""}, "commit"=>"更新", "id"=>"3", "authenticity_token"=>"ndmZFNWzZ3QASvoN5/rXwxbkG1i9IoQ75Z87P1fieSg="}
+  [4;36;1mMember Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+  [4;35;1mMember Load (0.0ms)[0m   [0mSELECT * FROM `members` WHERE (`members`.`id` = 2) [0m
+  [4;36;1mMember Load (0.0ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`id` = 3) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mMember Load (31.2ms)[0m   [0;1mSELECT `members`.id FROM `members` WHERE (`members`.`account` = BINARY 'yiyuan' AND `members`.id <> 3) LIMIT 1[0m
+  [4;35;1mMember Update (0.0ms)[0m   [0mUPDATE `members` SET `updated_at` = '2013-06-05 13:11:39', `hospital_id` = 2 WHERE `id` = 3[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/members/3
+Completed in 47ms (DB: 31) | 302 Found [http://127.0.0.1/members/3]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#show (for 127.0.0.1 at 2013-06-05 14:11:39) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mMember Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+  [4;36;1mMember Load (0.0ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`id` = 2) [0m
+  [4;35;1mMember Load (0.0ms)[0m   [0mSELECT * FROM `members` WHERE (`members`.`id` = 3) [0m
+Rendering template within layouts/admin
+Rendering members/show
+Completed in 62ms (View: 0, DB: 0) | 200 OK [http://127.0.0.1/members/3]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2013-06-05 14:11:41) [GET]
+  [4;36;1mMember Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+  [4;35;1mMember Load (0.0ms)[0m   [0mSELECT * FROM `members` WHERE (`members`.`id` = 2) [0m
+  [4;36;1mMember Load (0.0ms)[0m   [0;1mSELECT * FROM `members` LIMIT 0, 10[0m
+Rendering template within layouts/admin
+Rendering members/index
+Completed in 31ms (View: 31, DB: 0) | 200 OK [http://127.0.0.1/members]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#edit (for 127.0.0.1 at 2013-06-05 14:11:43) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mMember Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+  [4;36;1mMember Load (0.0ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`id` = 2) [0m
+  [4;35;1mMember Load (0.0ms)[0m   [0mSELECT * FROM `members` WHERE (`members`.`id` = 3) [0m
+Rendering template within layouts/admin
+Rendering members/edit
+  [4;36;1mCollege Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `colleges`[0m
+  [4;35;1mCollege Load (0.0ms)[0m   [0mSELECT * FROM `colleges` WHERE (`colleges`.`parent_id` = 0) [0m
+  [4;36;1mHospital Load (0.0ms)[0m   [0;1mSELECT * FROM `hospitals` [0m
+  [4;35;1mHospital Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `hospitals`[0m
+Completed in 47ms (View: 16, DB: 16) | 200 OK [http://127.0.0.1/members/3/edit]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#edit (for 127.0.0.1 at 2013-06-05 14:15:47) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mMember Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+  [4;35;1mMember Load (0.0ms)[0m   [0mSELECT * FROM `members` WHERE (`members`.`id` = 2) [0m
+  [4;36;1mMember Load (0.0ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`id` = 3) [0m
+Rendering template within layouts/admin
+Rendering members/edit
+  [4;35;1mCollege Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `colleges`[0m
+  [4;36;1mCollege Load (0.0ms)[0m   [0;1mSELECT * FROM `colleges` WHERE (`colleges`.`parent_id` = 0) [0m
+  [4;35;1mHospital Load (0.0ms)[0m   [0mSELECT * FROM `hospitals` [0m
+  [4;36;1mHospital Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `hospitals`[0m
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://127.0.0.1/members/3/edit]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#edit (for 127.0.0.1 at 2013-06-05 14:17:15) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mMember Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+  [4;36;1mMember Load (0.0ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`id` = 2) [0m
+  [4;35;1mMember Load (0.0ms)[0m   [0mSELECT * FROM `members` WHERE (`members`.`id` = 3) [0m
+Rendering template within layouts/admin
+Rendering members/edit
+  [4;36;1mHospital Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `hospitals`[0m
+  [4;35;1mHospital Load (0.0ms)[0m   [0mSELECT * FROM `hospitals` WHERE (`hospitals`.`id` = 2) [0m
+  [4;36;1mCollege Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `colleges`[0m
+  [4;35;1mCollege Load (15.6ms)[0m   [0mSELECT * FROM `colleges` WHERE (`colleges`.`parent_id` = 0) [0m
+  [4;36;1mHospital Load (0.0ms)[0m   [0;1mSELECT * FROM `hospitals` [0m
+Completed in 94ms (View: 62, DB: 16) | 200 OK [http://127.0.0.1/members/3/edit]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#edit (for 127.0.0.1 at 2013-06-05 14:18:04) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mMember Columns (46.9ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+  [4;36;1mMember Load (0.0ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`id` = 2) [0m
+  [4;35;1mMember Load (0.0ms)[0m   [0mSELECT * FROM `members` WHERE (`members`.`id` = 3) [0m
+Rendering template within layouts/admin
+Rendering members/edit
+  [4;36;1mHospital Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `hospitals`[0m
+  [4;35;1mHospital Load (0.0ms)[0m   [0mSELECT * FROM `hospitals` WHERE (`hospitals`.`id` = 2) [0m
+  [4;36;1mHospital Load (0.0ms)[0m   [0;1mSELECT * FROM `hospitals` [0m
+  [4;35;1mCollege Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `colleges`[0m
+  [4;36;1mCollege Load (0.0ms)[0m   [0;1mSELECT * FROM `colleges` WHERE (`colleges`.`parent_id` = 0) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `hospitals` [0m
+Completed in 94ms (View: 31, DB: 62) | 200 OK [http://127.0.0.1/members/3/edit]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#edit (for 127.0.0.1 at 2013-06-05 14:19:22) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mMember Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+  [4;35;1mMember Load (0.0ms)[0m   [0mSELECT * FROM `members` WHERE (`members`.`id` = 2) [0m
+  [4;36;1mMember Load (0.0ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`id` = 3) [0m
+Rendering template within layouts/admin
+Rendering members/edit
+  [4;35;1mHospital Load (0.0ms)[0m   [0mSELECT * FROM `hospitals` [0m
+  [4;36;1mHospital Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `hospitals`[0m
+  [4;35;1mCollege Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `colleges`[0m
+  [4;36;1mCollege Load (0.0ms)[0m   [0;1mSELECT * FROM `colleges` WHERE (`colleges`.`parent_id` = 0) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `hospitals` [0m
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://127.0.0.1/members/3/edit]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#edit (for 127.0.0.1 at 2013-06-05 14:22:14) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mMember Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+  [4;35;1mMember Load (0.0ms)[0m   [0mSELECT * FROM `members` WHERE (`members`.`id` = 2) [0m
+  [4;36;1mMember Load (0.0ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`id` = 3) [0m
+Rendering template within layouts/admin
+Rendering members/edit
+  [4;35;1mHospital Load (0.0ms)[0m   [0mSELECT * FROM `hospitals` [0m
+  [4;36;1mHospital Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `hospitals`[0m
+  [4;35;1mCollege Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `colleges`[0m
+  [4;36;1mCollege Load (0.0ms)[0m   [0;1mSELECT * FROM `colleges` WHERE (`colleges`.`parent_id` = 0) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `hospitals` [0m
+Completed in 156ms (View: 125, DB: 0) | 200 OK [http://127.0.0.1/members/3/edit]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AdminController#index (for 127.0.0.1 at 2013-06-05 14:24:38) [GET]
+  [4;36;1mMember Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+  [4;35;1mMember Load (0.0ms)[0m   [0mSELECT * FROM `members` WHERE (`members`.`id` = 2) [0m
+Rendering template within layouts/admin
+Rendering admin/index
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://127.0.0.1/admin/index]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2013-06-05 14:24:39) [GET]
+  [4;36;1mMember Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+  [4;35;1mMember Load (0.0ms)[0m   [0mSELECT * FROM `members` WHERE (`members`.`id` = 2) [0m
+  [4;36;1mMember Load (0.0ms)[0m   [0;1mSELECT * FROM `members` LIMIT 0, 10[0m
+Rendering template within layouts/admin
+Rendering members/index
+Completed in 31ms (View: 31, DB: 0) | 200 OK [http://127.0.0.1/members]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#edit (for 127.0.0.1 at 2013-06-05 14:24:42) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mMember Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+  [4;36;1mMember Load (0.0ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`id` = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `members` WHERE (`members`.`id` = 2) [0m
+Rendering template within layouts/admin
+Rendering members/edit
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/members/2/edit]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2013-06-05 14:24:44) [GET]
+  [4;36;1mMember Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+  [4;35;1mMember Load (0.0ms)[0m   [0mSELECT * FROM `members` WHERE (`members`.`id` = 2) [0m
+  [4;36;1mMember Load (0.0ms)[0m   [0;1mSELECT * FROM `members` LIMIT 0, 10[0m
+Rendering template within layouts/admin
+Rendering members/index
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://127.0.0.1/members]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#edit (for 127.0.0.1 at 2013-06-05 14:24:49) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mMember Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+  [4;36;1mMember Load (0.0ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`id` = 2) [0m
+  [4;35;1mMember Load (0.0ms)[0m   [0mSELECT * FROM `members` WHERE (`members`.`id` = 4) [0m
+Rendering template within layouts/admin
+Rendering members/edit
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/members/4/edit]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2013-06-05 14:24:53) [GET]
+  [4;36;1mMember Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+  [4;35;1mMember Load (0.0ms)[0m   [0mSELECT * FROM `members` WHERE (`members`.`id` = 2) [0m
+  [4;36;1mMember Load (0.0ms)[0m   [0;1mSELECT * FROM `members` LIMIT 0, 10[0m
+Rendering template within layouts/admin
+Rendering members/index
+Completed in 62ms (View: 47, DB: 0) | 200 OK [http://127.0.0.1/members]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#edit (for 127.0.0.1 at 2013-06-05 14:24:55) [GET]
+  Parameters: {"id"=>"5"}
+  [4;35;1mMember Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+  [4;36;1mMember Load (0.0ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`id` = 2) [0m
+  [4;35;1mMember Load (0.0ms)[0m   [0mSELECT * FROM `members` WHERE (`members`.`id` = 5) [0m
+Rendering template within layouts/admin
+Rendering members/edit
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://127.0.0.1/members/5/edit]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2013-06-05 14:24:59) [GET]
+  [4;36;1mMember Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+  [4;35;1mMember Load (0.0ms)[0m   [0mSELECT * FROM `members` WHERE (`members`.`id` = 2) [0m
+  [4;36;1mMember Load (0.0ms)[0m   [0;1mSELECT * FROM `members` LIMIT 0, 10[0m
+Rendering template within layouts/admin
+Rendering members/index
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/members]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2013-06-05 14:30:47) [GET]
+  [4;35;1mMember Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+  [4;36;1mMember Load (0.0ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`id` = 2) [0m
+  [4;35;1mMember Load (0.0ms)[0m   [0mSELECT * FROM `members` LIMIT 0, 10[0m
+Rendering template within layouts/admin
+Rendering members/index
+  [4;36;1mHospital Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `hospitals`[0m
+  [4;35;1mHospital Load (0.0ms)[0m   [0mSELECT * FROM `hospitals` WHERE (`hospitals`.`id` = 0) [0m
+  [4;36;1mHospital Load (0.0ms)[0m   [0;1mSELECT * FROM `hospitals` WHERE (`hospitals`.`id` = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `hospitals` WHERE (`hospitals`.`id` = 0) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `hospitals` WHERE (`hospitals`.`id` = 0) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `hospitals` WHERE (`hospitals`.`id` = 0) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `hospitals` WHERE (`hospitals`.`id` = 0) [0m
+Completed in 94ms (View: 78, DB: 0) | 200 OK [http://127.0.0.1/members]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2013-06-05 14:30:59) [GET]
+  [4;35;1mMember Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+  [4;36;1mMember Load (0.0ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`id` = 2) [0m
+  [4;35;1mMember Load (0.0ms)[0m   [0mSELECT * FROM `members` LIMIT 0, 10[0m
+Rendering template within layouts/admin
+Rendering members/index
+  [4;36;1mHospital Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `hospitals`[0m
+  [4;35;1mHospital Load (0.0ms)[0m   [0mSELECT * FROM `hospitals` WHERE (`hospitals`.`id` = 0) [0m
+  [4;36;1mHospital Load (0.0ms)[0m   [0;1mSELECT * FROM `hospitals` WHERE (`hospitals`.`id` = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `hospitals` WHERE (`hospitals`.`id` = 0) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `hospitals` WHERE (`hospitals`.`id` = 0) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `hospitals` WHERE (`hospitals`.`id` = 0) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `hospitals` WHERE (`hospitals`.`id` = 0) [0m
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://127.0.0.1/members]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2013-06-05 14:31:21) [GET]
+  [4;35;1mMember Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+  [4;36;1mMember Load (15.6ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`id` = 2) [0m
+  [4;35;1mMember Load (0.0ms)[0m   [0mSELECT * FROM `members` LIMIT 0, 10[0m
+Rendering template within layouts/admin
+Rendering members/index
+  [4;36;1mHospital Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `hospitals`[0m
+  [4;35;1mHospital Load (0.0ms)[0m   [0mSELECT * FROM `hospitals` WHERE (`hospitals`.`id` = 0) [0m
+  [4;36;1mCollege Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `colleges`[0m
+  [4;35;1mCollege Load (0.0ms)[0m   [0mSELECT * FROM `colleges` WHERE (`colleges`.`id` = 0) [0m
+  [4;36;1mHospital Load (0.0ms)[0m   [0;1mSELECT * FROM `hospitals` WHERE (`hospitals`.`id` = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `colleges` WHERE (`colleges`.`id` = 0) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `hospitals` WHERE (`hospitals`.`id` = 0) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `colleges` WHERE (`colleges`.`id` = 0) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `hospitals` WHERE (`hospitals`.`id` = 0) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `colleges` WHERE (`colleges`.`id` = 0) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `hospitals` WHERE (`hospitals`.`id` = 0) [0m
+  [4;35;1mCollege Load (0.0ms)[0m   [0mSELECT * FROM `colleges` WHERE (`colleges`.`id` = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `hospitals` WHERE (`hospitals`.`id` = 0) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `colleges` WHERE (`colleges`.`id` = 0) [0m
+Completed in 172ms (View: 141, DB: 16) | 200 OK [http://127.0.0.1/members]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2013-06-05 14:33:12) [GET]
+  [4;36;1mMember Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+  [4;35;1mMember Load (0.0ms)[0m   [0mSELECT * FROM `members` WHERE (`members`.`id` = 2) [0m
+  [4;36;1mMember Load (0.0ms)[0m   [0;1mSELECT * FROM `members` LIMIT 0, 10[0m
+Rendering template within layouts/admin
+Rendering members/index
+  [4;35;1mHospital Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `hospitals`[0m
+  [4;36;1mHospital Load (0.0ms)[0m   [0;1mSELECT * FROM `hospitals` WHERE (`hospitals`.`id` = 0) [0m
+  [4;35;1mCollege Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `colleges`[0m
+  [4;36;1mCollege Load (0.0ms)[0m   [0;1mSELECT * FROM `colleges` WHERE (`colleges`.`id` = 0) [0m
+  [4;35;1mHospital Load (0.0ms)[0m   [0mSELECT * FROM `hospitals` WHERE (`hospitals`.`id` = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `hospitals` WHERE (`hospitals`.`id` = 0) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `colleges` WHERE (`colleges`.`id` = 0) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `hospitals` WHERE (`hospitals`.`id` = 0) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `colleges` WHERE (`colleges`.`id` = 0) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `hospitals` WHERE (`hospitals`.`id` = 0) [0m
+  [4;35;1mCollege Load (0.0ms)[0m   [0mSELECT * FROM `colleges` WHERE (`colleges`.`id` = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `hospitals` WHERE (`hospitals`.`id` = 0) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `colleges` WHERE (`colleges`.`id` = 0) [0m
+Completed in 109ms (View: 78, DB: 31) | 200 OK [http://127.0.0.1/members]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2013-06-05 14:33:23) [GET]
+  [4;36;1mMember Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+  [4;35;1mMember Load (0.0ms)[0m   [0mSELECT * FROM `members` WHERE (`members`.`id` = 2) [0m
+  [4;36;1mMember Load (0.0ms)[0m   [0;1mSELECT * FROM `members` LIMIT 0, 10[0m
+Rendering template within layouts/admin
+Rendering members/index
+  [4;35;1mHospital Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `hospitals`[0m
+  [4;36;1mHospital Load (0.0ms)[0m   [0;1mSELECT * FROM `hospitals` WHERE (`hospitals`.`id` = 0) [0m
+  [4;35;1mCollege Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `colleges`[0m
+  [4;36;1mCollege Load (0.0ms)[0m   [0;1mSELECT * FROM `colleges` WHERE (`colleges`.`id` = 0) [0m
+  [4;35;1mHospital Load (0.0ms)[0m   [0mSELECT * FROM `hospitals` WHERE (`hospitals`.`id` = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `hospitals` WHERE (`hospitals`.`id` = 0) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `colleges` WHERE (`colleges`.`id` = 0) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `hospitals` WHERE (`hospitals`.`id` = 0) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `colleges` WHERE (`colleges`.`id` = 0) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `hospitals` WHERE (`hospitals`.`id` = 0) [0m
+  [4;35;1mCollege Load (0.0ms)[0m   [0mSELECT * FROM `colleges` WHERE (`colleges`.`id` = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `hospitals` WHERE (`hospitals`.`id` = 0) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `colleges` WHERE (`colleges`.`id` = 0) [0m
+Completed in 78ms (View: 62, DB: 0) | 200 OK [http://127.0.0.1/members]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#edit (for 127.0.0.1 at 2013-06-05 14:34:03) [GET]
+  Parameters: {"id"=>"7"}
+  [4;36;1mMember Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+  [4;35;1mMember Load (0.0ms)[0m   [0mSELECT * FROM `members` WHERE (`members`.`id` = 2) [0m
+  [4;36;1mMember Load (0.0ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`id` = 7) [0m
+Rendering template within layouts/admin
+Rendering members/edit
+  [4;35;1mCollege Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `colleges`[0m
+  [4;36;1mCollege Load (0.0ms)[0m   [0;1mSELECT * FROM `colleges` WHERE (`colleges`.`parent_id` = 0) [0m
+Completed in 78ms (View: 62, DB: 0) | 200 OK [http://127.0.0.1/members/7/edit]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#update (for 127.0.0.1 at 2013-06-05 14:34:06) [PUT]
+  Parameters: {"member"=>{"college_id"=>"3", "account"=>"xueyuan1", "password"=>""}, "commit"=>"更新", "id"=>"7", "authenticity_token"=>"ndmZFNWzZ3QASvoN5/rXwxbkG1i9IoQ75Z87P1fieSg="}
+  [4;35;1mMember Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+  [4;36;1mMember Load (0.0ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`id` = 2) [0m
+  [4;35;1mMember Load (0.0ms)[0m   [0mSELECT * FROM `members` WHERE (`members`.`id` = 7) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mMember Load (0.0ms)[0m   [0mSELECT `members`.id FROM `members` WHERE (`members`.`account` = BINARY 'xueyuan1' AND `members`.id <> 7) LIMIT 1[0m
+  [4;36;1mMember Update (0.0ms)[0m   [0;1mUPDATE `members` SET `college_id` = 3, `updated_at` = '2013-06-05 13:34:06' WHERE `id` = 7[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/members/7
+Completed in 47ms (DB: 16) | 302 Found [http://127.0.0.1/members/7]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#show (for 127.0.0.1 at 2013-06-05 14:34:06) [GET]
+  Parameters: {"id"=>"7"}
+  [4;36;1mMember Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+  [4;35;1mMember Load (0.0ms)[0m   [0mSELECT * FROM `members` WHERE (`members`.`id` = 2) [0m
+  [4;36;1mMember Load (0.0ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`id` = 7) [0m
+Rendering template within layouts/admin
+Rendering members/show
+  [4;35;1mCollege Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `colleges`[0m
+  [4;36;1mCollege Load (0.0ms)[0m   [0;1mSELECT * FROM `colleges` WHERE (`colleges`.`id` = 3) [0m
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/members/7]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2013-06-05 14:34:07) [GET]
+  [4;35;1mMember Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+  [4;36;1mMember Load (0.0ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`id` = 2) [0m
+  [4;35;1mMember Load (0.0ms)[0m   [0mSELECT * FROM `members` LIMIT 0, 10[0m
+Rendering template within layouts/admin
+Rendering members/index
+  [4;36;1mHospital Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `hospitals`[0m
+  [4;35;1mHospital Load (0.0ms)[0m   [0mSELECT * FROM `hospitals` WHERE (`hospitals`.`id` = 0) [0m
+  [4;36;1mCollege Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `colleges`[0m
+  [4;35;1mCollege Load (0.0ms)[0m   [0mSELECT * FROM `colleges` WHERE (`colleges`.`id` = 0) [0m
+  [4;36;1mHospital Load (0.0ms)[0m   [0;1mSELECT * FROM `hospitals` WHERE (`hospitals`.`id` = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `hospitals` WHERE (`hospitals`.`id` = 0) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `colleges` WHERE (`colleges`.`id` = 0) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `hospitals` WHERE (`hospitals`.`id` = 0) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `colleges` WHERE (`colleges`.`id` = 0) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `hospitals` WHERE (`hospitals`.`id` = 0) [0m
+  [4;36;1mCollege Load (0.0ms)[0m   [0;1mSELECT * FROM `colleges` WHERE (`colleges`.`id` = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `hospitals` WHERE (`hospitals`.`id` = 0) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `colleges` WHERE (`colleges`.`id` = 3) [0m
+Completed in 141ms (View: 109, DB: 16) | 200 OK [http://127.0.0.1/members]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#edit (for 127.0.0.1 at 2013-06-05 14:34:09) [GET]
+  Parameters: {"id"=>"7"}
+  [4;35;1mMember Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+  [4;36;1mMember Load (0.0ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`id` = 2) [0m
+  [4;35;1mMember Load (0.0ms)[0m   [0mSELECT * FROM `members` WHERE (`members`.`id` = 7) [0m
+Rendering template within layouts/admin
+Rendering members/edit
+  [4;36;1mCollege Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `colleges`[0m
+  [4;35;1mCollege Load (0.0ms)[0m   [0mSELECT * FROM `colleges` WHERE (`colleges`.`parent_id` = 0) [0m
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/members/7/edit]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#update (for 127.0.0.1 at 2013-06-05 14:34:11) [PUT]
+  Parameters: {"member"=>{"college_id"=>"6", "account"=>"xueyuan1", "password"=>""}, "commit"=>"更新", "id"=>"7", "authenticity_token"=>"ndmZFNWzZ3QASvoN5/rXwxbkG1i9IoQ75Z87P1fieSg="}
+  [4;36;1mMember Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+  [4;35;1mMember Load (0.0ms)[0m   [0mSELECT * FROM `members` WHERE (`members`.`id` = 2) [0m
+  [4;36;1mMember Load (0.0ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`id` = 7) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mMember Load (0.0ms)[0m   [0;1mSELECT `members`.id FROM `members` WHERE (`members`.`account` = BINARY 'xueyuan1' AND `members`.id <> 7) LIMIT 1[0m
+  [4;35;1mMember Update (0.0ms)[0m   [0mUPDATE `members` SET `college_id` = 6, `updated_at` = '2013-06-05 13:34:11' WHERE `id` = 7[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/members/7
+Completed in 31ms (DB: 0) | 302 Found [http://127.0.0.1/members/7]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#show (for 127.0.0.1 at 2013-06-05 14:34:12) [GET]
+  Parameters: {"id"=>"7"}
+  [4;35;1mMember Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+  [4;36;1mMember Load (0.0ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`id` = 2) [0m
+  [4;35;1mMember Load (0.0ms)[0m   [0mSELECT * FROM `members` WHERE (`members`.`id` = 7) [0m
+Rendering template within layouts/admin
+Rendering members/show
+  [4;36;1mCollege Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `colleges`[0m
+  [4;35;1mCollege Load (0.0ms)[0m   [0mSELECT * FROM `colleges` WHERE (`colleges`.`id` = 6) [0m
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/members/7]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#index (for 127.0.0.1 at 2013-06-05 14:34:13) [GET]
+  [4;36;1mMember Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+  [4;35;1mMember Load (0.0ms)[0m   [0mSELECT * FROM `members` WHERE (`members`.`id` = 2) [0m
+  [4;36;1mMember Load (0.0ms)[0m   [0;1mSELECT * FROM `members` LIMIT 0, 10[0m
+Rendering template within layouts/admin
+Rendering members/index
+  [4;35;1mHospital Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `hospitals`[0m
+  [4;36;1mHospital Load (0.0ms)[0m   [0;1mSELECT * FROM `hospitals` WHERE (`hospitals`.`id` = 0) [0m
+  [4;35;1mCollege Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `colleges`[0m
+  [4;36;1mCollege Load (0.0ms)[0m   [0;1mSELECT * FROM `colleges` WHERE (`colleges`.`id` = 0) [0m
+  [4;35;1mHospital Load (0.0ms)[0m   [0mSELECT * FROM `hospitals` WHERE (`hospitals`.`id` = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `hospitals` WHERE (`hospitals`.`id` = 0) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `colleges` WHERE (`colleges`.`id` = 0) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `hospitals` WHERE (`hospitals`.`id` = 0) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `colleges` WHERE (`colleges`.`id` = 0) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `hospitals` WHERE (`hospitals`.`id` = 0) [0m
+  [4;35;1mCollege Load (0.0ms)[0m   [0mSELECT * FROM `colleges` WHERE (`colleges`.`id` = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `hospitals` WHERE (`hospitals`.`id` = 0) [0m
+  [4;35;1mCollege Load (0.0ms)[0m   [0mSELECT * FROM `colleges` WHERE (`colleges`.`id` = 6) [0m
+Completed in 62ms (View: 47, DB: 0) | 200 OK [http://127.0.0.1/members]

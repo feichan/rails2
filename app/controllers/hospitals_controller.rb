@@ -1,4 +1,4 @@
-class HospitalsController < DeanController
+class HospitalsController < AdminController
   # GET /hospitals
   # GET /hospitals.xml
   def index
