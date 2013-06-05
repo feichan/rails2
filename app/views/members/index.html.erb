@@ -4,12 +4,16 @@
   <tr>
     <th>用户账号</th>
     <th>权限</th>
+    <th>所属</th>
   </tr>
 
 <% @members.each do |member| %>
   <tr>
     <td><%=h member.account %></td>
     <td><%=h @auth_list[member.auth] %></td>
+    <td>
+      <%= member.hospital.nil? ? member.college.nil? ? "无" : member.college.name : member.hospital.name %>
+    </td>
     <td><%= link_to '详细信息', member %></td>
     <td><%= link_to '编辑', edit_member_path(member) %></td>
     <td><%= link_to '删除', member, :confirm => '确定要删除吗？', :method => :delete %></td>
