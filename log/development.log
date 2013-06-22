@@ -28714,3 +28714,111 @@ Rendering members/index
   [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `hospitals` WHERE (`hospitals`.`id` = 0) [0m
   [4;35;1mCollege Load (0.0ms)[0m   [0mSELECT * FROM `colleges` WHERE (`colleges`.`id` = 6) [0m
 Completed in 62ms (View: 47, DB: 0) | 200 OK [http://127.0.0.1/members]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoginController#index (for 127.0.0.1 at 2013-06-22 08:11:51) [GET]
+Rendering template within layouts/application
+Rendering login/index
+Completed in 1297ms (View: 1297, DB: 0) | 200 OK [http://127.0.0.1/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoginController#action (for 127.0.0.1 at 2013-06-22 08:13:25) [POST]
+  Parameters: {"commit"=>"登陆", "authenticity_token"=>"ztH06DEkIxasIi2fY5ytZbP+NS+lw3WbCrnwe183DsQ=", "member"=>{"account"=>"shiyanzhongxin", "password"=>"111"}}
+  [4;36;1mMember Columns (46.9ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+  [4;35;1mMember Load (0.0ms)[0m   [0mSELECT * FROM `members` WHERE (`members`.`account` = 'shiyanzhongxin') LIMIT 1[0m
+Redirected to http://127.0.0.1:3000/experiment
+Completed in 62ms (DB: 47) | 302 Found [http://127.0.0.1/login/action]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ExperimentController#index (for 127.0.0.1 at 2013-06-22 08:13:25) [GET]
+  [4;36;1mMember Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+  [4;35;1mMember Load (0.0ms)[0m   [0mSELECT * FROM `members` WHERE (`members`.`id` = 5) [0m
+  [4;36;1mStudent Load (109.4ms)[0m   [0;1mSELECT * FROM `students` LIMIT 0, 10[0m
+Rendering template within layouts/experiment
+Rendering experiment/index
+  [4;35;1mCollege Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `colleges`[0m
+  [4;36;1mCollege Load (0.0ms)[0m   [0;1mSELECT * FROM `colleges` WHERE (`colleges`.`parent_id` = 0) [0m
+  [4;35;1mStudent Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `students`[0m
+  [4;36;1mCollege Load (0.0ms)[0m   [0;1mSELECT * FROM `colleges` WHERE (`colleges`.`id` = 3) [0m
+  [4;35;1mCollege Load (0.0ms)[0m   [0mSELECT * FROM `colleges` WHERE (`colleges`.`id` = 6) [0m
+Completed in 359ms (View: 203, DB: 109) | 200 OK [http://127.0.0.1/experiment]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ExperimentController#student_edit (for 127.0.0.1 at 2013-06-22 08:14:39) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mMember Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+  [4;35;1mMember Load (0.0ms)[0m   [0mSELECT * FROM `members` WHERE (`members`.`id` = 5) [0m
+  [4;36;1mStudent Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `students`[0m
+  [4;35;1mStudent Load (0.0ms)[0m   [0mSELECT * FROM `students` WHERE (`students`.`id` = 1) [0m
+Rendering template within layouts/experiment
+Rendering experiment/student_edit
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/experiment/student_edit/1]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ExperimentController#index (for 127.0.0.1 at 2013-06-22 08:16:57) [GET]
+  Parameters: {"grade"=>"", "college"=>"3"}
+  [4;36;1mMember Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+  [4;35;1mMember Load (0.0ms)[0m   [0mSELECT * FROM `members` WHERE (`members`.`id` = 5) [0m
+  [4;36;1mStudent Load (0.0ms)[0m   [0;1mSELECT * FROM `students` WHERE ( college_id = 3 ) LIMIT 0, 10[0m
+Rendering template within layouts/experiment
+Rendering experiment/index
+  [4;35;1mCollege Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `colleges`[0m
+  [4;36;1mCollege Load (0.0ms)[0m   [0;1mSELECT * FROM `colleges` WHERE (`colleges`.`parent_id` = 0) [0m
+  [4;35;1mStudent Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `students`[0m
+  [4;36;1mCollege Load (0.0ms)[0m   [0;1mSELECT * FROM `colleges` WHERE (`colleges`.`id` = 3) [0m
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/experiment?college=3&grade=]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ExperimentController#index (for 127.0.0.1 at 2013-06-22 08:25:22) [GET]
+  [4;35;1mMember Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+  [4;36;1mMember Load (0.0ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`id` = 5) [0m
+  [4;35;1mStudent Load (0.0ms)[0m   [0mSELECT * FROM `students` LIMIT 0, 10[0m
+Rendering template within layouts/experiment
+Rendering experiment/index
+  [4;36;1mCollege Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `colleges`[0m
+  [4;35;1mCollege Load (0.0ms)[0m   [0mSELECT * FROM `colleges` WHERE (`colleges`.`parent_id` = 0) [0m
+  [4;36;1mStudent Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `students`[0m
+  [4;35;1mCollege Load (0.0ms)[0m   [0mSELECT * FROM `colleges` WHERE (`colleges`.`id` = 3) [0m
+  [4;36;1mCollege Load (0.0ms)[0m   [0;1mSELECT * FROM `colleges` WHERE (`colleges`.`id` = 6) [0m
+Completed in 109ms (View: 78, DB: 0) | 200 OK [http://127.0.0.1/experiment]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ExperimentController#index (for 127.0.0.1 at 2013-06-22 08:25:27) [GET]
+  Parameters: {"grade"=>"", "college"=>"3"}
+  [4;35;1mMember Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+  [4;36;1mMember Load (0.0ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`id` = 5) [0m
+  [4;35;1mStudent Load (0.0ms)[0m   [0mSELECT * FROM `students` WHERE ( college_id = 3 ) LIMIT 0, 10[0m
+Rendering template within layouts/experiment
+Rendering experiment/index
+  [4;36;1mCollege Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `colleges`[0m
+  [4;35;1mCollege Load (0.0ms)[0m   [0mSELECT * FROM `colleges` WHERE (`colleges`.`parent_id` = 0) [0m
+  [4;36;1mStudent Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `students`[0m
+  [4;35;1mCollege Load (0.0ms)[0m   [0mSELECT * FROM `colleges` WHERE (`colleges`.`id` = 3) [0m
+Completed in 31ms (View: 31, DB: 0) | 200 OK [http://127.0.0.1/experiment?college=3&grade=]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ExperimentController#student_edit (for 127.0.0.1 at 2013-06-22 08:25:30) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mMember Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+  [4;35;1mMember Load (0.0ms)[0m   [0mSELECT * FROM `members` WHERE (`members`.`id` = 5) [0m
+  [4;36;1mStudent Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `students`[0m
+  [4;35;1mStudent Load (0.0ms)[0m   [0mSELECT * FROM `students` WHERE (`students`.`id` = 1) [0m
+Rendering template within layouts/experiment
+Rendering experiment/student_edit
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/experiment/student_edit/1]
