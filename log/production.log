@@ -5693,3 +5693,760 @@ Processing LoginController#index (for 66.249.73.146 at 2013-06-05 12:44:15) [GET
 Rendering template within layouts/application
 Rendering login/index
 Completed in 16ms (View: 16, DB: 0) | 200 OK [http://www.lixuebo.com/]
+
+
+Processing LoginController#index (for 117.136.9.150 at 2013-06-05 21:47:00) [GET]
+Rendering template within layouts/application
+Rendering login/index
+Completed in 1390ms (View: 1390, DB: 0) | 200 OK [http://www.lixuebo.com/]
+
+
+Processing LoginController#action (for 117.136.9.150 at 2013-06-05 21:47:14) [POST]
+  Parameters: {"commit"=>"登陆", "authenticity_token"=>"oX8GOW9v/oP5CStJEvs1URgBo0OFc7lAUNCbSkQ1VFQ=", "member"=>{"account"=>"admin", "password"=>"admin"}}
+Redirected to http://www.lixuebo.com/admin/index
+Completed in 16ms (DB: 16) | 302 Found [http://www.lixuebo.com/login/action]
+
+
+Processing AdminController#index (for 117.136.9.150 at 2013-06-05 21:47:15) [GET]
+Rendering template within layouts/admin
+Rendering admin/index
+Completed in 15ms (View: 15, DB: 0) | 200 OK [http://www.lixuebo.com/admin/index]
+
+
+Processing HospitalsController#index (for 117.136.9.150 at 2013-06-05 21:47:21) [GET]
+Rendering template within layouts/admin
+Rendering hospitals/index
+Completed in 47ms (View: 47, DB: 0) | 200 OK [http://www.lixuebo.com/hospitals]
+
+
+Processing AdminController#index (for 117.136.9.150 at 2013-06-05 21:47:28) [GET]
+Rendering template within layouts/admin
+Rendering admin/index
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://www.lixuebo.com/admin/index]
+
+
+Processing MembersController#index (for 117.136.9.150 at 2013-06-05 21:47:38) [GET]
+Rendering template within layouts/admin
+Rendering members/index
+Completed in 31ms (View: 31, DB: 0) | 200 OK [http://www.lixuebo.com/members]
+
+
+Processing MembersController#edit (for 117.136.9.150 at 2013-06-05 21:47:46) [GET]
+  Parameters: {"id"=>"10"}
+Rendering template within layouts/admin
+Rendering members/edit
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://www.lixuebo.com/members/10/edit]
+
+
+Processing MembersController#index (for 117.136.9.150 at 2013-06-05 21:47:50) [GET]
+Rendering template within layouts/admin
+Rendering members/index
+Completed in 31ms (View: 31, DB: 0) | 200 OK [http://www.lixuebo.com/members]
+
+
+Processing LoginController#index (for 182.236.160.211 at 2013-06-06 04:24:54) [GET]
+Rendering template within layouts/application
+Rendering login/index
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://www.lixuebo.com/]
+
+
+Processing LoginController#index (for 210.44.163.58 at 2013-06-06 16:06:25) [GET]
+Rendering template within layouts/application
+Rendering login/index
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://www.lixuebo.com/]
+
+
+Processing LoginController#action (for 210.44.163.58 at 2013-06-06 16:06:53) [POST]
+  Parameters: {"commit"=>"登陆", "authenticity_token"=>"jOhlwZ1grcb6EVmgq1IK3wln2GAZJcqqunyGrM6YFf4=", "member"=>{"account"=>"admin", "password"=>"admin"}}
+Redirected to http://www.lixuebo.com/admin/index
+Completed in 0ms (DB: 0) | 302 Found [http://www.lixuebo.com/login/action]
+
+
+Processing AdminController#index (for 210.44.163.58 at 2013-06-06 16:06:53) [GET]
+Rendering template within layouts/admin
+Rendering admin/index
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://www.lixuebo.com/admin/index]
+
+
+Processing HospitalsController#index (for 210.44.163.58 at 2013-06-06 16:07:00) [GET]
+Rendering template within layouts/admin
+Rendering hospitals/index
+Completed in 47ms (View: 47, DB: 0) | 200 OK [http://www.lixuebo.com/hospitals]
+
+
+Processing LoginController#logout (for 210.44.163.58 at 2013-06-06 16:08:19) [GET]
+Redirected to http://www.lixuebo.com/
+Completed in 0ms (DB: 0) | 302 Found [http://www.lixuebo.com/login/logout]
+
+
+Processing LoginController#index (for 210.44.163.58 at 2013-06-06 16:08:19) [GET]
+Rendering template within layouts/application
+Rendering login/index
+Completed in 15ms (View: 15, DB: 0) | 200 OK [http://www.lixuebo.com/]
+
+
+Processing LoginController#action (for 210.44.163.58 at 2013-06-06 16:08:22) [POST]
+  Parameters: {"commit"=>"登陆", "authenticity_token"=>"AIbAHYST2WUje6VSjHoyIEUU8gkeO18bCpXSN6BYpDQ=", "member"=>{"account"=>"admin", "password"=>"admin"}}
+Redirected to http://www.lixuebo.com/admin/index
+Completed in 0ms (DB: 0) | 302 Found [http://www.lixuebo.com/login/action]
+
+
+Processing AdminController#index (for 210.44.163.58 at 2013-06-06 16:08:22) [GET]
+Rendering template within layouts/admin
+Rendering admin/index
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://www.lixuebo.com/admin/index]
+
+
+Processing MembersController#index (for 210.44.163.58 at 2013-06-06 16:08:24) [GET]
+Rendering template within layouts/admin
+Rendering members/index
+Completed in 94ms (View: 94, DB: 0) | 200 OK [http://www.lixuebo.com/members]
+
+
+Processing MembersController#new (for 210.44.163.58 at 2013-06-06 16:08:30) [GET]
+Rendering template within layouts/admin
+Rendering members/new
+Completed in 15ms (View: 15, DB: 0) | 200 OK [http://www.lixuebo.com/members/new]
+
+
+Processing MembersController#index (for 210.44.163.58 at 2013-06-06 16:08:42) [GET]
+Rendering template within layouts/admin
+Rendering members/index
+Completed in 31ms (View: 31, DB: 0) | 200 OK [http://www.lixuebo.com/members]
+
+
+Processing AdminController#index (for 210.44.163.58 at 2013-06-06 16:08:54) [GET]
+Rendering template within layouts/admin
+Rendering admin/index
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://www.lixuebo.com/admin/index]
+
+
+Processing MembersController#index (for 210.44.163.58 at 2013-06-06 16:08:55) [GET]
+Rendering template within layouts/admin
+Rendering members/index
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://www.lixuebo.com/members]
+
+
+Processing HospitalsController#index (for 210.44.163.58 at 2013-06-06 16:08:58) [GET]
+Rendering template within layouts/admin
+Rendering hospitals/index
+Completed in 32ms (View: 32, DB: 0) | 200 OK [http://www.lixuebo.com/hospitals]
+
+
+Processing StudentsController#index (for 210.44.163.58 at 2013-06-06 16:09:01) [GET]
+Rendering template within layouts/admin
+Rendering students/index
+Completed in 16ms (View: 0, DB: 16) | 200 OK [http://www.lixuebo.com/students]
+
+
+Processing CollegesController#index (for 210.44.163.58 at 2013-06-06 16:09:05) [GET]
+Rendering template within layouts/admin
+Rendering colleges/index
+Completed in 47ms (View: 47, DB: 0) | 200 OK [http://www.lixuebo.com/colleges]
+
+
+Processing CollegesController#new (for 210.44.163.58 at 2013-06-06 16:09:08) [GET]
+Rendering template within layouts/admin
+Rendering colleges/new
+Completed in 15ms (View: 15, DB: 0) | 200 OK [http://www.lixuebo.com/colleges/new]
+
+
+Processing CollegesController#index (for 210.44.163.58 at 2013-06-06 16:09:11) [GET]
+Rendering template within layouts/admin
+Rendering colleges/index
+Completed in 47ms (View: 47, DB: 0) | 200 OK [http://www.lixuebo.com/colleges]
+
+
+Processing LoginController#logout (for 210.44.163.58 at 2013-06-06 16:09:15) [GET]
+Redirected to http://www.lixuebo.com/
+Completed in 0ms (DB: 0) | 302 Found [http://www.lixuebo.com/login/logout]
+
+
+Processing LoginController#index (for 210.44.163.58 at 2013-06-06 16:09:15) [GET]
+Rendering template within layouts/application
+Rendering login/index
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://www.lixuebo.com/]
+
+
+Processing LoginController#action (for 210.44.163.58 at 2013-06-06 16:09:22) [POST]
+  Parameters: {"commit"=>"登陆", "authenticity_token"=>"LQVyVTzu9Or/AK+tiZOqizqhCpJby++4Jye3EMcd5XQ=", "member"=>{"account"=>"shiyanzhongxin", "password"=>"shiyanzhongxin"}}
+Redirected to http://www.lixuebo.com/
+Completed in 0ms (DB: 0) | 302 Found [http://www.lixuebo.com/login/action]
+
+
+Processing LoginController#index (for 210.44.163.58 at 2013-06-06 16:09:22) [GET]
+Rendering template within layouts/application
+Rendering login/index
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://www.lixuebo.com/]
+
+
+Processing LoginController#action (for 210.44.163.58 at 2013-06-06 16:09:33) [POST]
+  Parameters: {"commit"=>"登陆", "authenticity_token"=>"LQVyVTzu9Or/AK+tiZOqizqhCpJby++4Jye3EMcd5XQ=", "member"=>{"account"=>"shiyazhongxin1", "password"=>"shiyanzhongxin1"}}
+Redirected to http://www.lixuebo.com/
+Completed in 0ms (DB: 0) | 302 Found [http://www.lixuebo.com/login/action]
+
+
+Processing LoginController#index (for 210.44.163.58 at 2013-06-06 16:09:33) [GET]
+Rendering template within layouts/application
+Rendering login/index
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://www.lixuebo.com/]
+
+
+Processing LoginController#action (for 210.44.163.58 at 2013-06-06 16:09:37) [POST]
+  Parameters: {"commit"=>"登陆", "authenticity_token"=>"LQVyVTzu9Or/AK+tiZOqizqhCpJby++4Jye3EMcd5XQ=", "member"=>{"account"=>"admin", "password"=>"admin"}}
+Redirected to http://www.lixuebo.com/admin/index
+Completed in 0ms (DB: 0) | 302 Found [http://www.lixuebo.com/login/action]
+
+
+Processing AdminController#index (for 210.44.163.58 at 2013-06-06 16:09:37) [GET]
+Rendering template within layouts/admin
+Rendering admin/index
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://www.lixuebo.com/admin/index]
+
+
+Processing MembersController#index (for 210.44.163.58 at 2013-06-06 16:09:39) [GET]
+Rendering template within layouts/admin
+Rendering members/index
+Completed in 31ms (View: 31, DB: 0) | 200 OK [http://www.lixuebo.com/members]
+
+
+Processing MembersController#edit (for 210.44.163.58 at 2013-06-06 16:09:43) [GET]
+  Parameters: {"id"=>"11"}
+Rendering template within layouts/admin
+Rendering members/edit
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://www.lixuebo.com/members/11/edit]
+
+
+Processing MembersController#update (for 210.44.163.58 at 2013-06-06 16:09:52) [PUT]
+  Parameters: {"commit"=>"更新", "authenticity_token"=>"LQVyVTzu9Or/AK+tiZOqizqhCpJby++4Jye3EMcd5XQ=", "member"=>{"auth"=>"3", "account"=>"shiyanzhongxin1", "college_id"=>"0", "password"=>"shiyanzhongxin1"}, "id"=>"11"}
+Redirected to http://www.lixuebo.com/members/11
+Completed in 0ms (DB: 0) | 302 Found [http://www.lixuebo.com/members/11]
+
+
+Processing MembersController#show (for 210.44.163.58 at 2013-06-06 16:09:52) [GET]
+  Parameters: {"id"=>"11"}
+Rendering template within layouts/admin
+Rendering members/show
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://www.lixuebo.com/members/11]
+
+
+Processing MembersController#index (for 210.44.163.58 at 2013-06-06 16:09:53) [GET]
+Rendering template within layouts/admin
+Rendering members/index
+Completed in 31ms (View: 31, DB: 0) | 200 OK [http://www.lixuebo.com/members]
+
+
+Processing LoginController#logout (for 210.44.163.58 at 2013-06-06 16:09:54) [GET]
+Redirected to http://www.lixuebo.com/
+Completed in 0ms (DB: 0) | 302 Found [http://www.lixuebo.com/login/logout]
+
+
+Processing LoginController#index (for 210.44.163.58 at 2013-06-06 16:09:54) [GET]
+Rendering template within layouts/application
+Rendering login/index
+Completed in 15ms (View: 0, DB: 0) | 200 OK [http://www.lixuebo.com/]
+
+
+Processing LoginController#action (for 210.44.163.58 at 2013-06-06 16:10:01) [POST]
+  Parameters: {"commit"=>"登陆", "authenticity_token"=>"FOGmAK9hctWG7D8tquWAJPndl70X58FVhRDuFuO1onI=", "member"=>{"account"=>"shiyanzhongxin1", "password"=>"shiyanzhongxin1"}}
+Redirected to http://www.lixuebo.com/experiment
+Completed in 0ms (DB: 0) | 302 Found [http://www.lixuebo.com/login/action]
+
+
+Processing ExperimentController#index (for 210.44.163.58 at 2013-06-06 16:10:01) [GET]
+Rendering template within layouts/experiment
+Rendering experiment/index
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://www.lixuebo.com/experiment]
+
+
+Processing ExperimentController#student_edit (for 210.44.163.58 at 2013-06-06 16:10:09) [GET]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/experiment
+Rendering experiment/student_edit
+Completed in 15ms (View: 15, DB: 0) | 200 OK [http://www.lixuebo.com/experiment/student_edit/1]
+
+
+Processing ExperimentController#confirm_add (for 210.44.163.58 at 2013-06-06 16:10:12) [PUT]
+  Parameters: {"commit"=>"添加", "authenticity_token"=>"FOGmAK9hctWG7D8tquWAJPndl70X58FVhRDuFuO1onI=", "id"=>"1", "student"=>{"internship_grade"=>"89"}}
+Redirected to http://www.lixuebo.com/experiment
+Completed in 31ms (DB: 15) | 302 Found [http://www.lixuebo.com/experiment/confirm_add]
+
+
+Processing ExperimentController#index (for 210.44.163.58 at 2013-06-06 16:10:12) [GET]
+Rendering template within layouts/experiment
+Rendering experiment/index
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://www.lixuebo.com/experiment]
+
+
+Processing ExperimentController#student_detials (for 210.44.163.58 at 2013-06-06 16:11:00) [GET]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/experiment
+Rendering experiment/student_detials
+Completed in 109ms (View: 109, DB: 0) | 200 OK [http://www.lixuebo.com/experiment/student_detials/1]
+
+
+Processing ExperimentController#student_edit (for 210.44.163.58 at 2013-06-06 16:11:07) [GET]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/experiment
+Rendering experiment/student_edit
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://www.lixuebo.com/experiment/student_edit/1]
+
+
+Processing LoginController#logout (for 210.44.163.58 at 2013-06-06 16:11:15) [GET]
+Redirected to http://www.lixuebo.com/
+Completed in 0ms (DB: 0) | 302 Found [http://www.lixuebo.com/login/logout]
+
+
+Processing LoginController#index (for 210.44.163.58 at 2013-06-06 16:11:15) [GET]
+Rendering template within layouts/application
+Rendering login/index
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://www.lixuebo.com/]
+
+
+Processing LoginController#action (for 210.44.163.58 at 2013-06-06 16:11:19) [POST]
+  Parameters: {"commit"=>"登陆", "authenticity_token"=>"bJnmaP83f3Eikm2l1o9ma4aMWUBFY4bUFREJekmYHgo=", "member"=>{"account"=>"cuilirui", "password"=>"cuilirui"}}
+Redirected to http://www.lixuebo.com/dean
+Completed in 0ms (DB: 0) | 302 Found [http://www.lixuebo.com/login/action]
+
+
+Processing DeanController#index (for 210.44.163.58 at 2013-06-06 16:11:19) [GET]
+Rendering template within layouts/dean
+Rendering dean/index
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://www.lixuebo.com/dean]
+
+
+Processing DeanController#college_list (for 210.44.163.58 at 2013-06-06 16:11:21) [GET]
+Rendering template within layouts/dean
+Rendering dean/college_list
+Completed in 15ms (View: 15, DB: 0) | 200 OK [http://www.lixuebo.com/dean/college_list]
+
+
+Processing DeanController#hospital_assign (for 210.44.163.58 at 2013-06-06 16:11:25) [GET]
+  Parameters: {"id"=>"5"}
+Rendering template within layouts/dean
+Rendering dean/hospital_assign
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://www.lixuebo.com/dean/hospital_assign/5]
+
+
+Processing DeanController#confirm_assin (for 210.44.163.58 at 2013-06-06 16:11:30) [POST]
+  Parameters: {"hostpital"=>["5", "7", "8"], "commit"=>"确认分配", "authenticity_token"=>"bJnmaP83f3Eikm2l1o9ma4aMWUBFY4bUFREJekmYHgo=", "college_id"=>"5"}
+Redirected to http://www.lixuebo.com/dean/college_list
+Completed in 125ms (DB: 125) | 302 Found [http://www.lixuebo.com/dean/confirm_assin]
+
+
+Processing DeanController#college_list (for 210.44.163.58 at 2013-06-06 16:11:30) [GET]
+Rendering template within layouts/dean
+Rendering dean/college_list
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://www.lixuebo.com/dean/college_list]
+
+
+Processing DeanController#index (for 210.44.163.58 at 2013-06-06 16:12:34) [GET]
+Rendering template within layouts/dean
+Rendering dean/index
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://www.lixuebo.com/dean]
+
+
+Processing DeanController#student_list (for 210.44.163.58 at 2013-06-06 16:12:36) [GET]
+Rendering template within layouts/dean
+Rendering dean/student_list
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://www.lixuebo.com/dean/student_list]
+
+
+Processing DeanController#student_list (for 210.44.163.58 at 2013-06-06 16:14:15) [GET]
+  Parameters: {"grade"=>"1981", "hospital"=>"6", "college"=>"9"}
+Rendering template within layouts/dean
+Rendering dean/student_list
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://www.lixuebo.com/dean/student_list?college=9&grade=1981&hospital=6]
+
+
+Processing DeanController#student_list (for 210.44.163.58 at 2013-06-06 16:14:21) [GET]
+  Parameters: {"grade"=>"", "hospital"=>"", "college"=>""}
+Rendering template within layouts/dean
+Rendering dean/student_list
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://www.lixuebo.com/dean/student_list?college=&grade=&hospital=]
+
+
+Processing DeanController#student_detail (for 210.44.163.58 at 2013-06-06 16:14:45) [GET]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/dean
+Rendering dean/student_detail
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://www.lixuebo.com/dean/student_detail/1]
+
+
+Processing LoginController#logout (for 210.44.163.58 at 2013-06-06 16:26:16) [GET]
+Redirected to http://www.lixuebo.com/
+Completed in 0ms (DB: 0) | 302 Found [http://www.lixuebo.com/login/logout]
+
+
+Processing LoginController#index (for 210.44.163.58 at 2013-06-06 16:26:16) [GET]
+Rendering template within layouts/application
+Rendering login/index
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://www.lixuebo.com/]
+
+
+Processing LoginController#action (for 210.44.163.58 at 2013-06-06 16:26:26) [POST]
+  Parameters: {"commit"=>"登陆", "authenticity_token"=>"beITgI4/ehNxbPYqadXoQ11CMtjVARXz8+auHe5tfRg=", "member"=>{"account"=>"jichuyixueyuan1", "password"=>"JICHUYIXUEYUAN1"}}
+Redirected to http://www.lixuebo.com/
+Completed in 0ms (DB: 0) | 302 Found [http://www.lixuebo.com/login/action]
+
+
+Processing LoginController#index (for 210.44.163.58 at 2013-06-06 16:26:26) [GET]
+Rendering template within layouts/application
+Rendering login/index
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://www.lixuebo.com/]
+
+
+Processing LoginController#action (for 210.44.163.58 at 2013-06-06 16:26:42) [POST]
+  Parameters: {"commit"=>"登陆", "authenticity_token"=>"beITgI4/ehNxbPYqadXoQ11CMtjVARXz8+auHe5tfRg=", "member"=>{"account"=>"jichuyixuyuan", "password"=>"jichuyixueyuan"}}
+Redirected to http://www.lixuebo.com/
+Completed in 0ms (DB: 0) | 302 Found [http://www.lixuebo.com/login/action]
+
+
+Processing LoginController#index (for 210.44.163.58 at 2013-06-06 16:26:42) [GET]
+Rendering template within layouts/application
+Rendering login/index
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://www.lixuebo.com/]
+
+
+Processing LoginController#action (for 210.44.163.58 at 2013-06-06 16:26:52) [POST]
+  Parameters: {"commit"=>"登陆", "authenticity_token"=>"beITgI4/ehNxbPYqadXoQ11CMtjVARXz8+auHe5tfRg=", "member"=>{"account"=>"admin", "password"=>"admin"}}
+Redirected to http://www.lixuebo.com/admin/index
+Completed in 0ms (DB: 0) | 302 Found [http://www.lixuebo.com/login/action]
+
+
+Processing AdminController#index (for 210.44.163.58 at 2013-06-06 16:26:52) [GET]
+Rendering template within layouts/admin
+Rendering admin/index
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://www.lixuebo.com/admin/index]
+
+
+Processing MembersController#index (for 210.44.163.58 at 2013-06-06 16:26:54) [GET]
+Rendering template within layouts/admin
+Rendering members/index
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://www.lixuebo.com/members]
+
+
+Processing LoginController#logout (for 210.44.163.58 at 2013-06-06 16:26:59) [GET]
+Redirected to http://www.lixuebo.com/
+Completed in 0ms (DB: 0) | 302 Found [http://www.lixuebo.com/login/logout]
+
+
+Processing LoginController#index (for 210.44.163.58 at 2013-06-06 16:26:59) [GET]
+Rendering template within layouts/application
+Rendering login/index
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://www.lixuebo.com/]
+
+
+Processing LoginController#action (for 210.44.163.58 at 2013-06-06 16:27:01) [POST]
+  Parameters: {"commit"=>"登陆", "authenticity_token"=>"jdrAD3zgo513kV72QpDjJAbooTGJ2s2Agw1D425lnUs=", "member"=>{"account"=>"jichuyixueyuan1", "password"=>"jichuyixueyuan1"}}
+Redirected to http://www.lixuebo.com/college
+Completed in 0ms (DB: 0) | 302 Found [http://www.lixuebo.com/login/action]
+
+
+Processing CollegeController#index (for 210.44.163.58 at 2013-06-06 16:27:01) [GET]
+Rendering template within layouts/college
+Rendering college/index
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://www.lixuebo.com/college]
+
+
+Processing CollegeController#assign (for 210.44.163.58 at 2013-06-06 16:27:05) [GET]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/college
+Rendering college/assign
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://www.lixuebo.com/college/assign/1]
+
+
+Processing CollegeController#confirm_assign (for 210.44.163.58 at 2013-06-06 16:27:10) [PUT]
+  Parameters: {"commit"=>"添加", "authenticity_token"=>"jdrAD3zgo513kV72QpDjJAbooTGJ2s2Agw1D425lnUs=", "id"=>"1", "student"=>{"hospital_id"=>"7"}}
+Redirected to http://www.lixuebo.com/college
+Completed in 32ms (DB: 32) | 302 Found [http://www.lixuebo.com/college/confirm_assign]
+
+
+Processing CollegeController#index (for 210.44.163.58 at 2013-06-06 16:27:10) [GET]
+Rendering template within layouts/college
+Rendering college/index
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://www.lixuebo.com/college]
+
+
+Processing CollegeController#assign (for 210.44.163.58 at 2013-06-06 16:27:27) [GET]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/college
+Rendering college/assign
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://www.lixuebo.com/college/assign/1]
+
+
+Processing CollegeController#index (for 210.44.163.58 at 2013-06-06 16:30:01) [GET]
+Rendering template within layouts/college
+Rendering college/index
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://www.lixuebo.com/college]
+
+
+Processing CollegeController#index (for 210.44.163.58 at 2013-06-06 16:30:23) [GET]
+Rendering template within layouts/college
+Rendering college/index
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://www.lixuebo.com/college]
+
+
+Processing LoginController#logout (for 210.44.163.58 at 2013-06-06 16:30:25) [GET]
+Redirected to http://www.lixuebo.com/
+Completed in 0ms (DB: 0) | 302 Found [http://www.lixuebo.com/login/logout]
+
+
+Processing LoginController#index (for 210.44.163.58 at 2013-06-06 16:30:25) [GET]
+Rendering template within layouts/application
+Rendering login/index
+Completed in 15ms (View: 15, DB: 0) | 200 OK [http://www.lixuebo.com/]
+
+
+Processing LoginController#action (for 210.44.163.58 at 2013-06-06 16:30:30) [POST]
+  Parameters: {"commit"=>"登陆", "authenticity_token"=>"RuGeTX4Tml+JocamtN8I8+0xZbLHjr1zq6vusKDtDUw=", "member"=>{"account"=>"admin", "password"=>"admin"}}
+Redirected to http://www.lixuebo.com/admin/index
+Completed in 0ms (DB: 0) | 302 Found [http://www.lixuebo.com/login/action]
+
+
+Processing AdminController#index (for 210.44.163.58 at 2013-06-06 16:30:30) [GET]
+Rendering template within layouts/admin
+Rendering admin/index
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://www.lixuebo.com/admin/index]
+
+
+Processing HospitalsController#index (for 210.44.163.58 at 2013-06-06 16:30:31) [GET]
+Rendering template within layouts/admin
+Rendering hospitals/index
+Completed in 47ms (View: 47, DB: 0) | 200 OK [http://www.lixuebo.com/hospitals]
+
+
+Processing MembersController#index (for 210.44.163.58 at 2013-06-06 16:30:34) [GET]
+Rendering template within layouts/admin
+Rendering members/index
+Completed in 31ms (View: 31, DB: 0) | 200 OK [http://www.lixuebo.com/members]
+
+
+Processing LoginController#logout (for 210.44.163.58 at 2013-06-06 16:30:39) [GET]
+Redirected to http://www.lixuebo.com/
+Completed in 0ms (DB: 0) | 302 Found [http://www.lixuebo.com/login/logout]
+
+
+Processing LoginController#index (for 210.44.163.58 at 2013-06-06 16:30:39) [GET]
+Rendering template within layouts/application
+Rendering login/index
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://www.lixuebo.com/]
+
+
+Processing LoginController#action (for 210.44.163.58 at 2013-06-06 16:30:46) [POST]
+  Parameters: {"commit"=>"登陆", "authenticity_token"=>"97pVctdmDaH3sRlRsDiR8K0CvbqiqRp8mtkdRtc29N8=", "member"=>{"account"=>"qiluyiyuan", "password"=>"qiluyiyua"}}
+Redirected to http://www.lixuebo.com/
+Completed in 0ms (DB: 0) | 302 Found [http://www.lixuebo.com/login/action]
+
+
+Processing LoginController#index (for 210.44.163.58 at 2013-06-06 16:30:46) [GET]
+Rendering template within layouts/application
+Rendering login/index
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://www.lixuebo.com/]
+
+
+Processing LoginController#action (for 210.44.163.58 at 2013-06-06 16:30:55) [POST]
+  Parameters: {"commit"=>"登陆", "authenticity_token"=>"97pVctdmDaH3sRlRsDiR8K0CvbqiqRp8mtkdRtc29N8=", "member"=>{"account"=>"qiluyiyuan", "password"=>"qiluyiyuan"}}
+Redirected to http://www.lixuebo.com/hospital
+Completed in 0ms (DB: 0) | 302 Found [http://www.lixuebo.com/login/action]
+
+
+Processing HospitalController#index (for 210.44.163.58 at 2013-06-06 16:30:55) [GET]
+Rendering template within layouts/hospital
+Rendering hospital/index
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://www.lixuebo.com/hospital]
+
+
+Processing LoginController#index (for 50.16.46.1 at 2013-06-06 20:42:05) [GET]
+Rendering template within layouts/application
+Rendering login/index
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://www.lixuebo.com/]
+
+
+Processing LoginController#index (for 222.175.150.210 at 2013-06-06 21:31:50) [GET]
+Rendering template within layouts/application
+Rendering login/index
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://www.lixuebo.com/]
+
+
+Processing LoginController#index (for 123.232.216.119 at 2013-06-06 22:14:59) [GET]
+Rendering template within layouts/application
+Rendering login/index
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://www.lixuebo.com/]
+
+
+Processing LoginController#action (for 123.232.216.119 at 2013-06-06 22:15:23) [POST]
+  Parameters: {"commit"=>"登陆", "authenticity_token"=>"bKXi/1zPTCpTVB4ni/AZGeDCCbC6GDJh+XfZ253djuw=", "member"=>{"account"=>"", "password"=>""}}
+Redirected to http://www.lixuebo.com/
+Completed in 0ms (DB: 0) | 302 Found [http://www.lixuebo.com/login/action]
+
+
+Processing LoginController#action (for 123.232.216.119 at 2013-06-06 22:15:23) [POST]
+  Parameters: {"commit"=>"登陆", "authenticity_token"=>"bKXi/1zPTCpTVB4ni/AZGeDCCbC6GDJh+XfZ253djuw=", "member"=>{"account"=>"", "password"=>""}}
+Redirected to http://www.lixuebo.com/
+Completed in 0ms (DB: 0) | 302 Found [http://www.lixuebo.com/login/action]
+
+
+Processing LoginController#index (for 123.232.216.119 at 2013-06-06 22:15:24) [GET]
+Rendering template within layouts/application
+Rendering login/index
+Completed in 15ms (View: 15, DB: 0) | 200 OK [http://www.lixuebo.com/]
+
+
+Processing LoginController#index (for 101.226.33.223 at 2013-06-06 22:44:59) [GET]
+Rendering template within layouts/application
+Rendering login/index
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://www.lixuebo.com/]
+
+
+Processing LoginController#index (for 220.181.127.233 at 2013-06-07 00:36:32) [GET]
+Rendering template within layouts/application
+Rendering login/index
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://www.lixuebo.com/]
+
+
+Processing LoginController#index (for 69.58.178.59 at 2013-06-07 11:06:36) [GET]
+Rendering template within layouts/application
+Rendering login/index
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://www.lixuebo.com/]
+
+
+Processing LoginController#index (for 69.58.178.59 at 2013-06-07 11:06:38) [GET]
+Rendering template within layouts/application
+Rendering login/index
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://www.lixuebo.com/]
+
+
+Processing LoginController#index (for 54.242.73.139 at 2013-06-08 10:12:49) [GET]
+Rendering template within layouts/application
+Rendering login/index
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://www.lixuebo.com/]
+
+
+Processing LoginController#index (for 127.0.0.1 at 2013-06-16 10:44:02) [GET]
+Rendering template within layouts/application
+Rendering login/index
+Completed in 1422ms (View: 1422, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing LoginController#action (for 127.0.0.1 at 2013-06-16 10:44:13) [POST]
+  Parameters: {"commit"=>"登陆", "authenticity_token"=>"uvMyu0Xz/fUfK1pnuuBBTg/e0DPJS9DnlWGDog523nU=", "member"=>{"account"=>"admin", "password"=>"admin"}}
+Redirected to http://localhost:3006/admin/index
+Completed in 47ms (DB: 47) | 302 Found [http://localhost/login/action]
+
+
+Processing AdminController#index (for 127.0.0.1 at 2013-06-16 10:44:13) [GET]
+Rendering template within layouts/admin
+Rendering admin/index
+Completed in 16ms (View: 0, DB: 16) | 200 OK [http://localhost/admin/index]
+
+
+Processing MembersController#index (for 127.0.0.1 at 2013-06-16 10:45:00) [GET]
+Rendering template within layouts/admin
+Rendering members/index
+Completed in 94ms (View: 32, DB: 46) | 200 OK [http://localhost/members]
+
+
+Processing LoginController#logout (for 127.0.0.1 at 2013-06-16 10:45:04) [GET]
+Redirected to http://localhost:3006/
+Completed in 0ms (DB: 0) | 302 Found [http://localhost/login/logout]
+
+
+Processing LoginController#index (for 127.0.0.1 at 2013-06-16 10:45:04) [GET]
+Rendering template within layouts/application
+Rendering login/index
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing LoginController#action (for 127.0.0.1 at 2013-06-16 10:45:10) [POST]
+  Parameters: {"commit"=>"登陆", "authenticity_token"=>"rMQYeYdHnoX+NRsW7dflVWPN7Lc6ppB70/XFR7aGQH4=", "member"=>{"account"=>"shiyanzhongxin1", "password"=>"shiyanzhongxin1"}}
+Redirected to http://localhost:3006/experiment
+Completed in 0ms (DB: 0) | 302 Found [http://localhost/login/action]
+
+
+Processing ExperimentController#index (for 127.0.0.1 at 2013-06-16 10:45:10) [GET]
+Rendering template within layouts/experiment
+Rendering experiment/index
+Completed in 62ms (View: 15, DB: 32) | 200 OK [http://localhost/experiment]
+
+
+Processing LoginController#logout (for 127.0.0.1 at 2013-06-16 10:46:15) [GET]
+Redirected to http://localhost:3006/
+Completed in 0ms (DB: 0) | 302 Found [http://localhost/login/logout]
+
+
+Processing LoginController#index (for 127.0.0.1 at 2013-06-16 10:46:15) [GET]
+Rendering template within layouts/application
+Rendering login/index
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing LoginController#action (for 127.0.0.1 at 2013-06-16 10:48:22) [POST]
+  Parameters: {"commit"=>"登陆", "authenticity_token"=>"TeTutOwJQ6CZs/wQ1HDF6h7bVG4rS/dolk/B8GnVeEw=", "member"=>{"account"=>"cuilirui", "password"=>"cuilirui"}}
+Redirected to http://localhost:3006/dean
+Completed in 0ms (DB: 0) | 302 Found [http://localhost/login/action]
+
+
+Processing DeanController#index (for 127.0.0.1 at 2013-06-16 10:48:22) [GET]
+Rendering template within layouts/dean
+Rendering dean/index
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://localhost/dean]
+
+
+Processing DeanController#college_list (for 127.0.0.1 at 2013-06-16 10:48:25) [GET]
+Rendering template within layouts/dean
+Rendering dean/college_list
+Completed in 32ms (View: 16, DB: 16) | 200 OK [http://localhost/dean/college_list]
+
+
+Processing DeanController#hospital_assign (for 127.0.0.1 at 2013-06-16 10:48:38) [GET]
+  Parameters: {"id"=>"5"}
+Rendering template within layouts/dean
+Rendering dean/hospital_assign
+Completed in 16ms (View: 0, DB: 16) | 200 OK [http://localhost/dean/hospital_assign/5]
+
+
+Processing DeanController#confirm_assin (for 127.0.0.1 at 2013-06-16 10:48:40) [POST]
+  Parameters: {"hostpital"=>["5", "7", "8"], "commit"=>"确认分配", "authenticity_token"=>"TeTutOwJQ6CZs/wQ1HDF6h7bVG4rS/dolk/B8GnVeEw=", "college_id"=>"5"}
+Redirected to http://localhost:3006/dean/college_list
+Completed in 78ms (DB: 62) | 302 Found [http://localhost/dean/confirm_assin]
+
+
+Processing DeanController#college_list (for 127.0.0.1 at 2013-06-16 10:48:40) [GET]
+Rendering template within layouts/dean
+Rendering dean/college_list
+Completed in 15ms (View: 15, DB: 0) | 200 OK [http://localhost/dean/college_list]
+
+
+Processing LoginController#logout (for 127.0.0.1 at 2013-06-16 10:52:50) [GET]
+Redirected to http://localhost:3006/
+Completed in 0ms (DB: 0) | 302 Found [http://localhost/login/logout]
+
+
+Processing LoginController#index (for 127.0.0.1 at 2013-06-16 10:52:50) [GET]
+Rendering template within layouts/application
+Rendering login/index
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing LoginController#action (for 127.0.0.1 at 2013-06-16 10:52:57) [POST]
+  Parameters: {"commit"=>"登陆", "authenticity_token"=>"zFW+7lY2WXN8D0kV4h+gzRF2mOuy3o4mGO7XcJ9S9n4=", "member"=>{"account"=>"qiluyiyuan", "password"=>"qiluyiyuan"}}
+Redirected to http://localhost:3006/hospital
+Completed in 0ms (DB: 0) | 302 Found [http://localhost/login/action]
+
+
+Processing HospitalController#index (for 127.0.0.1 at 2013-06-16 10:52:57) [GET]
+Rendering template within layouts/hospital
+Rendering hospital/index
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://localhost/hospital]
+
+
+Processing LoginController#logout (for 127.0.0.1 at 2013-06-16 10:53:04) [GET]
+Redirected to http://localhost:3006/
+Completed in 0ms (DB: 0) | 302 Found [http://localhost/login/logout]
+
+
+Processing LoginController#index (for 127.0.0.1 at 2013-06-16 10:53:04) [GET]
+Rendering template within layouts/application
+Rendering login/index
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://localhost/]
