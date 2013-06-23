@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130601161752) do
+ActiveRecord::Schema.define(:version => 20130623070435) do
 
   create_table "colleges", :force => true do |t|
     t.string   "name"
@@ -19,9 +19,43 @@ ActiveRecord::Schema.define(:version => 20130601161752) do
     t.datetime "updated_at"
   end
 
+  create_table "colleges_departments", :force => true do |t|
+    t.integer  "college_id"
+    t.integer  "department_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "colleges_hospitals", :force => true do |t|
     t.integer  "college_id"
     t.integer  "hospital_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "departments", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "departments_students", :force => true do |t|
+    t.integer  "department_id"
+    t.integer  "student_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "grade_types", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "grade_types_students", :force => true do |t|
+    t.integer  "grade_type_id"
+    t.integer  "student_id"
+    t.string   "grade"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -35,6 +69,8 @@ ActiveRecord::Schema.define(:version => 20130601161752) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "zone"
+    t.integer  "boy_no",     :default => 0
+    t.integer  "girl_no",    :default => 0
   end
 
   create_table "members", :force => true do |t|
@@ -86,6 +122,7 @@ ActiveRecord::Schema.define(:version => 20130601161752) do
     t.integer  "college_id"
     t.string   "internship_grade"
     t.string   "hostpital_grade"
+    t.integer  "hospital_id2"
   end
 
 end

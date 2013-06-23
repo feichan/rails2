@@ -6,6 +6,7 @@
     <th>所在地区</th>
     <th>医院地址</th>
     <th>级别</th>
+    <th>所需人数</th>
     <th>联系人</th>
     <th>联系人电话</th>
   </tr>
@@ -16,6 +17,10 @@
     <td><%=h hospital.zone %></td>
     <td><%=h hospital.address %></td>
     <td><%=h hospital.grade %></td>
+    <td>
+      男生 ： <%=h hospital.boy_no %>人
+      女生 ： <%=h hospital.girl_no %>人
+    </td>
     <td><%=h hospital.contact %></td>
     <td><%=h hospital.tel %></td>
     <td><%= link_to '详细信息', hospital %></td>

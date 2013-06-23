@@ -9,8 +9,45 @@
     <%= f.label :name, "姓名" %><br />
     <%= @student.name %>
   </p>
+  <% if @student.grade_type.length == 0%>
   <p>
-    <%= f.label :internship_grade, "实习成绩" %><br />
+    <%= f.label :grade_1, "成绩类型1" %><br />
+    <%= f.select :grade_1, GradeType.all.collect{|gt|[gt.name, gt.id]} %>
+    <%= f.text_field :grade_1_no %>
+  </p>
+  <p>
+    <%= f.label :grade_2, "成绩类型2" %><br />
+    <%= f.select :grade_2, GradeType.all.collect{|gt|[gt.name, gt.id]} %>
+    <%= f.text_field :grade_2_no %>
+  </p>
+  <p>
+    <%= f.label :grade_3, "成绩类型3" %><br />
+    <%= f.select :grade_3, GradeType.all.collect{|gt|[gt.name, gt.id]} %>
+    <%= f.text_field :grade_3_no %>
+  </p>
+  <p>
+    <%= f.label :grade_4, "成绩类型4" %><br />
+    <%= f.select :grade_4, GradeType.all.collect{|gt|[gt.name, gt.id]} %>
+    <%= f.text_field :grade_4_no %>
+  </p>
+  <p>
+    <%= f.label :grade_5, "成绩类型5" %><br />
+    <%= f.select :grade_5, GradeType.all.collect{|gt|[gt.name, gt.id]} %>
+    <%= f.text_field :grade_5_no %>
+  </p>
+  <% else -%>
+    <% no = 1%>
+    <%@student.grade_type.each do |gt|%>
+      <p>
+        <%= f.label "grade_#{no}", "成绩类型#{no}" %><br />
+        <%= f.select "grade_#{no}", GradeType.all.collect{|g|[g.name, g.id]}, :selected => gt.id %>
+        <%= f.text_field "grade_#{no}_no", :value => gt.grade %>
+      </p>
+      <% no += 1%>
+    <% end -%>
+  <% end -%>
+  <p>
+    <%= f.label :internship_grade, "实习总成绩" %><br />
     <%= f.text_field :internship_grade %>
   </p>
   <p>

@@ -1,0 +1,13 @@
+<h1>科别分配</h1>
+<ul>
+	<% form_for :assign, :url => {:action => :confirm_department_assign} do |f| -%>
+	<input type="hidden" name="profession_id" value="<%= @profession.id %>">
+	<%=h @profession.profession %>
+		<%@departments.each do |de|%>
+			<li>
+				<input type='checkbox' name="department[]" value="<%= de.id %>" <%= @existed.include?(de.id.to_i) ? 'checked' : '' %>>&nbsp;<%= de.name %>
+			</li>
+		<% end -%>
+		<%= f.submit "确认分配"%>
+	<% end -%>
+</ul>

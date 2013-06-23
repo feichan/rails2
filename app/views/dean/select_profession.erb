@@ -1,0 +1,39 @@
+<% if @type == "department"%>
+	<h1>选择专业</h1>
+	<table>
+		<tr>
+			<th>专业名称</th>
+			<th>已选科别</th>
+		</tr>
+		<% College.professions(params[:id]).each do |prof|%>
+			<tr>
+				<td><%= prof.profession%></td>
+				<td>
+					<% prof.department.each do |dep| %>
+						<%= dep.name -%>,
+					<% end -%>
+				</td>
+				<td><%=link_to "选择", :controller => :dean, :action => :department_assign, :id=> prof %></td>
+			</tr>
+	  <% end -%>
+	</table>
+<% elsif @type == "hospital"%>
+	<h1>选择专业</h1>
+	<table>
+		<tr>
+			<th>专业名称</th>
+			<th>分配医院</th>
+		</tr>
+		<% College.professions(params[:id]).each do |prof|%>
+			<tr>
+				<td><%= prof.profession%></td>
+				<td>
+					<% prof.hospital.each do |dep| %>
+						<%= dep.name -%>,
+					<% end -%>
+				</td>
+				<td><%=link_to "选择", :controller => :dean, :action => :hospital_assign, :id=> prof %></td>
+			</tr>
+	  <% end -%>
+	</table>
+<% end -%>
