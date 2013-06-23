@@ -10,13 +10,19 @@
     <%= f.label :name, "姓名" %><br />
     <%= @student.name %>
   </p>
+  <%= @hospitals_arr = [] %>
+  <% @hospitals.each do |hospital|%>
+    <% @boy_left = hospital.boy_no.to_i - (hospital.students.find_all_by_sex('男').length+hospital.students2.find_all_by_sex('男').length)%>
+    <% @girl_left = hospital.girl_no.to_i - (hospital.students.find_all_by_sex('女').length+hospital.students2.find_all_by_sex('女').length)%>
+    <% @hospitals_arr << ["#{hospital.name}(剩余 男生:#{@boy_left}人，女生:#{@girl_left}人)", hospital.hospital_id.to_i]%>
+  <% end -%>
   <p>
     <%= f.label :hospital_id, "实习单位1" %><br />
-    <%= f.select :hospital_id, @hospitals.collect{|h|[h.name, h.hospital_id]}, :selected => @student.hospital_id2.to_s %>
+    <%= f.select :hospital_id, @hospitals_arr, :selected => @student.hospital_id.to_i %>
   </p>
   <p>
     <%= f.label :hospital_id2, "实习单位2" %><br />
-    <%= f.select :hospital_id2, @hospitals.collect{|h|[h.name, h.hospital_id]}, :selected => @student.hospital_id2.to_s %>
+    <%= f.select :hospital_id2, @hospitals_arr, :selected => @student.hospital_id2.to_i %>
   </p>
   <p>
   	<%= f.submit "添加"%>
