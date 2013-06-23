@@ -1,5 +1,6 @@
 <% form_for(@student, :url=>{:action=>:confirm_add}) do |f| %>
   <input type='hidden' name='id' value="<%= @student.id%>"/>
+  <%= f.hidden_field :shixichengji, :value => "1" %>
 
   <p>
     <%= f.label :stu_no, "学号" %><br />

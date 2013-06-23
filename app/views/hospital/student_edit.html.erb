@@ -9,10 +9,16 @@
     <%= f.label :name, "姓名" %><br />
     <%= @student.name %>
   </p>
+  <% @student.department.each do |dep|%>
   <p>
-    <%= f.label :hostpital_grade, "医院成绩" %><br />
-    <%= f.text_field :hostpital_grade %>
+    <%= dep.name%><br/>
+    <input name="<%= "dep_grade_#{dep.id}"%>" value=""/>
   </p>
+  <% end -%>
+<!--   <p>
+    <%= f.label :hostpital_grade, "医院总成绩" %><br />
+    <%= f.text_field :hostpital_grade %>
+  </p> -->
   <p>
   	<%= f.submit "添加"%>
   </p>
