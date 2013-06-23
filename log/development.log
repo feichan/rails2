@@ -28822,3 +28822,2089 @@ Processing ExperimentController#student_edit (for 127.0.0.1 at 2013-06-22 08:25:
 Rendering template within layouts/experiment
 Rendering experiment/student_edit
 Completed in 31ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/experiment/student_edit/1]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (109.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (15.6ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateHospitals (20130530151237)
+Migrating to AddZoneToHospitals (20130530151517)
+Migrating to CreateStudents (20130530164743)
+Migrating to AddColumnToStudents (20130530170907)
+Migrating to AddCollegeIdToStudents (20130531235421)
+Migrating to CreateColleges (20130601000429)
+Migrating to CreateMembers (20130601015240)
+Migrating to AddColumnToMember (20130601020633)
+Migrating to CreateCollegesHospitals (20130601105622)
+Migrating to AddColumnToStudent (20130601135720)
+Migrating to AddCollegeIdToMembers (20130601144625)
+Migrating to AddColumnToMembers (20130601154516)
+Migrating to AddHostpitalGradeToStudents (20130601161752)
+Migrating to CreateGradeTypes (20130622073746)
+  [4;36;1mSQL (78.1ms)[0m   [0;1mCREATE TABLE `grade_types` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (31.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20130622073746')[0m
+Migrating to CreateGradeTypesStudents (20130622073915)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCREATE TABLE `grade_types_students` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `grade_type_id` int(11), `student_id` int(11), `grade` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20130622073915')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW FIELDS FROM `colleges`[0m
+  [4;36;1mSQL (125.0ms)[0m   [0;1mdescribe `colleges`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `colleges`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW FIELDS FROM `colleges_hospitals`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mdescribe `colleges_hospitals`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `colleges_hospitals`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW FIELDS FROM `grade_types`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mdescribe `grade_types`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `grade_types`[0m
+  [4;36;1mSQL (15.6ms)[0m   [0;1mSHOW FIELDS FROM `grade_types_students`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mdescribe `grade_types_students`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `grade_types_students`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW FIELDS FROM `hospitals`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mdescribe `hospitals`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `hospitals`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mdescribe `members`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `members`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW FIELDS FROM `students`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mdescribe `students`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `students`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoginController#logout (for 127.0.0.1 at 2013-06-22 08:40:44) [GET]
+Redirected to http://127.0.0.1:3000/
+Completed in 0ms (DB: 0) | 302 Found [http://127.0.0.1/login/logout]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoginController#index (for 127.0.0.1 at 2013-06-22 08:40:44) [GET]
+Rendering template within layouts/application
+Rendering login/index
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoginController#action (for 127.0.0.1 at 2013-06-22 08:40:49) [POST]
+  Parameters: {"commit"=>"登陆", "authenticity_token"=>"DKlApqQ5PkvJJJEqtyTdRhaR6hB98zU9Xue+GeEGRG0=", "member"=>{"account"=>"admin", "password"=>"admin"}}
+  [4;36;1mMember Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+  [4;35;1mMember Load (0.0ms)[0m   [0mSELECT * FROM `members` WHERE (`members`.`account` = 'admin') LIMIT 1[0m
+Redirected to http://127.0.0.1:3000/
+Completed in 16ms (DB: 0) | 302 Found [http://127.0.0.1/login/action]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoginController#index (for 127.0.0.1 at 2013-06-22 08:40:49) [GET]
+Rendering template within layouts/application
+Rendering login/index
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://127.0.0.1/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoginController#action (for 127.0.0.1 at 2013-06-22 08:40:59) [POST]
+  Parameters: {"commit"=>"登陆", "authenticity_token"=>"DKlApqQ5PkvJJJEqtyTdRhaR6hB98zU9Xue+GeEGRG0=", "member"=>{"account"=>"fcicada", "password"=>"111"}}
+  [4;36;1mMember Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+  [4;35;1mMember Load (0.0ms)[0m   [0mSELECT * FROM `members` WHERE (`members`.`account` = 'fcicada') LIMIT 1[0m
+Redirected to http://127.0.0.1:3000/admin/index
+Completed in 16ms (DB: 0) | 302 Found [http://127.0.0.1/login/action]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AdminController#index (for 127.0.0.1 at 2013-06-22 08:40:59) [GET]
+  [4;36;1mMember Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+  [4;35;1mMember Load (0.0ms)[0m   [0mSELECT * FROM `members` WHERE (`members`.`id` = 2) [0m
+Rendering template within layouts/admin
+Rendering admin/index
+Completed in 94ms (View: 62, DB: 0) | 200 OK [http://127.0.0.1/admin/index]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AdminController#index (for 127.0.0.1 at 2013-06-22 08:45:44) [GET]
+  [4;36;1mMember Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+  [4;35;1mMember Load (0.0ms)[0m   [0mSELECT * FROM `members` WHERE (`members`.`id` = 2) [0m
+Rendering template within layouts/admin
+Rendering admin/index
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/admin/index]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2013-06-22 08:45:46) [GET]
+
+NameError (uninitialized constant GradeTypesController):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (46.9ms)
+Rendered rescues/_request_and_response (15.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2013-06-22 08:48:01) [GET]
+
+NameError (uninitialized constant GradeTypesController):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (15.6ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2013-06-22 08:48:06) [GET]
+
+NameError (uninitialized constant GradeTypesController):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (15.6ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2013-06-22 08:48:18) [GET]
+
+NameError (uninitialized constant GradeTypesController):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (15.6ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2013-06-22 08:48:19) [GET]
+
+NameError (uninitialized constant GradeTypesController):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (15.6ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (15.6ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2013-06-22 08:48:22) [GET]
+
+NameError (uninitialized constant GradeTypesController):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (15.6ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AdminController#index (for 127.0.0.1 at 2013-06-22 08:48:42) [GET]
+  [4;36;1mMember Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+  [4;35;1mMember Load (0.0ms)[0m   [0mSELECT * FROM `members` WHERE (`members`.`id` = 2) [0m
+Rendering template within layouts/admin
+Rendering admin/index
+Completed in 31ms (View: 0, DB: 16) | 200 OK [http://127.0.0.1/admin/index]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AdminController#index (for 127.0.0.1 at 2013-06-22 08:48:45) [GET]
+  [4;36;1mMember Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+  [4;35;1mMember Load (0.0ms)[0m   [0mSELECT * FROM `members` WHERE (`members`.`id` = 2) [0m
+Rendering template within layouts/admin
+Rendering admin/index
+
+ActionView::TemplateError (undefined local variable or method `grade_typess_path' for #<ActionView::Base:0x32b0638>) on line #5 of app/views/admin/index.html.erb:
+2: 	<li><%=link_to "用户管理", members_path%></li>
+3: 	<li><%=link_to "医院管理", hospitals_path%></li>
+4: 	<li><%=link_to "学生信息管理", students_path%></li>
+5: 	<li><%=link_to "学生成绩类型管理", grade_typess_path%></li>
+6: </ul>
+
+    app/views/admin/index.html.erb:5
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (31.2ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AdminController#index (for 127.0.0.1 at 2013-06-22 08:48:49) [GET]
+  [4;36;1mMember Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+  [4;35;1mMember Load (0.0ms)[0m   [0mSELECT * FROM `members` WHERE (`members`.`id` = 2) [0m
+Rendering template within layouts/admin
+Rendering admin/index
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/admin/index]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2013-06-22 08:48:51) [GET]
+
+NameError (uninitialized constant GradeTypesController):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (31.2ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2013-06-22 08:49:12) [GET]
+
+NameError (uninitialized constant GradeTypesController):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (15.6ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2013-06-22 08:49:16) [GET]
+
+NameError (uninitialized constant GradeTypesController):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (62.5ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GradeTypesController#index (for 127.0.0.1 at 2013-06-22 08:51:50) [GET]
+  [4;36;1mMember Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+  [4;35;1mMember Load (0.0ms)[0m   [0mSELECT * FROM `members` WHERE (`members`.`id` = 2) [0m
+Rendering template within layouts/admin
+Rendering grade_types/index
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://127.0.0.1/grade_types]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GradeTypesController#index (for 127.0.0.1 at 2013-06-22 08:55:35) [GET]
+  [4;36;1mMember Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+  [4;35;1mMember Load (0.0ms)[0m   [0mSELECT * FROM `members` WHERE (`members`.`id` = 2) [0m
+  [4;36;1mGradeType Load (0.0ms)[0m   [0;1mSELECT * FROM `grade_types` [0m
+Rendering template within layouts/admin
+Rendering grade_types/index
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/grade_types]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GradeTypesController#index (for 127.0.0.1 at 2013-06-22 08:56:13) [GET]
+  [4;35;1mMember Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+  [4;36;1mMember Load (0.0ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`id` = 2) [0m
+  [4;35;1mGradeType Load (0.0ms)[0m   [0mSELECT * FROM `grade_types` [0m
+Rendering template within layouts/admin
+Rendering grade_types/index
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://127.0.0.1/grade_types]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GradeTypesController#new (for 127.0.0.1 at 2013-06-22 08:56:15) [GET]
+  [4;36;1mMember Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+  [4;35;1mMember Load (0.0ms)[0m   [0mSELECT * FROM `members` WHERE (`members`.`id` = 2) [0m
+Rendering template within layouts/admin
+Rendering grade_types/new
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/grade_types/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GradeTypesController#new (for 127.0.0.1 at 2013-06-22 08:58:20) [GET]
+  [4;36;1mMember Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+  [4;35;1mMember Load (0.0ms)[0m   [0mSELECT * FROM `members` WHERE (`members`.`id` = 2) [0m
+  [4;36;1mGradeType Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `grade_types`[0m
+Rendering template within layouts/admin
+Rendering grade_types/new
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://127.0.0.1/grade_types/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GradeTypesController#create (for 127.0.0.1 at 2013-06-22 08:58:35) [POST]
+  Parameters: {"commit"=>"添加", "grade_type"=>{"name"=>"成绩类型1"}, "authenticity_token"=>"DKlApqQ5PkvJJJEqtyTdRhaR6hB98zU9Xue+GeEGRG0="}
+  [4;35;1mMember Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+  [4;36;1mMember Load (0.0ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`id` = 2) [0m
+Rendering template within layouts/admin
+Rendering grade_types/create
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://127.0.0.1/grade_types]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GradeTypesController#create (for 127.0.0.1 at 2013-06-22 08:59:46) [POST]
+  Parameters: {"commit"=>"添加", "grade_type"=>{"name"=>"成绩类型1"}, "authenticity_token"=>"DKlApqQ5PkvJJJEqtyTdRhaR6hB98zU9Xue+GeEGRG0="}
+  [4;35;1mMember Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+  [4;36;1mMember Load (0.0ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`id` = 2) [0m
+  [4;35;1mCollege Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `colleges`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mCollege Create (0.0ms)[0m   [0mINSERT INTO `colleges` (`updated_at`, `created_at`, `profession`, `parent_id`, `name`) VALUES('2013-06-22 07:59:46', '2013-06-22 07:59:46', NULL, NULL, '成绩类型1')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/colleges/9
+Completed in 31ms (DB: 0) | 302 Found [http://127.0.0.1/grade_types]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CollegesController#show (for 127.0.0.1 at 2013-06-22 08:59:46) [GET]
+  Parameters: {"id"=>"9"}
+  [4;35;1mMember Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+  [4;36;1mMember Load (0.0ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`id` = 2) [0m
+  [4;35;1mCollege Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `colleges`[0m
+  [4;36;1mCollege Load (0.0ms)[0m   [0;1mSELECT * FROM `colleges` WHERE (`colleges`.`id` = 9) [0m
+Rendering template within layouts/admin
+Rendering colleges/show
+
+ActionView::TemplateError (Couldn't find College without an ID) on line #22 of app/views/colleges/show.html.erb:
+19: 
+20: <p>
+21:   <b>所在学院:</b>
+22:   <%=h College.find(@college.parent_id).name %>
+23: </p>
+24: <% end -%>
+25: 
+
+    app/views/colleges/show.html.erb:22
+    app/controllers/colleges_controller.rb:18:in `show'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (46.9ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GradeTypesController#index (for 127.0.0.1 at 2013-06-22 09:00:56) [GET]
+  [4;35;1mMember Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+  [4;36;1mMember Load (0.0ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`id` = 2) [0m
+  [4;35;1mGradeType Load (0.0ms)[0m   [0mSELECT * FROM `grade_types` [0m
+Rendering template within layouts/admin
+Rendering grade_types/index
+Completed in 78ms (View: 0, DB: 0) | 200 OK [http://127.0.0.1/grade_types]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GradeTypesController#index (for 127.0.0.1 at 2013-06-22 09:01:00) [GET]
+  [4;36;1mMember Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+  [4;35;1mMember Load (0.0ms)[0m   [0mSELECT * FROM `members` WHERE (`members`.`id` = 2) [0m
+  [4;36;1mGradeType Load (0.0ms)[0m   [0;1mSELECT * FROM `grade_types` [0m
+Rendering template within layouts/admin
+Rendering grade_types/index
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://127.0.0.1/grade_types]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AdminController#index (for 127.0.0.1 at 2013-06-22 09:01:15) [GET]
+  [4;35;1mMember Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+  [4;36;1mMember Load (0.0ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`id` = 2) [0m
+Rendering template within layouts/admin
+Rendering admin/index
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://127.0.0.1/admin/index]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CollegeController#index (for 127.0.0.1 at 2013-06-22 09:01:42) [GET]
+  [4;35;1mMember Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+  [4;36;1mMember Load (0.0ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`id` = 2) [0m
+
+NameError (undefined local variable or method `login_index_path' for #<CollegeController:0x32e1958>):
+  app/controllers/college_controller.rb:30:in `am_i_college?'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (46.9ms)
+Rendered rescues/_request_and_response (15.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CollegesController#index (for 127.0.0.1 at 2013-06-22 09:01:48) [GET]
+  [4;35;1mMember Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+  [4;36;1mMember Load (0.0ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`id` = 2) [0m
+  [4;35;1mCollege Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `colleges`[0m
+  [4;36;1mCollege Load (0.0ms)[0m   [0;1mSELECT * FROM `colleges` WHERE (`colleges`.`parent_id` = 0) [0m
+Rendering template within layouts/admin
+Rendering colleges/index
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://127.0.0.1/colleges]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CollegesController#index (for 127.0.0.1 at 2013-06-22 09:01:52) [GET]
+  [4;35;1mMember Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+  [4;36;1mMember Load (0.0ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`id` = 2) [0m
+  [4;35;1mCollege Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `colleges`[0m
+  [4;36;1mCollege Load (0.0ms)[0m   [0;1mSELECT * FROM `colleges` WHERE (`colleges`.`parent_id` = 0) [0m
+Rendering template within layouts/admin
+Rendering colleges/index
+Completed in 62ms (View: 47, DB: 0) | 200 OK [http://127.0.0.1/colleges]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AdminController#index (for 127.0.0.1 at 2013-06-22 09:03:00) [GET]
+  [4;35;1mMember Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+  [4;36;1mMember Load (0.0ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`id` = 2) [0m
+Rendering template within layouts/admin
+Rendering admin/index
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://127.0.0.1/admin/index]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CollegesController#index (for 127.0.0.1 at 2013-06-22 09:03:01) [GET]
+  [4;35;1mMember Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+  [4;36;1mMember Load (0.0ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`id` = 2) [0m
+  [4;35;1mCollege Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `colleges`[0m
+  [4;36;1mCollege Load (0.0ms)[0m   [0;1mSELECT * FROM `colleges` WHERE (`colleges`.`parent_id` = 0) [0m
+Rendering template within layouts/admin
+Rendering colleges/index
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://127.0.0.1/colleges]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CollegesController#edit (for 127.0.0.1 at 2013-06-22 09:03:04) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mMember Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+  [4;36;1mMember Load (0.0ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`id` = 2) [0m
+  [4;35;1mCollege Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `colleges`[0m
+  [4;36;1mCollege Load (0.0ms)[0m   [0;1mSELECT * FROM `colleges` WHERE (`colleges`.`id` = 3) [0m
+Rendering template within layouts/admin
+Rendering colleges/edit
+Completed in 78ms (View: 47, DB: 0) | 200 OK [http://127.0.0.1/colleges/3/edit]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CollegesController#index (for 127.0.0.1 at 2013-06-22 09:03:07) [GET]
+  [4;35;1mMember Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+  [4;36;1mMember Load (0.0ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`id` = 2) [0m
+  [4;35;1mCollege Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `colleges`[0m
+  [4;36;1mCollege Load (0.0ms)[0m   [0;1mSELECT * FROM `colleges` WHERE (`colleges`.`parent_id` = 0) [0m
+Rendering template within layouts/admin
+Rendering colleges/index
+Completed in 31ms (View: 0, DB: 0) | 200 OK [http://127.0.0.1/colleges]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CollegesController#show (for 127.0.0.1 at 2013-06-22 09:03:33) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mMember Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+  [4;36;1mMember Load (0.0ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`id` = 2) [0m
+  [4;35;1mCollege Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `colleges`[0m
+  [4;36;1mCollege Load (0.0ms)[0m   [0;1mSELECT * FROM `colleges` WHERE (`colleges`.`id` = 3) [0m
+Rendering template within layouts/admin
+Rendering colleges/show
+  [4;35;1mCollege Load (0.0ms)[0m   [0mSELECT * FROM `colleges` WHERE (`colleges`.`parent_id` = 3) [0m
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://127.0.0.1/colleges/3]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CollegesController#index (for 127.0.0.1 at 2013-06-22 09:03:37) [GET]
+  [4;36;1mMember Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+  [4;35;1mMember Load (0.0ms)[0m   [0mSELECT * FROM `members` WHERE (`members`.`id` = 2) [0m
+  [4;36;1mCollege Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `colleges`[0m
+  [4;35;1mCollege Load (0.0ms)[0m   [0mSELECT * FROM `colleges` WHERE (`colleges`.`parent_id` = 0) [0m
+Rendering template within layouts/admin
+Rendering colleges/index
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://127.0.0.1/colleges]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CollegesController#edit (for 127.0.0.1 at 2013-06-22 09:03:41) [GET]
+  Parameters: {"id"=>"6"}
+  [4;36;1mMember Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+  [4;35;1mMember Load (0.0ms)[0m   [0mSELECT * FROM `members` WHERE (`members`.`id` = 2) [0m
+  [4;36;1mCollege Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `colleges`[0m
+  [4;35;1mCollege Load (0.0ms)[0m   [0mSELECT * FROM `colleges` WHERE (`colleges`.`id` = 6) [0m
+Rendering template within layouts/admin
+Rendering colleges/edit
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/colleges/6/edit]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CollegesController#index (for 127.0.0.1 at 2013-06-22 09:03:44) [GET]
+  [4;36;1mMember Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+  [4;35;1mMember Load (0.0ms)[0m   [0mSELECT * FROM `members` WHERE (`members`.`id` = 2) [0m
+  [4;36;1mCollege Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `colleges`[0m
+  [4;35;1mCollege Load (0.0ms)[0m   [0mSELECT * FROM `colleges` WHERE (`colleges`.`parent_id` = 0) [0m
+Rendering template within layouts/admin
+Rendering colleges/index
+Completed in 62ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/colleges]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CollegesController#new (for 127.0.0.1 at 2013-06-22 09:03:46) [GET]
+  Parameters: {"parent_id"=>"0"}
+  [4;36;1mMember Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+  [4;35;1mMember Load (0.0ms)[0m   [0mSELECT * FROM `members` WHERE (`members`.`id` = 2) [0m
+  [4;36;1mCollege Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `colleges`[0m
+Rendering template within layouts/admin
+Rendering colleges/new
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://127.0.0.1/colleges/new?parent_id=0]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CollegesController#index (for 127.0.0.1 at 2013-06-22 09:03:48) [GET]
+  [4;35;1mMember Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+  [4;36;1mMember Load (0.0ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`id` = 2) [0m
+  [4;35;1mCollege Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `colleges`[0m
+  [4;36;1mCollege Load (0.0ms)[0m   [0;1mSELECT * FROM `colleges` WHERE (`colleges`.`parent_id` = 0) [0m
+Rendering template within layouts/admin
+Rendering colleges/index
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/colleges]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AdminController#index (for 127.0.0.1 at 2013-06-22 09:03:54) [GET]
+  [4;35;1mMember Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+  [4;36;1mMember Load (0.0ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`id` = 2) [0m
+Rendering template within layouts/admin
+Rendering admin/index
+Completed in 16ms (View: 0, DB: 16) | 200 OK [http://127.0.0.1/admin/index]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GradeTypesController#index (for 127.0.0.1 at 2013-06-22 09:04:07) [GET]
+  [4;35;1mMember Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+  [4;36;1mMember Load (0.0ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`id` = 2) [0m
+  [4;35;1mGradeType Load (0.0ms)[0m   [0mSELECT * FROM `grade_types` [0m
+Rendering template within layouts/admin
+Rendering grade_types/index
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://127.0.0.1/grade_types]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GradeTypesController#new (for 127.0.0.1 at 2013-06-22 09:04:08) [GET]
+  [4;36;1mMember Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+  [4;35;1mMember Load (0.0ms)[0m   [0mSELECT * FROM `members` WHERE (`members`.`id` = 2) [0m
+  [4;36;1mGradeType Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `grade_types`[0m
+Rendering template within layouts/admin
+Rendering grade_types/new
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/grade_types/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GradeTypesController#create (for 127.0.0.1 at 2013-06-22 09:04:11) [POST]
+  Parameters: {"commit"=>"添加", "grade_type"=>{"name"=>"成绩类型1"}, "authenticity_token"=>"DKlApqQ5PkvJJJEqtyTdRhaR6hB98zU9Xue+GeEGRG0="}
+  [4;35;1mMember Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+  [4;36;1mMember Load (0.0ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`id` = 2) [0m
+  [4;35;1mGradeType Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `grade_types`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mGradeType Create (0.0ms)[0m   [0mINSERT INTO `grade_types` (`updated_at`, `created_at`, `name`) VALUES('2013-06-22 08:04:11', '2013-06-22 08:04:11', '成绩类型1')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/grade_types
+
+NoMethodError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.call):
+  app/controllers/grade_types_controller.rb:16:in `create'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (31.2ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AdminController#index (for 127.0.0.1 at 2013-06-22 09:07:44) [GET]
+  [4;35;1mMember Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+  [4;36;1mMember Load (0.0ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`id` = 2) [0m
+Rendering template within layouts/admin
+Rendering admin/index
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://127.0.0.1/admin/index]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GradeTypesController#index (for 127.0.0.1 at 2013-06-22 09:07:45) [GET]
+  [4;35;1mGradeType Load (0.0ms)[0m   [0mSELECT * FROM `grade_types` [0m
+Rendering template within layouts/grade_types
+Rendering grade_types/index
+  [4;36;1mGradeType Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `grade_types`[0m
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/grade_types]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GradeTypesController#index (for 127.0.0.1 at 2013-06-22 09:11:31) [GET]
+  [4;35;1mMember Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+  [4;36;1mMember Load (0.0ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`id` = 2) [0m
+  [4;35;1mGradeType Load (0.0ms)[0m   [0mSELECT * FROM `grade_types` [0m
+Rendering template within layouts/grade_types
+Rendering grade_types/index
+  [4;36;1mGradeType Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `grade_types`[0m
+Completed in 47ms (View: 0, DB: 0) | 200 OK [http://127.0.0.1/grade_types]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GradeTypesController#new (for 127.0.0.1 at 2013-06-22 09:11:33) [GET]
+  [4;35;1mMember Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+  [4;36;1mMember Load (0.0ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`id` = 2) [0m
+  [4;35;1mGradeType Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `grade_types`[0m
+Rendering template within layouts/grade_types
+Rendering grade_types/new
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://127.0.0.1/grade_types/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GradeTypesController#create (for 127.0.0.1 at 2013-06-22 09:11:37) [POST]
+  Parameters: {"commit"=>"添加", "grade_type"=>{"name"=>"成绩类型2"}, "authenticity_token"=>"DKlApqQ5PkvJJJEqtyTdRhaR6hB98zU9Xue+GeEGRG0="}
+  [4;36;1mMember Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+  [4;35;1mMember Load (0.0ms)[0m   [0mSELECT * FROM `members` WHERE (`members`.`id` = 2) [0m
+  [4;36;1mGradeType Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `grade_types`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mGradeType Create (0.0ms)[0m   [0;1mINSERT INTO `grade_types` (`updated_at`, `created_at`, `name`) VALUES('2013-06-22 08:11:37', '2013-06-22 08:11:37', '成绩类型2')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/grade_types/2
+Completed in 16ms (DB: 0) | 302 Found [http://127.0.0.1/grade_types]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GradeTypesController#show (for 127.0.0.1 at 2013-06-22 09:11:37) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mMember Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+  [4;35;1mMember Load (0.0ms)[0m   [0mSELECT * FROM `members` WHERE (`members`.`id` = 2) [0m
+  [4;36;1mGradeType Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `grade_types`[0m
+  [4;35;1mGradeType Load (0.0ms)[0m   [0mSELECT * FROM `grade_types` WHERE (`grade_types`.`id` = 2) [0m
+Rendering template within layouts/grade_types
+Rendering grade_types/show
+Completed in 47ms (View: 0, DB: 0) | 200 OK [http://127.0.0.1/grade_types/2]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GradeTypesController#index (for 127.0.0.1 at 2013-06-22 09:11:39) [GET]
+  [4;36;1mMember Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+  [4;35;1mMember Load (0.0ms)[0m   [0mSELECT * FROM `members` WHERE (`members`.`id` = 2) [0m
+  [4;36;1mGradeType Load (0.0ms)[0m   [0;1mSELECT * FROM `grade_types` [0m
+Rendering template within layouts/grade_types
+Rendering grade_types/index
+  [4;35;1mGradeType Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `grade_types`[0m
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/grade_types]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GradeTypesController#new (for 127.0.0.1 at 2013-06-22 09:11:40) [GET]
+  [4;36;1mMember Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+  [4;35;1mMember Load (0.0ms)[0m   [0mSELECT * FROM `members` WHERE (`members`.`id` = 2) [0m
+  [4;36;1mGradeType Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `grade_types`[0m
+Rendering template within layouts/grade_types
+Rendering grade_types/new
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://127.0.0.1/grade_types/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GradeTypesController#create (for 127.0.0.1 at 2013-06-22 09:11:45) [POST]
+  Parameters: {"commit"=>"添加", "grade_type"=>{"name"=>"成绩类型3"}, "authenticity_token"=>"DKlApqQ5PkvJJJEqtyTdRhaR6hB98zU9Xue+GeEGRG0="}
+  [4;35;1mMember Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+  [4;36;1mMember Load (0.0ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`id` = 2) [0m
+  [4;35;1mGradeType Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `grade_types`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mGradeType Create (0.0ms)[0m   [0mINSERT INTO `grade_types` (`updated_at`, `created_at`, `name`) VALUES('2013-06-22 08:11:45', '2013-06-22 08:11:45', '成绩类型3')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/grade_types/3
+Completed in 16ms (DB: 0) | 302 Found [http://127.0.0.1/grade_types]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GradeTypesController#show (for 127.0.0.1 at 2013-06-22 09:11:45) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mMember Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+  [4;36;1mMember Load (0.0ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`id` = 2) [0m
+  [4;35;1mGradeType Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `grade_types`[0m
+  [4;36;1mGradeType Load (0.0ms)[0m   [0;1mSELECT * FROM `grade_types` WHERE (`grade_types`.`id` = 3) [0m
+Rendering template within layouts/grade_types
+Rendering grade_types/show
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://127.0.0.1/grade_types/3]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GradeTypesController#index (for 127.0.0.1 at 2013-06-22 09:11:46) [GET]
+  [4;35;1mMember Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+  [4;36;1mMember Load (0.0ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`id` = 2) [0m
+  [4;35;1mGradeType Load (0.0ms)[0m   [0mSELECT * FROM `grade_types` [0m
+Rendering template within layouts/grade_types
+Rendering grade_types/index
+  [4;36;1mGradeType Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `grade_types`[0m
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/grade_types]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GradeTypesController#new (for 127.0.0.1 at 2013-06-22 09:11:47) [GET]
+  [4;35;1mMember Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+  [4;36;1mMember Load (0.0ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`id` = 2) [0m
+  [4;35;1mGradeType Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `grade_types`[0m
+Rendering template within layouts/grade_types
+Rendering grade_types/new
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://127.0.0.1/grade_types/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GradeTypesController#create (for 127.0.0.1 at 2013-06-22 09:11:52) [POST]
+  Parameters: {"commit"=>"添加", "grade_type"=>{"name"=>"成绩类型4"}, "authenticity_token"=>"DKlApqQ5PkvJJJEqtyTdRhaR6hB98zU9Xue+GeEGRG0="}
+  [4;36;1mMember Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+  [4;35;1mMember Load (0.0ms)[0m   [0mSELECT * FROM `members` WHERE (`members`.`id` = 2) [0m
+  [4;36;1mGradeType Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `grade_types`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mGradeType Create (0.0ms)[0m   [0;1mINSERT INTO `grade_types` (`updated_at`, `created_at`, `name`) VALUES('2013-06-22 08:11:52', '2013-06-22 08:11:52', '成绩类型4')[0m
+  [4;35;1mSQL (15.6ms)[0m   [0mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/grade_types/4
+Completed in 62ms (DB: 16) | 302 Found [http://127.0.0.1/grade_types]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GradeTypesController#show (for 127.0.0.1 at 2013-06-22 09:11:52) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mMember Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+  [4;35;1mMember Load (0.0ms)[0m   [0mSELECT * FROM `members` WHERE (`members`.`id` = 2) [0m
+  [4;36;1mGradeType Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `grade_types`[0m
+  [4;35;1mGradeType Load (0.0ms)[0m   [0mSELECT * FROM `grade_types` WHERE (`grade_types`.`id` = 4) [0m
+Rendering template within layouts/grade_types
+Rendering grade_types/show
+Completed in 78ms (View: 0, DB: 0) | 200 OK [http://127.0.0.1/grade_types/4]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GradeTypesController#create (for 127.0.0.1 at 2013-06-22 09:11:57) [POST]
+  Parameters: {"commit"=>"添加", "grade_type"=>{"name"=>"成绩类型5"}, "authenticity_token"=>"DKlApqQ5PkvJJJEqtyTdRhaR6hB98zU9Xue+GeEGRG0="}
+  [4;36;1mMember Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+  [4;35;1mMember Load (0.0ms)[0m   [0mSELECT * FROM `members` WHERE (`members`.`id` = 2) [0m
+  [4;36;1mGradeType Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `grade_types`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mGradeType Create (0.0ms)[0m   [0;1mINSERT INTO `grade_types` (`updated_at`, `created_at`, `name`) VALUES('2013-06-22 08:11:57', '2013-06-22 08:11:57', '成绩类型5')[0m
+  [4;35;1mSQL (31.2ms)[0m   [0mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/grade_types/5
+Completed in 47ms (DB: 31) | 302 Found [http://127.0.0.1/grade_types]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GradeTypesController#show (for 127.0.0.1 at 2013-06-22 09:11:57) [GET]
+  Parameters: {"id"=>"5"}
+  [4;36;1mMember Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+  [4;35;1mMember Load (0.0ms)[0m   [0mSELECT * FROM `members` WHERE (`members`.`id` = 2) [0m
+  [4;36;1mGradeType Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `grade_types`[0m
+  [4;35;1mGradeType Load (0.0ms)[0m   [0mSELECT * FROM `grade_types` WHERE (`grade_types`.`id` = 5) [0m
+Rendering template within layouts/grade_types
+Rendering grade_types/show
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://127.0.0.1/grade_types/5]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GradeTypesController#index (for 127.0.0.1 at 2013-06-22 09:11:59) [GET]
+  [4;36;1mMember Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+  [4;35;1mMember Load (0.0ms)[0m   [0mSELECT * FROM `members` WHERE (`members`.`id` = 2) [0m
+  [4;36;1mGradeType Load (0.0ms)[0m   [0;1mSELECT * FROM `grade_types` [0m
+Rendering template within layouts/grade_types
+Rendering grade_types/index
+  [4;35;1mGradeType Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `grade_types`[0m
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/grade_types]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GradeTypesController#index (for 127.0.0.1 at 2013-06-22 09:12:02) [GET]
+  [4;36;1mMember Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+  [4;35;1mMember Load (0.0ms)[0m   [0mSELECT * FROM `members` WHERE (`members`.`id` = 2) [0m
+  [4;36;1mGradeType Load (0.0ms)[0m   [0;1mSELECT * FROM `grade_types` [0m
+Rendering template within layouts/grade_types
+Rendering grade_types/index
+  [4;35;1mGradeType Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `grade_types`[0m
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/grade_types]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GradeTypesController#index (for 127.0.0.1 at 2013-06-22 09:12:22) [GET]
+  [4;36;1mMember Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+  [4;35;1mMember Load (0.0ms)[0m   [0mSELECT * FROM `members` WHERE (`members`.`id` = 2) [0m
+  [4;36;1mGradeType Load (0.0ms)[0m   [0;1mSELECT * FROM `grade_types` [0m
+Rendering template within layouts/admin
+Rendering grade_types/index
+  [4;35;1mGradeType Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `grade_types`[0m
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/grade_types]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AdminController#index (for 127.0.0.1 at 2013-06-22 09:12:27) [GET]
+  [4;36;1mMember Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+  [4;35;1mMember Load (0.0ms)[0m   [0mSELECT * FROM `members` WHERE (`members`.`id` = 2) [0m
+Rendering template within layouts/admin
+Rendering admin/index
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/admin/index]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoginController#logout (for 127.0.0.1 at 2013-06-23 00:39:29) [GET]
+Redirected to http://127.0.0.1:3000/
+Completed in 0ms (DB: 0) | 302 Found [http://127.0.0.1/login/logout]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoginController#index (for 127.0.0.1 at 2013-06-23 00:39:30) [GET]
+Rendering template within layouts/application
+Rendering login/index
+Completed in 31ms (View: 31, DB: 0) | 200 OK [http://127.0.0.1/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoginController#action (for 127.0.0.1 at 2013-06-23 00:39:35) [POST]
+  Parameters: {"commit"=>"登陆", "member"=>{"account"=>"jiaowuchu", "password"=>"111"}, "authenticity_token"=>"k50fE+qXJQSX0ohxyOkmUdur1sxZ/VL3Of55NyIJPsU="}
+  [4;36;1mMember Columns (62.5ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+  [4;35;1mMember Load (0.0ms)[0m   [0mSELECT * FROM `members` WHERE (`members`.`account` = 'jiaowuchu') LIMIT 1[0m
+Redirected to http://127.0.0.1:3000/dean
+Completed in 94ms (DB: 62) | 302 Found [http://127.0.0.1/login/action]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DeanController#index (for 127.0.0.1 at 2013-06-23 00:39:36) [GET]
+  [4;36;1mMember Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+  [4;35;1mMember Load (0.0ms)[0m   [0mSELECT * FROM `members` WHERE (`members`.`id` = 4) [0m
+Rendering template within layouts/dean
+Rendering dean/index
+Completed in 47ms (View: 47, DB: 0) | 200 OK [http://127.0.0.1/dean]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoginController#logout (for 127.0.0.1 at 2013-06-23 00:39:40) [GET]
+Redirected to http://127.0.0.1:3000/
+Completed in 0ms (DB: 0) | 302 Found [http://127.0.0.1/login/logout]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoginController#index (for 127.0.0.1 at 2013-06-23 00:39:40) [GET]
+Rendering template within layouts/application
+Rendering login/index
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://127.0.0.1/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoginController#action (for 127.0.0.1 at 2013-06-23 00:39:55) [POST]
+  Parameters: {"commit"=>"登陆", "member"=>{"account"=>"shiyanzhongxin", "password"=>"111"}, "authenticity_token"=>"pcBjYTLcy9O0UddXs4qeCSFpupkXqrTTvEmN+QZIQhM="}
+  [4;36;1mMember Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+  [4;35;1mMember Load (0.0ms)[0m   [0mSELECT * FROM `members` WHERE (`members`.`account` = 'shiyanzhongxin') LIMIT 1[0m
+Redirected to http://127.0.0.1:3000/experiment
+Completed in 16ms (DB: 0) | 302 Found [http://127.0.0.1/login/action]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ExperimentController#index (for 127.0.0.1 at 2013-06-23 00:39:55) [GET]
+  [4;36;1mMember Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+  [4;35;1mMember Load (0.0ms)[0m   [0mSELECT * FROM `members` WHERE (`members`.`id` = 5) [0m
+  [4;36;1mStudent Load (0.0ms)[0m   [0;1mSELECT * FROM `students` LIMIT 0, 10[0m
+Rendering template within layouts/experiment
+Rendering experiment/index
+  [4;35;1mCollege Columns (62.5ms)[0m   [0mSHOW FIELDS FROM `colleges`[0m
+  [4;36;1mCollege Load (0.0ms)[0m   [0;1mSELECT * FROM `colleges` WHERE (`colleges`.`parent_id` = 0) [0m
+  [4;35;1mStudent Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `students`[0m
+  [4;36;1mCollege Load (0.0ms)[0m   [0;1mSELECT * FROM `colleges` WHERE (`colleges`.`id` = 3) [0m
+  [4;35;1mCollege Load (0.0ms)[0m   [0mSELECT * FROM `colleges` WHERE (`colleges`.`id` = 6) [0m
+Completed in 266ms (View: 188, DB: 62) | 200 OK [http://127.0.0.1/experiment]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ExperimentController#student_edit (for 127.0.0.1 at 2013-06-23 00:39:58) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mMember Columns (31.2ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+  [4;35;1mMember Load (0.0ms)[0m   [0mSELECT * FROM `members` WHERE (`members`.`id` = 5) [0m
+  [4;36;1mStudent Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `students`[0m
+  [4;35;1mStudent Load (0.0ms)[0m   [0mSELECT * FROM `students` WHERE (`students`.`id` = 1) [0m
+Rendering template within layouts/experiment
+Rendering experiment/student_edit
+Completed in 94ms (View: 16, DB: 31) | 200 OK [http://127.0.0.1/experiment/student_edit/1]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ExperimentController#index (for 127.0.0.1 at 2013-06-23 00:49:28) [GET]
+  [4;36;1mMember Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+  [4;35;1mMember Load (0.0ms)[0m   [0mSELECT * FROM `members` WHERE (`members`.`id` = 5) [0m
+  [4;36;1mStudent Load (0.0ms)[0m   [0;1mSELECT * FROM `students` LIMIT 0, 10[0m
+Rendering template within layouts/experiment
+Rendering experiment/index
+  [4;35;1mCollege Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `colleges`[0m
+  [4;36;1mCollege Load (0.0ms)[0m   [0;1mSELECT * FROM `colleges` WHERE (`colleges`.`parent_id` = 0) [0m
+  [4;35;1mStudent Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `students`[0m
+  [4;36;1mCollege Load (15.6ms)[0m   [0;1mSELECT * FROM `colleges` WHERE (`colleges`.`id` = 3) [0m
+  [4;35;1mgrade_types_students Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `grade_types_students`[0m
+  [4;36;1mGradeType Load (0.0ms)[0m   [0;1mSELECT * FROM `grade_types` INNER JOIN `grade_types_students` ON `grade_types`.id = `grade_types_students`.grade_type_id WHERE (`grade_types_students`.student_id = 1 ) [0m
+  [4;35;1mCollege Load (0.0ms)[0m   [0mSELECT * FROM `colleges` WHERE (`colleges`.`id` = 6) [0m
+  [4;36;1mGradeType Load (0.0ms)[0m   [0;1mSELECT * FROM `grade_types` INNER JOIN `grade_types_students` ON `grade_types`.id = `grade_types_students`.grade_type_id WHERE (`grade_types_students`.student_id = 2 ) [0m
+Completed in 47ms (View: 16, DB: 16) | 200 OK [http://127.0.0.1/experiment]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ExperimentController#index (for 127.0.0.1 at 2013-06-23 00:49:29) [GET]
+  [4;35;1mMember Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+  [4;36;1mMember Load (0.0ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`id` = 5) [0m
+  [4;35;1mStudent Load (0.0ms)[0m   [0mSELECT * FROM `students` LIMIT 0, 10[0m
+Rendering template within layouts/experiment
+Rendering experiment/index
+  [4;36;1mCollege Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `colleges`[0m
+  [4;35;1mCollege Load (0.0ms)[0m   [0mSELECT * FROM `colleges` WHERE (`colleges`.`parent_id` = 0) [0m
+  [4;36;1mStudent Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `students`[0m
+  [4;35;1mCollege Load (0.0ms)[0m   [0mSELECT * FROM `colleges` WHERE (`colleges`.`id` = 3) [0m
+  [4;36;1mgrade_types_students Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `grade_types_students`[0m
+  [4;35;1mGradeType Load (0.0ms)[0m   [0mSELECT * FROM `grade_types` INNER JOIN `grade_types_students` ON `grade_types`.id = `grade_types_students`.grade_type_id WHERE (`grade_types_students`.student_id = 1 ) [0m
+  [4;36;1mCollege Load (0.0ms)[0m   [0;1mSELECT * FROM `colleges` WHERE (`colleges`.`id` = 6) [0m
+  [4;35;1mGradeType Load (0.0ms)[0m   [0mSELECT * FROM `grade_types` INNER JOIN `grade_types_students` ON `grade_types`.id = `grade_types_students`.grade_type_id WHERE (`grade_types_students`.student_id = 2 ) [0m
+Completed in 109ms (View: 78, DB: 0) | 200 OK [http://127.0.0.1/experiment]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ExperimentController#index (for 127.0.0.1 at 2013-06-23 00:49:30) [GET]
+  [4;36;1mMember Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+  [4;35;1mMember Load (0.0ms)[0m   [0mSELECT * FROM `members` WHERE (`members`.`id` = 5) [0m
+  [4;36;1mStudent Load (0.0ms)[0m   [0;1mSELECT * FROM `students` LIMIT 0, 10[0m
+Rendering template within layouts/experiment
+Rendering experiment/index
+  [4;35;1mCollege Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `colleges`[0m
+  [4;36;1mCollege Load (0.0ms)[0m   [0;1mSELECT * FROM `colleges` WHERE (`colleges`.`parent_id` = 0) [0m
+  [4;35;1mStudent Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `students`[0m
+  [4;36;1mCollege Load (0.0ms)[0m   [0;1mSELECT * FROM `colleges` WHERE (`colleges`.`id` = 3) [0m
+  [4;35;1mgrade_types_students Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `grade_types_students`[0m
+  [4;36;1mGradeType Load (0.0ms)[0m   [0;1mSELECT * FROM `grade_types` INNER JOIN `grade_types_students` ON `grade_types`.id = `grade_types_students`.grade_type_id WHERE (`grade_types_students`.student_id = 1 ) [0m
+  [4;35;1mCollege Load (0.0ms)[0m   [0mSELECT * FROM `colleges` WHERE (`colleges`.`id` = 6) [0m
+  [4;36;1mGradeType Load (0.0ms)[0m   [0;1mSELECT * FROM `grade_types` INNER JOIN `grade_types_students` ON `grade_types`.id = `grade_types_students`.grade_type_id WHERE (`grade_types_students`.student_id = 2 ) [0m
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/experiment]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ExperimentController#index (for 127.0.0.1 at 2013-06-23 00:49:30) [GET]
+  [4;35;1mMember Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+  [4;36;1mMember Load (0.0ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`id` = 5) [0m
+  [4;35;1mStudent Load (0.0ms)[0m   [0mSELECT * FROM `students` LIMIT 0, 10[0m
+Rendering template within layouts/experiment
+Rendering experiment/index
+  [4;36;1mCollege Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `colleges`[0m
+  [4;35;1mCollege Load (0.0ms)[0m   [0mSELECT * FROM `colleges` WHERE (`colleges`.`parent_id` = 0) [0m
+  [4;36;1mStudent Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `students`[0m
+  [4;35;1mCollege Load (0.0ms)[0m   [0mSELECT * FROM `colleges` WHERE (`colleges`.`id` = 3) [0m
+  [4;36;1mgrade_types_students Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `grade_types_students`[0m
+  [4;35;1mGradeType Load (0.0ms)[0m   [0mSELECT * FROM `grade_types` INNER JOIN `grade_types_students` ON `grade_types`.id = `grade_types_students`.grade_type_id WHERE (`grade_types_students`.student_id = 1 ) [0m
+  [4;36;1mCollege Load (0.0ms)[0m   [0;1mSELECT * FROM `colleges` WHERE (`colleges`.`id` = 6) [0m
+  [4;35;1mGradeType Load (0.0ms)[0m   [0mSELECT * FROM `grade_types` INNER JOIN `grade_types_students` ON `grade_types`.id = `grade_types_students`.grade_type_id WHERE (`grade_types_students`.student_id = 2 ) [0m
+Completed in 47ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/experiment]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ExperimentController#index (for 127.0.0.1 at 2013-06-23 00:54:13) [GET]
+  [4;36;1mMember Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+  [4;35;1mMember Load (0.0ms)[0m   [0mSELECT * FROM `members` WHERE (`members`.`id` = 5) [0m
+  [4;36;1mStudent Load (0.0ms)[0m   [0;1mSELECT * FROM `students` LIMIT 0, 10[0m
+Rendering template within layouts/experiment
+Rendering experiment/index
+  [4;35;1mCollege Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `colleges`[0m
+  [4;36;1mCollege Load (0.0ms)[0m   [0;1mSELECT * FROM `colleges` WHERE (`colleges`.`parent_id` = 0) [0m
+  [4;35;1mStudent Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `students`[0m
+  [4;36;1mCollege Load (0.0ms)[0m   [0;1mSELECT * FROM `colleges` WHERE (`colleges`.`id` = 3) [0m
+  [4;35;1mgrade_types_students Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `grade_types_students`[0m
+  [4;36;1mGradeType Load (0.0ms)[0m   [0;1mSELECT * FROM `grade_types` INNER JOIN `grade_types_students` ON `grade_types`.id = `grade_types_students`.grade_type_id WHERE (`grade_types_students`.student_id = 1 ) [0m
+  [4;35;1mCollege Load (0.0ms)[0m   [0mSELECT * FROM `colleges` WHERE (`colleges`.`id` = 6) [0m
+  [4;36;1mGradeType Load (0.0ms)[0m   [0;1mSELECT * FROM `grade_types` INNER JOIN `grade_types_students` ON `grade_types`.id = `grade_types_students`.grade_type_id WHERE (`grade_types_students`.student_id = 2 ) [0m
+Completed in 94ms (View: 16, DB: 16) | 200 OK [http://127.0.0.1/experiment]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ExperimentController#student_edit (for 127.0.0.1 at 2013-06-23 00:54:36) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mMember Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+  [4;36;1mMember Load (0.0ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`id` = 5) [0m
+  [4;35;1mStudent Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `students`[0m
+  [4;36;1mStudent Load (0.0ms)[0m   [0;1mSELECT * FROM `students` WHERE (`students`.`id` = 1) [0m
+Rendering template within layouts/experiment
+Rendering experiment/student_edit
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://127.0.0.1/experiment/student_edit/1]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ExperimentController#student_edit (for 127.0.0.1 at 2013-06-23 00:55:07) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mMember Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+  [4;36;1mMember Load (0.0ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`id` = 5) [0m
+  [4;35;1mStudent Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `students`[0m
+  [4;36;1mStudent Load (0.0ms)[0m   [0;1mSELECT * FROM `students` WHERE (`students`.`id` = 1) [0m
+Rendering template within layouts/experiment
+Rendering experiment/student_edit
+Completed in 31ms (View: 0, DB: 0) | 200 OK [http://127.0.0.1/experiment/student_edit/1]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ExperimentController#student_edit (for 127.0.0.1 at 2013-06-23 00:59:02) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mMember Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+  [4;36;1mMember Load (0.0ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`id` = 5) [0m
+  [4;35;1mStudent Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `students`[0m
+  [4;36;1mStudent Load (0.0ms)[0m   [0;1mSELECT * FROM `students` WHERE (`students`.`id` = 1) [0m
+Rendering template within layouts/experiment
+Rendering experiment/student_edit
+  [4;35;1mGradeType Load (0.0ms)[0m   [0mSELECT * FROM `grade_types` [0m
+  [4;36;1mGradeType Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `grade_types`[0m
+
+ActionView::TemplateError (wrong number of arguments (1 for 2)) on line #14 of app/views/experiment/student_edit.html.erb:
+11:   </p>
+12:   <p>
+13:     <%= f.label :grade_1, "成绩类型1" %><br />
+14:     <%= f.select GradeType.all.collect{|gt|[gt.id, gt.name]} %>
+15:   </p>
+16:   <p>
+17:     <%= f.label :internship_grade, "实习成绩" %><br />
+
+    app/views/experiment/student_edit.html.erb:14:in `select'
+    app/views/experiment/student_edit.html.erb:14
+    app/views/experiment/student_edit.html.erb:1
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (31.2ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ExperimentController#student_edit (for 127.0.0.1 at 2013-06-23 00:59:15) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mMember Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+  [4;36;1mMember Load (0.0ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`id` = 5) [0m
+  [4;35;1mStudent Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `students`[0m
+  [4;36;1mStudent Load (0.0ms)[0m   [0;1mSELECT * FROM `students` WHERE (`students`.`id` = 1) [0m
+Rendering template within layouts/experiment
+Rendering experiment/student_edit
+  [4;35;1mGradeType Load (0.0ms)[0m   [0mSELECT * FROM `grade_types` [0m
+  [4;36;1mGradeType Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `grade_types`[0m
+
+ActionView::TemplateError (undefined method `grade_1' for #<Student:0x5767c68>) on line #14 of app/views/experiment/student_edit.html.erb:
+11:   </p>
+12:   <p>
+13:     <%= f.label :grade_1, "成绩类型1" %><br />
+14:     <%= f.select :grade_1, GradeType.all.collect{|gt|[gt.id, gt.name]} %>
+15:   </p>
+16:   <p>
+17:     <%= f.label :internship_grade, "实习成绩" %><br />
+
+    app/views/experiment/student_edit.html.erb:14
+    app/views/experiment/student_edit.html.erb:1
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (93.8ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ExperimentController#student_edit (for 127.0.0.1 at 2013-06-23 01:01:24) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mMember Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+  [4;36;1mMember Load (0.0ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`id` = 5) [0m
+  [4;35;1mStudent Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `students`[0m
+  [4;36;1mStudent Load (0.0ms)[0m   [0;1mSELECT * FROM `students` WHERE (`students`.`id` = 1) [0m
+Rendering template within layouts/experiment
+Rendering experiment/student_edit
+  [4;35;1mGradeType Load (0.0ms)[0m   [0mSELECT * FROM `grade_types` [0m
+  [4;36;1mGradeType Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `grade_types`[0m
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/experiment/student_edit/1]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ExperimentController#student_edit (for 127.0.0.1 at 2013-06-23 01:01:42) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mMember Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+  [4;36;1mMember Load (0.0ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`id` = 5) [0m
+  [4;35;1mStudent Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `students`[0m
+  [4;36;1mStudent Load (0.0ms)[0m   [0;1mSELECT * FROM `students` WHERE (`students`.`id` = 1) [0m
+Rendering template within layouts/experiment
+Rendering experiment/student_edit
+  [4;35;1mGradeType Load (0.0ms)[0m   [0mSELECT * FROM `grade_types` [0m
+  [4;36;1mGradeType Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `grade_types`[0m
+Completed in 47ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/experiment/student_edit/1]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ExperimentController#student_edit (for 127.0.0.1 at 2013-06-23 01:04:51) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mMember Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+  [4;36;1mMember Load (0.0ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`id` = 5) [0m
+  [4;35;1mStudent Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `students`[0m
+  [4;36;1mStudent Load (0.0ms)[0m   [0;1mSELECT * FROM `students` WHERE (`students`.`id` = 1) [0m
+Rendering template within layouts/experiment
+Rendering experiment/student_edit
+  [4;35;1mGradeType Load (0.0ms)[0m   [0mSELECT * FROM `grade_types` [0m
+  [4;36;1mGradeType Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `grade_types`[0m
+
+ActionView::TemplateError (wrong number of arguments (1 for 2)) on line #15 of app/views/experiment/student_edit.html.erb:
+12:   <p>
+13:     <%= f.label :grade_1, "成绩类型1" %><br />
+14:     <%= f.select :grade_1, GradeType.all.collect{|gt|[gt.name, gt.id]} %>
+15:     <%= f.select :grade_1_no %>
+16:   </p>
+17:   <p>
+18:     <%= f.label :grade_2, "成绩类型2" %><br />
+
+    app/views/experiment/student_edit.html.erb:15:in `select'
+    app/views/experiment/student_edit.html.erb:15
+    app/views/experiment/student_edit.html.erb:1
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (31.2ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ExperimentController#student_edit (for 127.0.0.1 at 2013-06-23 01:05:08) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mMember Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+  [4;36;1mMember Load (0.0ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`id` = 5) [0m
+  [4;35;1mStudent Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `students`[0m
+  [4;36;1mStudent Load (0.0ms)[0m   [0;1mSELECT * FROM `students` WHERE (`students`.`id` = 1) [0m
+Rendering template within layouts/experiment
+Rendering experiment/student_edit
+  [4;35;1mGradeType Load (0.0ms)[0m   [0mSELECT * FROM `grade_types` [0m
+  [4;36;1mGradeType Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `grade_types`[0m
+
+ActionView::TemplateError (undefined method `grade_1_no' for #<Student:0x5778d98>) on line #15 of app/views/experiment/student_edit.html.erb:
+12:   <p>
+13:     <%= f.label :grade_1, "成绩类型1" %><br />
+14:     <%= f.select :grade_1, GradeType.all.collect{|gt|[gt.name, gt.id]} %>
+15:     <%= f.text_field :grade_1_no %>
+16:   </p>
+17:   <p>
+18:     <%= f.label :grade_2, "成绩类型2" %><br />
+
+    app/views/experiment/student_edit.html.erb:15
+    app/views/experiment/student_edit.html.erb:1
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (93.8ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ExperimentController#student_edit (for 127.0.0.1 at 2013-06-23 01:05:58) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mMember Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+  [4;36;1mMember Load (0.0ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`id` = 5) [0m
+  [4;35;1mStudent Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `students`[0m
+  [4;36;1mStudent Load (0.0ms)[0m   [0;1mSELECT * FROM `students` WHERE (`students`.`id` = 1) [0m
+Rendering template within layouts/experiment
+Rendering experiment/student_edit
+  [4;35;1mGradeType Load (0.0ms)[0m   [0mSELECT * FROM `grade_types` [0m
+  [4;36;1mGradeType Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `grade_types`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `grade_types` [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `grade_types` [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `grade_types` [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `grade_types` [0m
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/experiment/student_edit/1]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ExperimentController#confirm_add (for 127.0.0.1 at 2013-06-23 01:31:47) [PUT]
+  Parameters: {"commit"=>"添加", "student"=>{"grade_5"=>"5", "grade_4"=>"4", "grade_3"=>"3", "grade_2"=>"2", "grade_1"=>"1", "grade_3_no"=>"34", "internship_grade"=>"98", "grade_5_no"=>"56", "grade_4_no"=>"45", "grade_2_no"=>"23", "grade_1_no"=>"123"}, "authenticity_token"=>"pcBjYTLcy9O0UddXs4qeCSFpupkXqrTTvEmN+QZIQhM=", "id"=>"1"}
+  [4;35;1mMember Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+  [4;36;1mMember Load (0.0ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`id` = 5) [0m
+  [4;35;1mStudent Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `students`[0m
+  [4;36;1mStudent Load (0.0ms)[0m   [0;1mSELECT * FROM `students` WHERE (`students`.`id` = 1) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mStudent Load (0.0ms)[0m   [0;1mSELECT `students`.id FROM `students` WHERE (`students`.`stu_no` = 20086226 AND `students`.id <> 1) LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+
+RuntimeError ():
+  app/models/student.rb:17:in `add_grade_types_students'
+  app/controllers/experiment_controller.rb:33:in `confirm_add'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (46.9ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ExperimentController#confirm_add (for 127.0.0.1 at 2013-06-23 01:32:19) [PUT]
+  Parameters: {"commit"=>"添加", "student"=>{"grade_5"=>"5", "grade_4"=>"4", "grade_3"=>"3", "grade_2"=>"2", "grade_1"=>"1", "grade_3_no"=>"34", "internship_grade"=>"98", "grade_5_no"=>"56", "grade_4_no"=>"45", "grade_2_no"=>"23", "grade_1_no"=>"123"}, "authenticity_token"=>"pcBjYTLcy9O0UddXs4qeCSFpupkXqrTTvEmN+QZIQhM=", "id"=>"1"}
+  [4;36;1mMember Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+  [4;35;1mMember Load (0.0ms)[0m   [0mSELECT * FROM `members` WHERE (`members`.`id` = 5) [0m
+  [4;36;1mStudent Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `students`[0m
+  [4;35;1mStudent Load (0.0ms)[0m   [0mSELECT * FROM `students` WHERE (`students`.`id` = 1) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mStudent Load (0.0ms)[0m   [0mSELECT `students`.id FROM `students` WHERE (`students`.`stu_no` = 20086226 AND `students`.id <> 1) LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+
+RuntimeError ():
+  app/models/student.rb:17:in `add_grade_types_students'
+  app/controllers/experiment_controller.rb:33:in `confirm_add'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (46.9ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ExperimentController#confirm_add (for 127.0.0.1 at 2013-06-23 01:47:34) [PUT]
+  Parameters: {"commit"=>"添加", "student"=>{"grade_5"=>"5", "grade_4"=>"4", "grade_3"=>"3", "grade_2"=>"2", "grade_1"=>"1", "grade_3_no"=>"34", "internship_grade"=>"98", "grade_5_no"=>"56", "grade_4_no"=>"45", "grade_2_no"=>"23", "grade_1_no"=>"123"}, "authenticity_token"=>"pcBjYTLcy9O0UddXs4qeCSFpupkXqrTTvEmN+QZIQhM=", "id"=>"1"}
+  [4;35;1mMember Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+  [4;36;1mMember Load (0.0ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`id` = 5) [0m
+  [4;35;1mStudent Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `students`[0m
+  [4;36;1mStudent Load (0.0ms)[0m   [0;1mSELECT * FROM `students` WHERE (`students`.`id` = 1) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mStudent Load (0.0ms)[0m   [0;1mSELECT `students`.id FROM `students` WHERE (`students`.`stu_no` = 20086226 AND `students`.id <> 1) LIMIT 1[0m
+  [4;35;1mGradeTypesStudents Load (0.0ms)[0m   [0mSELECT * FROM `grade_types_students` WHERE (student_id = 1) [0m
+  [4;36;1mGradeTypesStudents Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `grade_types_students`[0m
+  [4;35;1mGradeTypesStudents Create (156.2ms)[0m   [0mINSERT INTO `grade_types_students` (`updated_at`, `student_id`, `grade_type_id`, `created_at`, `grade`) VALUES('2013-06-23 00:47:34', 1, 1, '2013-06-23 00:47:34', '123')[0m
+  [4;36;1mGradeTypesStudents Create (0.0ms)[0m   [0;1mINSERT INTO `grade_types_students` (`updated_at`, `student_id`, `grade_type_id`, `created_at`, `grade`) VALUES('2013-06-23 00:47:34', 1, 2, '2013-06-23 00:47:34', '23')[0m
+  [4;35;1mGradeTypesStudents Create (0.0ms)[0m   [0mINSERT INTO `grade_types_students` (`updated_at`, `student_id`, `grade_type_id`, `created_at`, `grade`) VALUES('2013-06-23 00:47:34', 1, 3, '2013-06-23 00:47:34', '34')[0m
+  [4;36;1mGradeTypesStudents Create (0.0ms)[0m   [0;1mINSERT INTO `grade_types_students` (`updated_at`, `student_id`, `grade_type_id`, `created_at`, `grade`) VALUES('2013-06-23 00:47:34', 1, 4, '2013-06-23 00:47:34', '45')[0m
+  [4;35;1mGradeTypesStudents Create (0.0ms)[0m   [0mINSERT INTO `grade_types_students` (`updated_at`, `student_id`, `grade_type_id`, `created_at`, `grade`) VALUES('2013-06-23 00:47:34', 1, 5, '2013-06-23 00:47:34', '56')[0m
+  [4;36;1mSQL (31.2ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/experiment
+Completed in 250ms (DB: 188) | 302 Found [http://127.0.0.1/experiment/confirm_add]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ExperimentController#index (for 127.0.0.1 at 2013-06-23 01:47:35) [GET]
+  [4;35;1mMember Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+  [4;36;1mMember Load (0.0ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`id` = 5) [0m
+  [4;35;1mStudent Load (0.0ms)[0m   [0mSELECT * FROM `students` LIMIT 0, 10[0m
+Rendering template within layouts/experiment
+Rendering experiment/index
+  [4;36;1mCollege Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `colleges`[0m
+  [4;35;1mCollege Load (0.0ms)[0m   [0mSELECT * FROM `colleges` WHERE (`colleges`.`parent_id` = 0) [0m
+  [4;36;1mStudent Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `students`[0m
+  [4;35;1mCollege Load (0.0ms)[0m   [0mSELECT * FROM `colleges` WHERE (`colleges`.`id` = 3) [0m
+  [4;36;1mgrade_types_students Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `grade_types_students`[0m
+  [4;35;1mGradeType Load (0.0ms)[0m   [0mSELECT * FROM `grade_types` INNER JOIN `grade_types_students` ON `grade_types`.id = `grade_types_students`.grade_type_id WHERE (`grade_types_students`.student_id = 1 ) [0m
+  [4;36;1mGradeType Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `grade_types`[0m
+  [4;35;1mCollege Load (0.0ms)[0m   [0mSELECT * FROM `colleges` WHERE (`colleges`.`id` = 6) [0m
+  [4;36;1mGradeType Load (0.0ms)[0m   [0;1mSELECT * FROM `grade_types` INNER JOIN `grade_types_students` ON `grade_types`.id = `grade_types_students`.grade_type_id WHERE (`grade_types_students`.student_id = 2 ) [0m
+Completed in 94ms (View: 78, DB: 0) | 200 OK [http://127.0.0.1/experiment]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ExperimentController#student_edit (for 127.0.0.1 at 2013-06-23 01:48:48) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mMember Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+  [4;36;1mMember Load (0.0ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`id` = 5) [0m
+  [4;35;1mStudent Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `students`[0m
+  [4;36;1mStudent Load (0.0ms)[0m   [0;1mSELECT * FROM `students` WHERE (`students`.`id` = 2) [0m
+Rendering template within layouts/experiment
+Rendering experiment/student_edit
+  [4;35;1mGradeType Load (0.0ms)[0m   [0mSELECT * FROM `grade_types` [0m
+  [4;36;1mGradeType Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `grade_types`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `grade_types` [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `grade_types` [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `grade_types` [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `grade_types` [0m
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://127.0.0.1/experiment/student_edit/2]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ExperimentController#confirm_add (for 127.0.0.1 at 2013-06-23 01:49:00) [PUT]
+  Parameters: {"commit"=>"添加", "student"=>{"grade_5"=>"5", "grade_4"=>"4", "grade_3"=>"3", "grade_2"=>"2", "grade_1"=>"1", "grade_3_no"=>"456", "internship_grade"=>"99", "grade_5_no"=>"678", "grade_4_no"=>"567", "grade_2_no"=>"345", "grade_1_no"=>"234"}, "authenticity_token"=>"pcBjYTLcy9O0UddXs4qeCSFpupkXqrTTvEmN+QZIQhM=", "id"=>"2"}
+  [4;35;1mMember Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+  [4;36;1mMember Load (0.0ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`id` = 5) [0m
+  [4;35;1mStudent Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `students`[0m
+  [4;36;1mStudent Load (0.0ms)[0m   [0;1mSELECT * FROM `students` WHERE (`students`.`id` = 2) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mStudent Load (0.0ms)[0m   [0;1mSELECT `students`.id FROM `students` WHERE (`students`.`stu_no` = 20086747 AND `students`.id <> 2) LIMIT 1[0m
+  [4;35;1mGradeTypesStudents Load (0.0ms)[0m   [0mSELECT * FROM `grade_types_students` WHERE (student_id = 2) [0m
+  [4;36;1mGradeTypesStudents Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `grade_types_students`[0m
+  [4;35;1mGradeTypesStudents Create (0.0ms)[0m   [0mINSERT INTO `grade_types_students` (`updated_at`, `student_id`, `grade_type_id`, `created_at`, `grade`) VALUES('2013-06-23 00:49:00', 2, 1, '2013-06-23 00:49:00', '234')[0m
+  [4;36;1mGradeTypesStudents Create (0.0ms)[0m   [0;1mINSERT INTO `grade_types_students` (`updated_at`, `student_id`, `grade_type_id`, `created_at`, `grade`) VALUES('2013-06-23 00:49:00', 2, 2, '2013-06-23 00:49:00', '345')[0m
+  [4;35;1mGradeTypesStudents Create (0.0ms)[0m   [0mINSERT INTO `grade_types_students` (`updated_at`, `student_id`, `grade_type_id`, `created_at`, `grade`) VALUES('2013-06-23 00:49:00', 2, 3, '2013-06-23 00:49:00', '456')[0m
+  [4;36;1mGradeTypesStudents Create (0.0ms)[0m   [0;1mINSERT INTO `grade_types_students` (`updated_at`, `student_id`, `grade_type_id`, `created_at`, `grade`) VALUES('2013-06-23 00:49:00', 2, 4, '2013-06-23 00:49:00', '567')[0m
+  [4;35;1mGradeTypesStudents Create (0.0ms)[0m   [0mINSERT INTO `grade_types_students` (`updated_at`, `student_id`, `grade_type_id`, `created_at`, `grade`) VALUES('2013-06-23 00:49:00', 2, 5, '2013-06-23 00:49:00', '678')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/experiment
+Completed in 47ms (DB: 0) | 302 Found [http://127.0.0.1/experiment/confirm_add]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ExperimentController#index (for 127.0.0.1 at 2013-06-23 01:49:00) [GET]
+  [4;35;1mMember Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+  [4;36;1mMember Load (0.0ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`id` = 5) [0m
+  [4;35;1mStudent Load (0.0ms)[0m   [0mSELECT * FROM `students` LIMIT 0, 10[0m
+Rendering template within layouts/experiment
+Rendering experiment/index
+  [4;36;1mCollege Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `colleges`[0m
+  [4;35;1mCollege Load (0.0ms)[0m   [0mSELECT * FROM `colleges` WHERE (`colleges`.`parent_id` = 0) [0m
+  [4;36;1mStudent Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `students`[0m
+  [4;35;1mCollege Load (0.0ms)[0m   [0mSELECT * FROM `colleges` WHERE (`colleges`.`id` = 3) [0m
+  [4;36;1mgrade_types_students Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `grade_types_students`[0m
+  [4;35;1mGradeType Load (0.0ms)[0m   [0mSELECT * FROM `grade_types` INNER JOIN `grade_types_students` ON `grade_types`.id = `grade_types_students`.grade_type_id WHERE (`grade_types_students`.student_id = 1 ) [0m
+  [4;36;1mGradeType Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `grade_types`[0m
+  [4;35;1mCollege Load (0.0ms)[0m   [0mSELECT * FROM `colleges` WHERE (`colleges`.`id` = 6) [0m
+  [4;36;1mGradeType Load (0.0ms)[0m   [0;1mSELECT * FROM `grade_types` INNER JOIN `grade_types_students` ON `grade_types`.id = `grade_types_students`.grade_type_id WHERE (`grade_types_students`.student_id = 2 ) [0m
+Completed in 94ms (View: 31, DB: 0) | 200 OK [http://127.0.0.1/experiment]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ExperimentController#index (for 127.0.0.1 at 2013-06-23 01:49:30) [GET]
+  [4;35;1mMember Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+  [4;36;1mMember Load (0.0ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`id` = 5) [0m
+  [4;35;1mStudent Load (0.0ms)[0m   [0mSELECT * FROM `students` LIMIT 0, 10[0m
+Rendering template within layouts/experiment
+Rendering experiment/index
+  [4;36;1mCollege Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `colleges`[0m
+  [4;35;1mCollege Load (0.0ms)[0m   [0mSELECT * FROM `colleges` WHERE (`colleges`.`parent_id` = 0) [0m
+  [4;36;1mStudent Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `students`[0m
+  [4;35;1mCollege Load (0.0ms)[0m   [0mSELECT * FROM `colleges` WHERE (`colleges`.`id` = 3) [0m
+  [4;36;1mgrade_types_students Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `grade_types_students`[0m
+  [4;35;1mGradeType Load (0.0ms)[0m   [0mSELECT * FROM `grade_types` INNER JOIN `grade_types_students` ON `grade_types`.id = `grade_types_students`.grade_type_id WHERE (`grade_types_students`.student_id = 1 ) [0m
+  [4;36;1mGradeType Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `grade_types`[0m
+  [4;35;1mCollege Load (0.0ms)[0m   [0mSELECT * FROM `colleges` WHERE (`colleges`.`id` = 6) [0m
+  [4;36;1mGradeType Load (0.0ms)[0m   [0;1mSELECT * FROM `grade_types` INNER JOIN `grade_types_students` ON `grade_types`.id = `grade_types_students`.grade_type_id WHERE (`grade_types_students`.student_id = 2 ) [0m
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://127.0.0.1/experiment]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ExperimentController#index (for 127.0.0.1 at 2013-06-23 01:49:45) [GET]
+  [4;35;1mMember Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+  [4;36;1mMember Load (0.0ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`id` = 5) [0m
+  [4;35;1mStudent Load (0.0ms)[0m   [0mSELECT * FROM `students` LIMIT 0, 10[0m
+Rendering template within layouts/experiment
+Rendering experiment/index
+  [4;36;1mCollege Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `colleges`[0m
+  [4;35;1mCollege Load (0.0ms)[0m   [0mSELECT * FROM `colleges` WHERE (`colleges`.`parent_id` = 0) [0m
+  [4;36;1mStudent Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `students`[0m
+  [4;35;1mCollege Load (0.0ms)[0m   [0mSELECT * FROM `colleges` WHERE (`colleges`.`id` = 3) [0m
+  [4;36;1mgrade_types_students Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `grade_types_students`[0m
+  [4;35;1mGradeType Load (0.0ms)[0m   [0mSELECT * FROM `grade_types` INNER JOIN `grade_types_students` ON `grade_types`.id = `grade_types_students`.grade_type_id WHERE (`grade_types_students`.student_id = 1 ) [0m
+  [4;36;1mGradeType Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `grade_types`[0m
+  [4;35;1mCollege Load (0.0ms)[0m   [0mSELECT * FROM `colleges` WHERE (`colleges`.`id` = 6) [0m
+  [4;36;1mGradeType Load (0.0ms)[0m   [0;1mSELECT * FROM `grade_types` INNER JOIN `grade_types_students` ON `grade_types`.id = `grade_types_students`.grade_type_id WHERE (`grade_types_students`.student_id = 2 ) [0m
+Completed in 62ms (View: 47, DB: 0) | 200 OK [http://127.0.0.1/experiment]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ExperimentController#student_edit (for 127.0.0.1 at 2013-06-23 01:51:22) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mMember Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+  [4;36;1mMember Load (0.0ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`id` = 5) [0m
+  [4;35;1mStudent Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `students`[0m
+  [4;36;1mStudent Load (0.0ms)[0m   [0;1mSELECT * FROM `students` WHERE (`students`.`id` = 1) [0m
+Rendering template within layouts/experiment
+Rendering experiment/student_edit
+  [4;35;1mGradeType Load (0.0ms)[0m   [0mSELECT * FROM `grade_types` [0m
+  [4;36;1mGradeType Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `grade_types`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `grade_types` [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `grade_types` [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `grade_types` [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `grade_types` [0m
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://127.0.0.1/experiment/student_edit/1]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ExperimentController#student_edit (for 127.0.0.1 at 2013-06-23 01:55:59) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mMember Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+  [4;36;1mMember Load (0.0ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`id` = 5) [0m
+  [4;35;1mStudent Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `students`[0m
+  [4;36;1mStudent Load (0.0ms)[0m   [0;1mSELECT * FROM `students` WHERE (`students`.`id` = 1) [0m
+Rendering template within layouts/experiment
+Rendering experiment/student_edit
+  [4;35;1mGradeType Load (0.0ms)[0m   [0mSELECT * FROM `grade_types` [0m
+  [4;36;1mGradeType Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `grade_types`[0m
+  [4;35;1mgrade_types_students Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `grade_types_students`[0m
+  [4;36;1mGradeType Load (0.0ms)[0m   [0;1mSELECT * FROM `grade_types` INNER JOIN `grade_types_students` ON `grade_types`.id = `grade_types_students`.grade_type_id WHERE (`grade_types_students`.student_id = 1 ) LIMIT 1[0m
+
+ActionView::TemplateError (undefined method `merge' for #<GradeType:0x578d3a8>) on line #15 of app/views/experiment/student_edit.html.erb:
+12:   <p>
+13:     <%= f.label :grade_1, "成绩类型1" %><br />
+14:     <%= f.select :grade_1, GradeType.all.collect{|gt|[gt.name, gt.id]} %>
+15:     <%= f.text_field :grade_1_no, @student.grade_type.find(:first, :conditions => "") %>
+16:   </p>
+17:   <p>
+18:     <%= f.label :grade_2, "成绩类型2" %><br />
+
+    app/views/experiment/student_edit.html.erb:15
+    app/views/experiment/student_edit.html.erb:1
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (31.2ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ExperimentController#student_edit (for 127.0.0.1 at 2013-06-23 02:18:03) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mMember Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+  [4;36;1mMember Load (0.0ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`id` = 5) [0m
+  [4;35;1mStudent Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `students`[0m
+  [4;36;1mStudent Load (0.0ms)[0m   [0;1mSELECT * FROM `students` WHERE (`students`.`id` = 1) [0m
+Rendering template within layouts/experiment
+Rendering experiment/student_edit
+  [4;35;1mgrade_types_students Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `grade_types_students`[0m
+  [4;36;1mGradeType Load (0.0ms)[0m   [0;1mSELECT * FROM `grade_types` INNER JOIN `grade_types_students` ON `grade_types`.id = `grade_types_students`.grade_type_id WHERE (`grade_types_students`.student_id = 1 ) [0m
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/experiment/student_edit/1]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ExperimentController#student_edit (for 127.0.0.1 at 2013-06-23 02:29:02) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mMember Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+  [4;36;1mMember Load (0.0ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`id` = 5) [0m
+  [4;35;1mStudent Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `students`[0m
+  [4;36;1mStudent Load (0.0ms)[0m   [0;1mSELECT * FROM `students` WHERE (`students`.`id` = 1) [0m
+Rendering template within layouts/experiment
+Rendering experiment/student_edit
+  [4;35;1mgrade_types_students Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `grade_types_students`[0m
+  [4;36;1mGradeType Load (0.0ms)[0m   [0;1mSELECT * FROM `grade_types` INNER JOIN `grade_types_students` ON `grade_types`.id = `grade_types_students`.grade_type_id WHERE (`grade_types_students`.student_id = 1 ) [0m
+  [4;35;1mGradeType Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `grade_types`[0m
+  [4;36;1mGradeType Load (0.0ms)[0m   [0;1mSELECT * FROM `grade_types` [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `grade_types` [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `grade_types` [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `grade_types` [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `grade_types` [0m
+Completed in 62ms (View: 31, DB: 0) | 200 OK [http://127.0.0.1/experiment/student_edit/1]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ExperimentController#student_edit (for 127.0.0.1 at 2013-06-23 02:33:41) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mMember Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+  [4;36;1mMember Load (0.0ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`id` = 5) [0m
+  [4;35;1mStudent Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `students`[0m
+  [4;36;1mStudent Load (0.0ms)[0m   [0;1mSELECT * FROM `students` WHERE (`students`.`id` = 1) [0m
+Rendering template within layouts/experiment
+Rendering experiment/student_edit
+  [4;35;1mgrade_types_students Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `grade_types_students`[0m
+  [4;36;1mGradeType Load (0.0ms)[0m   [0;1mSELECT * FROM `grade_types` INNER JOIN `grade_types_students` ON `grade_types`.id = `grade_types_students`.grade_type_id WHERE (`grade_types_students`.student_id = 1 ) [0m
+  [4;35;1mGradeType Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `grade_types`[0m
+  [4;36;1mGradeType Load (0.0ms)[0m   [0;1mSELECT * FROM `grade_types` [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `grade_types` [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `grade_types` [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `grade_types` [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `grade_types` [0m
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/experiment/student_edit/1]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ExperimentController#student_edit (for 127.0.0.1 at 2013-06-23 02:33:44) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mMember Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+  [4;36;1mMember Load (0.0ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`id` = 5) [0m
+  [4;35;1mStudent Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `students`[0m
+  [4;36;1mStudent Load (0.0ms)[0m   [0;1mSELECT * FROM `students` WHERE (`students`.`id` = 1) [0m
+Rendering template within layouts/experiment
+Rendering experiment/student_edit
+  [4;35;1mgrade_types_students Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `grade_types_students`[0m
+  [4;36;1mGradeType Load (0.0ms)[0m   [0;1mSELECT * FROM `grade_types` INNER JOIN `grade_types_students` ON `grade_types`.id = `grade_types_students`.grade_type_id WHERE (`grade_types_students`.student_id = 1 ) [0m
+  [4;35;1mGradeType Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `grade_types`[0m
+  [4;36;1mGradeType Load (0.0ms)[0m   [0;1mSELECT * FROM `grade_types` [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `grade_types` [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `grade_types` [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `grade_types` [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `grade_types` [0m
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/experiment/student_edit/1]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ExperimentController#student_edit (for 127.0.0.1 at 2013-06-23 02:33:45) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mMember Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+  [4;36;1mMember Load (0.0ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`id` = 5) [0m
+  [4;35;1mStudent Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `students`[0m
+  [4;36;1mStudent Load (0.0ms)[0m   [0;1mSELECT * FROM `students` WHERE (`students`.`id` = 1) [0m
+Rendering template within layouts/experiment
+Rendering experiment/student_edit
+  [4;35;1mgrade_types_students Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `grade_types_students`[0m
+  [4;36;1mGradeType Load (0.0ms)[0m   [0;1mSELECT * FROM `grade_types` INNER JOIN `grade_types_students` ON `grade_types`.id = `grade_types_students`.grade_type_id WHERE (`grade_types_students`.student_id = 1 ) [0m
+  [4;35;1mGradeType Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `grade_types`[0m
+  [4;36;1mGradeType Load (0.0ms)[0m   [0;1mSELECT * FROM `grade_types` [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `grade_types` [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `grade_types` [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `grade_types` [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `grade_types` [0m
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/experiment/student_edit/1]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ExperimentController#student_edit (for 127.0.0.1 at 2013-06-23 02:34:54) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mMember Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+  [4;36;1mMember Load (0.0ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`id` = 5) [0m
+  [4;35;1mStudent Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `students`[0m
+  [4;36;1mStudent Load (0.0ms)[0m   [0;1mSELECT * FROM `students` WHERE (`students`.`id` = 1) [0m
+Rendering template within layouts/experiment
+Rendering experiment/student_edit
+  [4;35;1mgrade_types_students Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `grade_types_students`[0m
+  [4;36;1mGradeType Load (15.6ms)[0m   [0;1mSELECT * FROM `grade_types` INNER JOIN `grade_types_students` ON `grade_types`.id = `grade_types_students`.grade_type_id WHERE (`grade_types_students`.student_id = 1 ) [0m
+  [4;35;1mGradeType Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `grade_types`[0m
+  [4;36;1mGradeType Load (0.0ms)[0m   [0;1mSELECT * FROM `grade_types` [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `grade_types` [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `grade_types` [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `grade_types` [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `grade_types` [0m
+Completed in 47ms (View: 0, DB: 16) | 200 OK [http://127.0.0.1/experiment/student_edit/1]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ExperimentController#student_edit (for 127.0.0.1 at 2013-06-23 02:35:40) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mMember Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+  [4;36;1mMember Load (0.0ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`id` = 5) [0m
+  [4;35;1mStudent Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `students`[0m
+  [4;36;1mStudent Load (0.0ms)[0m   [0;1mSELECT * FROM `students` WHERE (`students`.`id` = 1) [0m
+Rendering template within layouts/experiment
+Rendering experiment/student_edit
+  [4;35;1mgrade_types_students Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `grade_types_students`[0m
+  [4;36;1mGradeType Load (0.0ms)[0m   [0;1mSELECT * FROM `grade_types` INNER JOIN `grade_types_students` ON `grade_types`.id = `grade_types_students`.grade_type_id WHERE (`grade_types_students`.student_id = 1 ) [0m
+  [4;35;1mGradeType Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `grade_types`[0m
+  [4;36;1mGradeType Load (0.0ms)[0m   [0;1mSELECT * FROM `grade_types` [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `grade_types` [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `grade_types` [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `grade_types` [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `grade_types` [0m
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://127.0.0.1/experiment/student_edit/1]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ExperimentController#student_edit (for 127.0.0.1 at 2013-06-23 02:38:10) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mMember Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+  [4;36;1mMember Load (0.0ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`id` = 5) [0m
+  [4;35;1mStudent Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `students`[0m
+  [4;36;1mStudent Load (0.0ms)[0m   [0;1mSELECT * FROM `students` WHERE (`students`.`id` = 1) [0m
+Rendering template within layouts/experiment
+Rendering experiment/student_edit
+  [4;35;1mgrade_types_students Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `grade_types_students`[0m
+  [4;36;1mGradeType Load (0.0ms)[0m   [0;1mSELECT * FROM `grade_types` INNER JOIN `grade_types_students` ON `grade_types`.id = `grade_types_students`.grade_type_id WHERE (`grade_types_students`.student_id = 1 ) [0m
+  [4;35;1mGradeType Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `grade_types`[0m
+  [4;36;1mGradeType Load (0.0ms)[0m   [0;1mSELECT * FROM `grade_types` [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `grade_types` [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `grade_types` [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `grade_types` [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `grade_types` [0m
+Completed in 47ms (View: 16, DB: 16) | 200 OK [http://127.0.0.1/experiment/student_edit/1]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ExperimentController#student_edit (for 127.0.0.1 at 2013-06-23 02:40:06) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mMember Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+  [4;36;1mMember Load (0.0ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`id` = 5) [0m
+  [4;35;1mStudent Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `students`[0m
+  [4;36;1mStudent Load (0.0ms)[0m   [0;1mSELECT * FROM `students` WHERE (`students`.`id` = 1) [0m
+Rendering template within layouts/experiment
+Rendering experiment/student_edit
+  [4;35;1mgrade_types_students Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `grade_types_students`[0m
+  [4;36;1mGradeType Load (0.0ms)[0m   [0;1mSELECT * FROM `grade_types` INNER JOIN `grade_types_students` ON `grade_types`.id = `grade_types_students`.grade_type_id WHERE (`grade_types_students`.student_id = 1 ) [0m
+  [4;35;1mGradeType Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `grade_types`[0m
+  [4;36;1mGradeType Load (0.0ms)[0m   [0;1mSELECT * FROM `grade_types` [0m
+
+ActionView::TemplateError (undefined method `grade_type_id' for #<GradeType:0x594e550>) on line #44 of app/views/experiment/student_edit.html.erb:
+41:       <p>
+42:         <%= f.label "grade_#{no}", "成绩类型#{no}" %><br />
+43:         <%= f.select "grade_#{no}", GradeType.all.collect{|gt|[gt.name, gt.id]}, :selected => gt.id %>
+44:         <%= f.text_field "grade_#{no}_no", :value => gt.grade_type_id %>
+45:       </p>
+46:       <% no += 1%>
+47:     <% end -%>
+
+    app/views/experiment/student_edit.html.erb:44
+    C:/Ruby187/lib/ruby/gems/1.8/gems/will_paginate-2.3.15/lib/will_paginate/finder.rb:168:in `method_missing'
+    C:/Ruby187/lib/ruby/gems/1.8/gems/will_paginate-2.3.15/lib/will_paginate/finder.rb:168:in `method_missing'
+    app/views/experiment/student_edit.html.erb:40
+    app/views/experiment/student_edit.html.erb:1
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (31.2ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ExperimentController#student_edit (for 127.0.0.1 at 2013-06-23 02:42:57) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mMember Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+  [4;36;1mMember Load (0.0ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`id` = 5) [0m
+  [4;35;1mStudent Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `students`[0m
+  [4;36;1mStudent Load (0.0ms)[0m   [0;1mSELECT * FROM `students` WHERE (`students`.`id` = 1) [0m
+Rendering template within layouts/experiment
+Rendering experiment/student_edit
+  [4;35;1mgrade_types_students Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `grade_types_students`[0m
+  [4;36;1mGradeType Load (0.0ms)[0m   [0;1mSELECT * FROM `grade_types` INNER JOIN `grade_types_students` ON `grade_types`.id = `grade_types_students`.grade_type_id WHERE (`grade_types_students`.student_id = 1 ) [0m
+  [4;35;1mGradeType Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `grade_types`[0m
+  [4;36;1mGradeType Load (0.0ms)[0m   [0;1mSELECT * FROM `grade_types` [0m
+
+ActionView::TemplateError (undefined method `grade' for #<GradeType:0x5730618>) on line #44 of app/views/experiment/student_edit.html.erb:
+41:       <p>
+42:         <%= f.label "grade_#{no}", "成绩类型#{no}" %><br />
+43:         <%= f.select "grade_#{no}", GradeType.all.collect{|gt|[gt.name, gt.id]}, :selected => gt.id %>
+44:         <%= f.text_field "grade_#{no}_no", :value => gt.grade %>
+45:       </p>
+46:       <% no += 1%>
+47:     <% end -%>
+
+    app/views/experiment/student_edit.html.erb:44
+    C:/Ruby187/lib/ruby/gems/1.8/gems/will_paginate-2.3.15/lib/will_paginate/finder.rb:168:in `method_missing'
+    C:/Ruby187/lib/ruby/gems/1.8/gems/will_paginate-2.3.15/lib/will_paginate/finder.rb:168:in `method_missing'
+    app/views/experiment/student_edit.html.erb:40
+    app/views/experiment/student_edit.html.erb:1
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (109.4ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ExperimentController#student_edit (for 127.0.0.1 at 2013-06-23 02:43:25) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mMember Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+  [4;36;1mMember Load (0.0ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`id` = 5) [0m
+  [4;35;1mStudent Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `students`[0m
+  [4;36;1mStudent Load (0.0ms)[0m   [0;1mSELECT * FROM `students` WHERE (`students`.`id` = 1) [0m
+Rendering template within layouts/experiment
+Rendering experiment/student_edit
+  [4;35;1mgrade_types_students Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `grade_types_students`[0m
+  [4;36;1mGradeType Load (0.0ms)[0m   [0;1mSELECT * FROM `grade_types` INNER JOIN `grade_types_students` ON `grade_types`.id = `grade_types_students`.grade_type_id WHERE (`grade_types_students`.student_id = 1 ) [0m
+  [4;35;1mGradeType Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `grade_types`[0m
+  [4;36;1mGradeType Load (0.0ms)[0m   [0;1mSELECT * FROM `grade_types` [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `grade_types` [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `grade_types` [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `grade_types` [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `grade_types` [0m
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://127.0.0.1/experiment/student_edit/1]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ExperimentController#confirm_add (for 127.0.0.1 at 2013-06-23 02:44:02) [PUT]
+  Parameters: {"commit"=>"添加", "student"=>{"grade_5"=>"5", "grade_4"=>"4", "grade_3"=>"3", "grade_2"=>"2", "grade_1"=>"1", "grade_3_no"=>"343", "internship_grade"=>"98", "grade_5_no"=>"56", "grade_4_no"=>"45", "grade_2_no"=>"23", "grade_1_no"=>"123"}, "authenticity_token"=>"pcBjYTLcy9O0UddXs4qeCSFpupkXqrTTvEmN+QZIQhM=", "id"=>"1"}
+  [4;35;1mMember Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+  [4;36;1mMember Load (0.0ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`id` = 5) [0m
+  [4;35;1mStudent Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `students`[0m
+  [4;36;1mStudent Load (0.0ms)[0m   [0;1mSELECT * FROM `students` WHERE (`students`.`id` = 1) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mStudent Load (0.0ms)[0m   [0;1mSELECT `students`.id FROM `students` WHERE (`students`.`stu_no` = 20086226 AND `students`.id <> 1) LIMIT 1[0m
+  [4;35;1mGradeTypesStudents Load (0.0ms)[0m   [0mSELECT * FROM `grade_types_students` WHERE (student_id = 1) [0m
+  [4;36;1mGradeTypesStudents Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `grade_types_students`[0m
+  [4;35;1mGradeTypesStudents Destroy (156.2ms)[0m   [0mDELETE FROM `grade_types_students` WHERE `id` = 1[0m
+  [4;36;1mGradeTypesStudents Destroy (0.0ms)[0m   [0;1mDELETE FROM `grade_types_students` WHERE `id` = 2[0m
+  [4;35;1mGradeTypesStudents Destroy (0.0ms)[0m   [0mDELETE FROM `grade_types_students` WHERE `id` = 3[0m
+  [4;36;1mGradeTypesStudents Destroy (0.0ms)[0m   [0;1mDELETE FROM `grade_types_students` WHERE `id` = 4[0m
+  [4;35;1mGradeTypesStudents Destroy (0.0ms)[0m   [0mDELETE FROM `grade_types_students` WHERE `id` = 5[0m
+  [4;36;1mGradeTypesStudents Create (0.0ms)[0m   [0;1mINSERT INTO `grade_types_students` (`updated_at`, `student_id`, `grade_type_id`, `created_at`, `grade`) VALUES('2013-06-23 01:44:02', 1, 1, '2013-06-23 01:44:02', '123')[0m
+  [4;35;1mGradeTypesStudents Create (0.0ms)[0m   [0mINSERT INTO `grade_types_students` (`updated_at`, `student_id`, `grade_type_id`, `created_at`, `grade`) VALUES('2013-06-23 01:44:02', 1, 2, '2013-06-23 01:44:02', '23')[0m
+  [4;36;1mGradeTypesStudents Create (0.0ms)[0m   [0;1mINSERT INTO `grade_types_students` (`updated_at`, `student_id`, `grade_type_id`, `created_at`, `grade`) VALUES('2013-06-23 01:44:02', 1, 3, '2013-06-23 01:44:02', '343')[0m
+  [4;35;1mGradeTypesStudents Create (0.0ms)[0m   [0mINSERT INTO `grade_types_students` (`updated_at`, `student_id`, `grade_type_id`, `created_at`, `grade`) VALUES('2013-06-23 01:44:02', 1, 4, '2013-06-23 01:44:02', '45')[0m
+  [4;36;1mGradeTypesStudents Create (0.0ms)[0m   [0;1mINSERT INTO `grade_types_students` (`updated_at`, `student_id`, `grade_type_id`, `created_at`, `grade`) VALUES('2013-06-23 01:44:02', 1, 5, '2013-06-23 01:44:02', '56')[0m
+  [4;35;1mSQL (15.6ms)[0m   [0mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/experiment
+Completed in 234ms (DB: 172) | 302 Found [http://127.0.0.1/experiment/confirm_add]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ExperimentController#index (for 127.0.0.1 at 2013-06-23 02:44:03) [GET]
+  [4;36;1mMember Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+  [4;35;1mMember Load (0.0ms)[0m   [0mSELECT * FROM `members` WHERE (`members`.`id` = 5) [0m
+  [4;36;1mStudent Load (0.0ms)[0m   [0;1mSELECT * FROM `students` LIMIT 0, 10[0m
+Rendering template within layouts/experiment
+Rendering experiment/index
+  [4;35;1mCollege Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `colleges`[0m
+  [4;36;1mCollege Load (0.0ms)[0m   [0;1mSELECT * FROM `colleges` WHERE (`colleges`.`parent_id` = 0) [0m
+  [4;35;1mStudent Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `students`[0m
+  [4;36;1mCollege Load (0.0ms)[0m   [0;1mSELECT * FROM `colleges` WHERE (`colleges`.`id` = 3) [0m
+  [4;35;1mgrade_types_students Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `grade_types_students`[0m
+  [4;36;1mGradeType Load (0.0ms)[0m   [0;1mSELECT * FROM `grade_types` INNER JOIN `grade_types_students` ON `grade_types`.id = `grade_types_students`.grade_type_id WHERE (`grade_types_students`.student_id = 1 ) [0m
+  [4;35;1mGradeType Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `grade_types`[0m
+  [4;36;1mCollege Load (0.0ms)[0m   [0;1mSELECT * FROM `colleges` WHERE (`colleges`.`id` = 6) [0m
+  [4;35;1mGradeType Load (0.0ms)[0m   [0mSELECT * FROM `grade_types` INNER JOIN `grade_types_students` ON `grade_types`.id = `grade_types_students`.grade_type_id WHERE (`grade_types_students`.student_id = 2 ) [0m
+Completed in 78ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/experiment]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ExperimentController#student_edit (for 127.0.0.1 at 2013-06-23 02:44:07) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mMember Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+  [4;35;1mMember Load (0.0ms)[0m   [0mSELECT * FROM `members` WHERE (`members`.`id` = 5) [0m
+  [4;36;1mStudent Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `students`[0m
+  [4;35;1mStudent Load (0.0ms)[0m   [0mSELECT * FROM `students` WHERE (`students`.`id` = 2) [0m
+Rendering template within layouts/experiment
+Rendering experiment/student_edit
+  [4;36;1mgrade_types_students Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `grade_types_students`[0m
+  [4;35;1mGradeType Load (0.0ms)[0m   [0mSELECT * FROM `grade_types` INNER JOIN `grade_types_students` ON `grade_types`.id = `grade_types_students`.grade_type_id WHERE (`grade_types_students`.student_id = 2 ) [0m
+  [4;36;1mGradeType Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `grade_types`[0m
+  [4;35;1mGradeType Load (0.0ms)[0m   [0mSELECT * FROM `grade_types` [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `grade_types` [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `grade_types` [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `grade_types` [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `grade_types` [0m
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/experiment/student_edit/2]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ExperimentController#confirm_add (for 127.0.0.1 at 2013-06-23 02:44:22) [PUT]
+  Parameters: {"commit"=>"添加", "student"=>{"grade_5"=>"5", "grade_4"=>"4", "grade_3"=>"3", "grade_2"=>"2", "grade_1"=>"1", "grade_3_no"=>"456", "internship_grade"=>"99", "grade_5_no"=>"678", "grade_4_no"=>"56", "grade_2_no"=>"345", "grade_1_no"=>"234"}, "authenticity_token"=>"pcBjYTLcy9O0UddXs4qeCSFpupkXqrTTvEmN+QZIQhM=", "id"=>"2"}
+  [4;36;1mMember Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+  [4;35;1mMember Load (0.0ms)[0m   [0mSELECT * FROM `members` WHERE (`members`.`id` = 5) [0m
+  [4;36;1mStudent Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `students`[0m
+  [4;35;1mStudent Load (0.0ms)[0m   [0mSELECT * FROM `students` WHERE (`students`.`id` = 2) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mStudent Load (0.0ms)[0m   [0mSELECT `students`.id FROM `students` WHERE (`students`.`stu_no` = 20086747 AND `students`.id <> 2) LIMIT 1[0m
+  [4;36;1mGradeTypesStudents Load (0.0ms)[0m   [0;1mSELECT * FROM `grade_types_students` WHERE (student_id = 2) [0m
+  [4;35;1mGradeTypesStudents Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `grade_types_students`[0m
+  [4;36;1mGradeTypesStudents Destroy (0.0ms)[0m   [0;1mDELETE FROM `grade_types_students` WHERE `id` = 6[0m
+  [4;35;1mGradeTypesStudents Destroy (0.0ms)[0m   [0mDELETE FROM `grade_types_students` WHERE `id` = 7[0m
+  [4;36;1mGradeTypesStudents Destroy (0.0ms)[0m   [0;1mDELETE FROM `grade_types_students` WHERE `id` = 8[0m
+  [4;35;1mGradeTypesStudents Destroy (0.0ms)[0m   [0mDELETE FROM `grade_types_students` WHERE `id` = 9[0m
+  [4;36;1mGradeTypesStudents Destroy (0.0ms)[0m   [0;1mDELETE FROM `grade_types_students` WHERE `id` = 10[0m
+  [4;35;1mGradeTypesStudents Create (0.0ms)[0m   [0mINSERT INTO `grade_types_students` (`updated_at`, `student_id`, `grade_type_id`, `created_at`, `grade`) VALUES('2013-06-23 01:44:22', 2, 1, '2013-06-23 01:44:22', '234')[0m
+  [4;36;1mGradeTypesStudents Create (0.0ms)[0m   [0;1mINSERT INTO `grade_types_students` (`updated_at`, `student_id`, `grade_type_id`, `created_at`, `grade`) VALUES('2013-06-23 01:44:22', 2, 2, '2013-06-23 01:44:22', '345')[0m
+  [4;35;1mGradeTypesStudents Create (0.0ms)[0m   [0mINSERT INTO `grade_types_students` (`updated_at`, `student_id`, `grade_type_id`, `created_at`, `grade`) VALUES('2013-06-23 01:44:22', 2, 3, '2013-06-23 01:44:22', '456')[0m
+  [4;36;1mGradeTypesStudents Create (0.0ms)[0m   [0;1mINSERT INTO `grade_types_students` (`updated_at`, `student_id`, `grade_type_id`, `created_at`, `grade`) VALUES('2013-06-23 01:44:22', 2, 4, '2013-06-23 01:44:22', '56')[0m
+  [4;35;1mGradeTypesStudents Create (0.0ms)[0m   [0mINSERT INTO `grade_types_students` (`updated_at`, `student_id`, `grade_type_id`, `created_at`, `grade`) VALUES('2013-06-23 01:44:22', 2, 5, '2013-06-23 01:44:22', '678')[0m
+  [4;36;1mSQL (62.5ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/experiment
+Completed in 109ms (DB: 78) | 302 Found [http://127.0.0.1/experiment/confirm_add]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ExperimentController#index (for 127.0.0.1 at 2013-06-23 02:44:22) [GET]
+  [4;35;1mMember Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+  [4;36;1mMember Load (0.0ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`id` = 5) [0m
+  [4;35;1mStudent Load (0.0ms)[0m   [0mSELECT * FROM `students` LIMIT 0, 10[0m
+Rendering template within layouts/experiment
+Rendering experiment/index
+  [4;36;1mCollege Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `colleges`[0m
+  [4;35;1mCollege Load (0.0ms)[0m   [0mSELECT * FROM `colleges` WHERE (`colleges`.`parent_id` = 0) [0m
+  [4;36;1mStudent Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `students`[0m
+  [4;35;1mCollege Load (0.0ms)[0m   [0mSELECT * FROM `colleges` WHERE (`colleges`.`id` = 3) [0m
+  [4;36;1mgrade_types_students Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `grade_types_students`[0m
+  [4;35;1mGradeType Load (0.0ms)[0m   [0mSELECT * FROM `grade_types` INNER JOIN `grade_types_students` ON `grade_types`.id = `grade_types_students`.grade_type_id WHERE (`grade_types_students`.student_id = 1 ) [0m
+  [4;36;1mGradeType Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `grade_types`[0m
+  [4;35;1mCollege Load (0.0ms)[0m   [0mSELECT * FROM `colleges` WHERE (`colleges`.`id` = 6) [0m
+  [4;36;1mGradeType Load (0.0ms)[0m   [0;1mSELECT * FROM `grade_types` INNER JOIN `grade_types_students` ON `grade_types`.id = `grade_types_students`.grade_type_id WHERE (`grade_types_students`.student_id = 2 ) [0m
+Completed in 78ms (View: 31, DB: 0) | 200 OK [http://127.0.0.1/experiment]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ExperimentController#student_detials (for 127.0.0.1 at 2013-06-23 02:45:13) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mMember Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+  [4;36;1mMember Load (0.0ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`id` = 5) [0m
+  [4;35;1mStudent Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `students`[0m
+  [4;36;1mStudent Load (0.0ms)[0m   [0;1mSELECT * FROM `students` WHERE (`students`.`id` = 1) [0m
+Rendering template within layouts/experiment
+Rendering experiment/student_detials
+  [4;35;1mCollege Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `colleges`[0m
+  [4;36;1mCollege Load (0.0ms)[0m   [0;1mSELECT * FROM `colleges` WHERE (`colleges`.`id` = 3) [0m
+  [4;35;1mCollege Load (0.0ms)[0m   [0mSELECT * FROM `colleges` WHERE (`colleges`.`id` = 4) [0m
+  [4;36;1mCollege Load (0.0ms)[0m   [0;1mSELECT * FROM `colleges` WHERE (`colleges`.`id` = 6) [0m
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://127.0.0.1/experiment/student_detials/1]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ExperimentController#index (for 127.0.0.1 at 2013-06-23 02:45:22) [GET]
+  Parameters: {"grade"=>"", "college"=>"3"}
+  [4;35;1mMember Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+  [4;36;1mMember Load (0.0ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`id` = 5) [0m
+  [4;35;1mStudent Load (15.6ms)[0m   [0mSELECT * FROM `students` WHERE ( college_id = 3 ) LIMIT 0, 10[0m
+Rendering template within layouts/experiment
+Rendering experiment/index
+  [4;36;1mCollege Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `colleges`[0m
+  [4;35;1mCollege Load (0.0ms)[0m   [0mSELECT * FROM `colleges` WHERE (`colleges`.`parent_id` = 0) [0m
+  [4;36;1mStudent Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `students`[0m
+  [4;35;1mCollege Load (0.0ms)[0m   [0mSELECT * FROM `colleges` WHERE (`colleges`.`id` = 3) [0m
+  [4;36;1mgrade_types_students Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `grade_types_students`[0m
+  [4;35;1mGradeType Load (0.0ms)[0m   [0mSELECT * FROM `grade_types` INNER JOIN `grade_types_students` ON `grade_types`.id = `grade_types_students`.grade_type_id WHERE (`grade_types_students`.student_id = 1 ) [0m
+  [4;36;1mGradeType Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `grade_types`[0m
+Completed in 78ms (View: 47, DB: 16) | 200 OK [http://127.0.0.1/experiment?college=3&grade=]

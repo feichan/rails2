@@ -1,4 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :grade_types
+
   map.resources :members
 
   map.resources :colleges
@@ -6,6 +8,8 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :students
 
   map.resources :hospitals
+
+  map.resources :grade_types
 
   # The priority is based upon order of creation: first created -> highest priority.
 

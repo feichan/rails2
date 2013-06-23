@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130601161752) do
+ActiveRecord::Schema.define(:version => 20130622073915) do
 
   create_table "colleges", :force => true do |t|
     t.string   "name"
@@ -22,6 +22,20 @@ ActiveRecord::Schema.define(:version => 20130601161752) do
   create_table "colleges_hospitals", :force => true do |t|
     t.integer  "college_id"
     t.integer  "hospital_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "grade_types", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "grade_types_students", :force => true do |t|
+    t.integer  "grade_type_id"
+    t.integer  "student_id"
+    t.string   "grade"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
