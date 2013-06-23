@@ -1,3 +1,4 @@
+<h1>分配医院</h1>
 <% form_for(@student, :url=>{:action=>:confirm_assign}) do |f| %>
   <input type='hidden' name='id' value="<%= @student.id%>"/>
 
@@ -10,8 +11,12 @@
     <%= @student.name %>
   </p>
   <p>
-    <%= f.label :hospital_id, "分配医院" %><br />
-    <%= f.select :hospital_id, @hospitals.collect{|h|[h.name, h.hospital_id]} %>
+    <%= f.label :hospital_id, "实习单位1" %><br />
+    <%= f.select :hospital_id, @hospitals.collect{|h|[h.name, h.hospital_id]}, :selected => @student.hospital_id2.to_s %>
+  </p>
+  <p>
+    <%= f.label :hospital_id2, "实习单位2" %><br />
+    <%= f.select :hospital_id2, @hospitals.collect{|h|[h.name, h.hospital_id]}, :selected => @student.hospital_id2.to_s %>
   </p>
   <p>
   	<%= f.submit "添加"%>

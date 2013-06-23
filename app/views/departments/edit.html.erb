@@ -1,0 +1,16 @@
+<h1>科类编辑</h1>
+
+<% form_for(@department) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :name, '科类名称' %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.submit '更新' %>
+  </p>
+<% end %>
+
+<%= link_to '详细信息', @department %> |
+<%= link_to '返回列表', departments_path %>

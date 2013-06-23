@@ -1,0 +1,16 @@
+<h1>编辑成绩列表</h1>
+
+<% form_for(@grade_type) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :name, '名称' %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.submit '更新' %>
+  </p>
+<% end %>
+
+<%= link_to '详细信息', @grade_type %> |
+<%= link_to '返回列表', grade_types_path %>

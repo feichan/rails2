@@ -22,7 +22,10 @@
     <th>学号</th>
     <th>姓名</th>
     <th>年级</th>
-    <th>实习单位</th>
+    <th>学院</th>
+    <th>专业</th>
+    <th>实习单位1</th>
+    <th>实习单位2</th>
   </tr>
 
 <% @students.each do |student| %>
@@ -30,7 +33,10 @@
     <td><%=h student.stu_no %></td>
     <td><%=h student.name %></td>
     <td><%=h student.grade %></td>
+    <td><%=h student.college.name%></td>
+    <td><%=h student.profession.profession%></td>
     <td><%=h student.hospital_id.nil? ? "未分配" : student.hospital.name %></td>
+    <td><%=h student.hospital_id2.nil? ? "未分配" : student.hospital_2.name %></td>
     <td><%= link_to '详细信息', :action=>:student_detials, :id=>student %></td>
     <td><%= link_to '分配医院', :action=>:assign, :id=>student %></td>
   </tr>

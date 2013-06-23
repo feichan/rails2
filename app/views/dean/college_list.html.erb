@@ -2,18 +2,13 @@
 <table>
   <tr>
     <th>学院名称</th>
-    <th>分配医院</th>
   </tr>
 
 <% @colleges.each do |college| %>
   <tr>
     <td><%=h college.name %></td>
-    <td>
-    	<% college.hospital.each do |hosp| %>
-    		<%= hosp.name%><br/>
-    	<% end -%>
-    </td>
-    <td><%= link_to '医院分配', :controller => :dean, :action => :hospital_assign, :id=> college %></td>
+    <td><%= link_to '医院分配', :controller => :dean, :action => :select_profession, :id=> college, :type => "hospital" %></td>
+    <td><%= link_to '科类分配', :controller => :dean, :action => :select_profession, :id=> college, :type => "department" %></td>
   </tr>
 <% end %>
 </table>

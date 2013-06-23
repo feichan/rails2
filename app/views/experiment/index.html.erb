@@ -33,7 +33,8 @@
     <th>姓名</th>
     <th>学院</th>
     <td>年级</td>
-    <td>实习成绩</td>
+    <td>各项成绩</td>
+    <td>实习总成绩</td>
   </tr>
 
 <% @students.each do |student| %>
@@ -42,6 +43,16 @@
     <td><%=h student.name %></td>
     <td><%=h student.college.name %></td>
     <td><%=h student.grade %></td>
+    <td>
+      <table>
+        <%student.grade_type.each do |gt|%>
+          <tr>
+            <td><%=h gt.name %></td>
+            <td><%=h gt.grade %></td>
+          </tr>
+        <% end -%>
+      </table>
+    </td>
     <td><%=h student.internship_grade.nil? ? "暂无" : student.internship_grade %></td>
     <td><%= link_to '详细信息', :action=>:student_detials, :id=>student %></td>
     <td><%= link_to '填写实习成绩', :action=>:student_edit, :id=>student %></td>
