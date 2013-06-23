@@ -14,7 +14,13 @@ class HospitalController < ApplicationController
 
   def confirm_add
   	@student = Student.find(params[:id])
-  	@student.update_attributes(params[:student])
+    total_grade = 0
+    DepartmentsStudents.find_all_by_student_id(params[:id]).each do |dep|
+      grade = params["dep_grade_#{dep.id}"]
+      dep.update_attribute("grade", grade)
+      total_grade += grade.to_i
+    end
+  	@student.update_attribute("hostpital_grade", total_grade)
     flash[:notice] = "添加成功"
   	redirect_to :action => :index	
   end
