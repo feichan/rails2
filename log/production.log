@@ -6450,3 +6450,222 @@ Processing LoginController#index (for 127.0.0.1 at 2013-06-16 10:53:04) [GET]
 Rendering template within layouts/application
 Rendering login/index
 Completed in 0ms (View: 0, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing LoginController#index (for 127.0.0.1 at 2013-06-23 17:46:27) [GET]
+Rendering template within layouts/application
+Rendering login/index
+Completed in 219ms (View: 219, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing LoginController#action (for 127.0.0.1 at 2013-06-23 17:46:36) [POST]
+  Parameters: {"commit"=>"登陆", "authenticity_token"=>"+fERx5chpU0OecGIsViIezIlimCV8GjF5OwfbFI5UxI=", "member"=>{"account"=>"admin", "password"=>"admin"}}
+Redirected to http://localhost:3006/admin/index
+Completed in 16ms (DB: 0) | 302 Found [http://localhost/login/action]
+
+
+Processing AdminController#index (for 127.0.0.1 at 2013-06-23 17:46:36) [GET]
+Rendering template within layouts/admin
+Rendering admin/index
+Completed in 15ms (View: 0, DB: 0) | 200 OK [http://localhost/admin/index]
+
+
+Processing DepartmentsController#index (for 127.0.0.1 at 2013-06-23 17:46:39) [GET]
+Rendering template within layouts/admin
+Rendering departments/index
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://localhost/departments]
+
+
+Processing DepartmentsController#new (for 127.0.0.1 at 2013-06-23 17:46:40) [GET]
+Rendering template within layouts/admin
+Rendering departments/new
+Completed in 31ms (View: 16, DB: 15) | 200 OK [http://localhost/departments/new]
+
+
+Processing DepartmentsController#create (for 127.0.0.1 at 2013-06-23 17:46:53) [POST]
+  Parameters: {"department"=>{"name"=>"中医内科"}, "commit"=>"添加", "authenticity_token"=>"+fERx5chpU0OecGIsViIezIlimCV8GjF5OwfbFI5UxI="}
+Redirected to http://localhost:3006/departments/1
+Completed in 31ms (DB: 31) | 302 Found [http://localhost/departments]
+
+
+Processing DepartmentsController#show (for 127.0.0.1 at 2013-06-23 17:46:53) [GET]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/admin
+Rendering departments/show
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://localhost/departments/1]
+
+
+Processing DepartmentsController#index (for 127.0.0.1 at 2013-06-23 17:46:55) [GET]
+Rendering template within layouts/admin
+Rendering departments/index
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://localhost/departments]
+
+
+Processing DepartmentsController#new (for 127.0.0.1 at 2013-06-23 17:46:57) [GET]
+Rendering template within layouts/admin
+Rendering departments/new
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://localhost/departments/new]
+
+
+Processing DepartmentsController#create (for 127.0.0.1 at 2013-06-23 17:47:02) [POST]
+  Parameters: {"department"=>{"name"=>"中医外科"}, "commit"=>"添加", "authenticity_token"=>"+fERx5chpU0OecGIsViIezIlimCV8GjF5OwfbFI5UxI="}
+Redirected to http://localhost:3006/departments/2
+Completed in 16ms (DB: 16) | 302 Found [http://localhost/departments]
+
+
+Processing DepartmentsController#show (for 127.0.0.1 at 2013-06-23 17:47:02) [GET]
+  Parameters: {"id"=>"2"}
+Rendering template within layouts/admin
+Rendering departments/show
+Completed in 15ms (View: 15, DB: 0) | 200 OK [http://localhost/departments/2]
+
+
+Processing DepartmentsController#index (for 127.0.0.1 at 2013-06-23 17:47:03) [GET]
+Rendering template within layouts/admin
+Rendering departments/index
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://localhost/departments]
+
+
+Processing DepartmentsController#new (for 127.0.0.1 at 2013-06-23 17:47:04) [GET]
+Rendering template within layouts/admin
+Rendering departments/new
+Completed in 15ms (View: 15, DB: 0) | 200 OK [http://localhost/departments/new]
+
+
+Processing DepartmentsController#create (for 127.0.0.1 at 2013-06-23 17:47:10) [POST]
+  Parameters: {"department"=>{"name"=>"呼吸科"}, "commit"=>"添加", "authenticity_token"=>"+fERx5chpU0OecGIsViIezIlimCV8GjF5OwfbFI5UxI="}
+Redirected to http://localhost:3006/departments/3
+Completed in 16ms (DB: 16) | 302 Found [http://localhost/departments]
+
+
+Processing DepartmentsController#show (for 127.0.0.1 at 2013-06-23 17:47:10) [GET]
+  Parameters: {"id"=>"3"}
+Rendering template within layouts/admin
+Rendering departments/show
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://localhost/departments/3]
+
+
+Processing DepartmentsController#index (for 127.0.0.1 at 2013-06-23 17:47:11) [GET]
+Rendering template within layouts/admin
+Rendering departments/index
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/departments]
+
+
+Processing DepartmentsController#new (for 127.0.0.1 at 2013-06-23 17:47:13) [GET]
+Rendering template within layouts/admin
+Rendering departments/new
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://localhost/departments/new]
+
+
+Processing DepartmentsController#create (for 127.0.0.1 at 2013-06-23 17:47:28) [POST]
+  Parameters: {"department"=>{"name"=>"胸内科"}, "commit"=>"添加", "authenticity_token"=>"+fERx5chpU0OecGIsViIezIlimCV8GjF5OwfbFI5UxI="}
+Redirected to http://localhost:3006/departments/4
+Completed in 15ms (DB: 15) | 302 Found [http://localhost/departments]
+
+
+Processing DepartmentsController#show (for 127.0.0.1 at 2013-06-23 17:47:28) [GET]
+  Parameters: {"id"=>"4"}
+Rendering template within layouts/admin
+Rendering departments/show
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://localhost/departments/4]
+
+
+Processing DepartmentsController#index (for 127.0.0.1 at 2013-06-23 17:47:29) [GET]
+Rendering template within layouts/admin
+Rendering departments/index
+Completed in 15ms (View: 15, DB: 0) | 200 OK [http://localhost/departments]
+
+
+Processing AdminController#index (for 127.0.0.1 at 2013-06-23 17:47:31) [GET]
+Rendering template within layouts/admin
+Rendering admin/index
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://localhost/admin/index]
+
+
+Processing CollegesController#index (for 127.0.0.1 at 2013-06-23 17:48:38) [GET]
+Rendering template within layouts/admin
+Rendering colleges/index
+Completed in 47ms (View: 32, DB: 0) | 200 OK [http://localhost/colleges]
+
+
+Processing CollegesController#show (for 127.0.0.1 at 2013-06-23 17:48:46) [GET]
+  Parameters: {"id"=>"5"}
+Rendering template within layouts/admin
+Rendering colleges/show
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://localhost/colleges/5]
+
+
+Processing CollegesController#index (for 127.0.0.1 at 2013-06-23 17:48:49) [GET]
+Rendering template within layouts/admin
+Rendering colleges/index
+Completed in 47ms (View: 47, DB: 0) | 200 OK [http://localhost/colleges]
+
+
+Processing CollegesController#show (for 127.0.0.1 at 2013-06-23 17:48:50) [GET]
+  Parameters: {"id"=>"5"}
+Rendering template within layouts/admin
+Rendering colleges/show
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://localhost/colleges/5]
+
+
+Processing AdminController#index (for 127.0.0.1 at 2013-06-23 17:48:52) [GET]
+Rendering template within layouts/admin
+Rendering admin/index
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://localhost/admin/index]
+
+
+Processing HospitalsController#index (for 127.0.0.1 at 2013-06-23 17:48:57) [GET]
+Rendering template within layouts/admin
+Rendering hospitals/index
+Completed in 47ms (View: 47, DB: 0) | 200 OK [http://localhost/hospitals]
+
+
+Processing HospitalsController#edit (for 127.0.0.1 at 2013-06-23 17:49:01) [GET]
+  Parameters: {"id"=>"3"}
+Rendering template within layouts/admin
+Rendering hospitals/edit
+Completed in 15ms (View: 15, DB: 0) | 200 OK [http://localhost/hospitals/3/edit]
+
+
+Processing HospitalsController#update (for 127.0.0.1 at 2013-06-23 17:49:09) [PUT]
+  Parameters: {"commit"=>"确定更新", "authenticity_token"=>"+fERx5chpU0OecGIsViIezIlimCV8GjF5OwfbFI5UxI=", "hospital"=>{"name"=>"济南市中医院", "grade"=>"", "zone"=>"", "contact"=>"", "girl_no"=>"13", "tel"=>"", "boy_no"=>"12", "address"=>"文化西路"}, "id"=>"3"}
+Redirected to http://localhost:3006/hospitals/3
+Completed in 15ms (DB: 15) | 302 Found [http://localhost/hospitals/3]
+
+
+Processing HospitalsController#show (for 127.0.0.1 at 2013-06-23 17:49:09) [GET]
+  Parameters: {"id"=>"3"}
+Rendering template within layouts/admin
+Rendering hospitals/show
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://localhost/hospitals/3]
+
+
+Processing HospitalsController#index (for 127.0.0.1 at 2013-06-23 17:49:11) [GET]
+Rendering template within layouts/admin
+Rendering hospitals/index
+Completed in 32ms (View: 32, DB: 0) | 200 OK [http://localhost/hospitals]
+
+
+Processing AdminController#index (for 127.0.0.1 at 2013-06-23 17:49:15) [GET]
+Rendering template within layouts/admin
+Rendering admin/index
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://localhost/admin/index]
+
+
+Processing GradeTypesController#index (for 127.0.0.1 at 2013-06-23 17:49:18) [GET]
+Rendering template within layouts/admin
+Rendering grade_types/index
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/grade_types]
+
+
+Processing GradeTypesController#new (for 127.0.0.1 at 2013-06-23 17:49:19) [GET]
+Rendering template within layouts/admin
+Rendering grade_types/new
+Completed in 31ms (View: 0, DB: 0) | 200 OK [http://localhost/grade_types/new]
+
+
+Processing GradeTypesController#create (for 127.0.0.1 at 2013-06-23 17:49:26) [POST]
+  Parameters: {"commit"=>"添加", "grade_type"=>{"name"=>"类型1"}, "authenticity_token"=>"+fERx5chpU0OecGIsViIezIlimCV8GjF5OwfbFI5UxI="}
+Rendering template within layouts/admin
+Rendering grade_types/new
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://localhost/grade_types]
