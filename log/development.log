@@ -38916,3 +38916,78 @@ Rendering hospital/index
   [4;35;1mDepartment Load (0.0ms)[0m   [0mSELECT * FROM `departments` INNER JOIN `departments_students` ON `departments`.id = `departments_students`.department_id WHERE (`departments_students`.student_id = 1 ) [0m
   [4;36;1mDepartment Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `departments`[0m
 Completed in 47ms (View: 31, DB: 0) | 200 OK [http://127.0.0.1/hospital]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (156.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (16.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateHospitals (20130530151237)
+Migrating to AddZoneToHospitals (20130530151517)
+Migrating to CreateStudents (20130530164743)
+Migrating to AddColumnToStudents (20130530170907)
+Migrating to AddCollegeIdToStudents (20130531235421)
+Migrating to CreateColleges (20130601000429)
+Migrating to CreateMembers (20130601015240)
+Migrating to AddColumnToMember (20130601020633)
+Migrating to CreateCollegesHospitals (20130601105622)
+Migrating to AddColumnToStudent (20130601135720)
+Migrating to AddCollegeIdToMembers (20130601144625)
+Migrating to AddColumnToMembers (20130601154516)
+Migrating to AddHostpitalGradeToStudents (20130601161752)
+Migrating to CreateGradeTypes (20130622073746)
+  [4;36;1mSQL (375.0ms)[0m   [0;1mCREATE TABLE `grade_types` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (47.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20130622073746')[0m
+Migrating to CreateGradeTypesStudents (20130622073915)
+  [4;36;1mSQL (156.0ms)[0m   [0;1mCREATE TABLE `grade_types_students` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `grade_type_id` int(11), `student_id` int(11), `grade` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (16.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20130622073915')[0m
+Migrating to CreateDepartments (20130623020005)
+  [4;36;1mSQL (109.0ms)[0m   [0;1mCREATE TABLE `departments` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (15.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20130623020005')[0m
+Migrating to CreateCollegesDepartments (20130623023644)
+  [4;36;1mSQL (78.0ms)[0m   [0;1mCREATE TABLE `colleges_departments` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `college_id` int(11), `department_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (16.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20130623023644')[0m
+Migrating to CreateDepartmentsStudents (20130623034708)
+  [4;36;1mSQL (47.0ms)[0m   [0;1mCREATE TABLE `departments_students` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `department_id` int(11), `student_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (15.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20130623034708')[0m
+Migrating to AddClomnToHospital (20130623041045)
+  [4;36;1mSQL (390.0ms)[0m   [0;1mALTER TABLE `hospitals` ADD `boy_no` int(11) DEFAULT 0[0m
+  [4;35;1mSQL (250.0ms)[0m   [0mALTER TABLE `hospitals` ADD `girl_no` int(11) DEFAULT 0[0m
+  [4;36;1mSQL (32.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20130623041045')[0m
+Migrating to AddCloumnToStudents (20130623070435)
+  [4;35;1mSQL (109.0ms)[0m   [0mALTER TABLE `students` ADD `hospital_id2` int(11)[0m
+  [4;36;1mSQL (16.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20130623070435')[0m
+Migrating to AddCluomnToDepartmentsStudents (20130623082922)
+  [4;35;1mSQL (93.0ms)[0m   [0mALTER TABLE `departments_students` ADD `grade` varchar(255)[0m
+  [4;36;1mSQL (16.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20130623082922')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (16.0ms)[0m   [0;1mSHOW FIELDS FROM `colleges`[0m
+  [4;35;1mSQL (15.0ms)[0m   [0mdescribe `colleges`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `colleges`[0m
+  [4;35;1mSQL (16.0ms)[0m   [0mSHOW FIELDS FROM `colleges_departments`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mdescribe `colleges_departments`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `colleges_departments`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW FIELDS FROM `colleges_hospitals`[0m
+  [4;35;1mSQL (15.0ms)[0m   [0mdescribe `colleges_hospitals`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `colleges_hospitals`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW FIELDS FROM `departments`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mdescribe `departments`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `departments`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW FIELDS FROM `departments_students`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mdescribe `departments_students`[0m
+  [4;36;1mSQL (16.0ms)[0m   [0;1mSHOW KEYS FROM `departments_students`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW FIELDS FROM `grade_types`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mdescribe `grade_types`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `grade_types`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW FIELDS FROM `grade_types_students`[0m
+  [4;35;1mSQL (16.0ms)[0m   [0mdescribe `grade_types_students`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `grade_types_students`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW FIELDS FROM `hospitals`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mdescribe `hospitals`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `hospitals`[0m
+  [4;36;1mSQL (15.0ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mdescribe `members`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `members`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW FIELDS FROM `students`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mdescribe `students`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `students`[0m
