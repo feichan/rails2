@@ -44,7 +44,7 @@ class DeanController < ApplicationController
     @hospitals = Hospital.all
   end
 
-  def confirm_assin
+  def confirm_hospital_assin
     @hostpital = params[:hostpital]
     @college_id = params[:college_id]
     esxits = CollegesHospitals.find_all_by_college_id(@college_id)
@@ -68,8 +68,32 @@ class DeanController < ApplicationController
       end
       flash[:notice] == "分配成功"
     end
-    redirect_to :action => :college_list
+    redirect_to :action => :select_profession, :id=> College.find(@college_id).parent_id, :type => "hospital" 
   end
+
+  def select_profession
+    @type = params[:type]
+  end
+
+  def department_assign
+    @profession = College.find(params[:id])
+    @existed = []
+    CollegesDepartments.find_all_by_college_id(@profession).each {|h|@existed.push(h.department_id.to_i)}
+    @departments = Department.all
+  end
+
+  def confirm_department_assign
+    @profession = College.find(params[:profession_id])
+    @department_ids = params[:department]
+    CollegesDepartments.find_all_by_college_id(@profession.id).each do |cd|
+      cd.destroy
+    end
+    @department_ids.each do |dep|
+      CollegesDepartments.create!(:college_id => @profession.id.to_i, :department_id => dep.to_i)
+    end
+    redirect_to :action => :select_profession, :id=> @profession.parent_id, :type => "department"
+  end
+
   private 
   def am_i_dean?
     member = Member.find(session[:member_id])

@@ -1,13 +1,13 @@
-	<h1>医院列表</h1>
-	<ul>
-		<% form_for :assign, :url => {:action => :confirm_assin} do |f| -%>
-      <input type="hidden" name="college_id" value="<%= @collage_id %>">
-  		<%@hospitals.each do |hospital|%>
-        <li>
-          <input type='checkbox' name="hostpital[]" value="<%= hospital.id %>" <%= @existed.include?(hospital.id.to_i) ? 'checked' : ''%>>&nbsp;
-          <%= hospital.name %>
-        </li>
-      <% end -%>
-      <%= f.submit "确认分配"%>
+<h1>医院分配</h1>
+<ul>
+	<% form_for :assign, :url => {:action => :confirm_hospital_assin} do |f| -%>
+    <input type="hidden" name="college_id" value="<%= @collage_id %>">
+		<%@hospitals.each do |hospital|%>
+      <li>
+        <input type='checkbox' name="hostpital[]" value="<%= hospital.id %>" <%= @existed.include?(hospital.id.to_i) ? 'checked' : ''%>>&nbsp;
+        <%= hospital.name %>
+      </li>
     <% end -%>
-	</ul>
+    <%= f.submit "确认分配"%>
+  <% end -%>
+</ul>

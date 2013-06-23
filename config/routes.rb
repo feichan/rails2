@@ -1,4 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :departments
+
   map.resources :grade_types
 
   map.resources :members

@@ -7,7 +7,9 @@ class Student < ActiveRecord::Base
 	validates_uniqueness_of :stu_no, :message => "不可重复。"
 
 	belongs_to :college
+	belongs_to :profession, :class_name => "College", :foreign_key => "profession"
 	belongs_to :hospital
+	belongs_to :hospital_2, :class_name => "Hospital", :foreign_key => "hospital_id2"
 	has_and_belongs_to_many :grade_type
 
 	after_update :add_grade_types_students

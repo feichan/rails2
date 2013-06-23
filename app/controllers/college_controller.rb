@@ -15,7 +15,8 @@ class CollegeController < ApplicationController
 
   def assign
     @student = Student.find(params[:id])
-    @hospitals = College.find(@member.college_id).hospital
+    @hospitals = College.find(@student.profession).hospital
+    # @hospitals = College.find(@member.college_id).hospital
   end
 
   def confirm_assign
@@ -24,6 +25,11 @@ class CollegeController < ApplicationController
     flash[:notice] = "分配成功"
     redirect_to :action => :index
   end
+
+  def student_detials
+    @student = Student.find(params[:id])
+  end
+  
 	private 
 	def am_i_college?
 		@member = Member.find(session[:member_id])
