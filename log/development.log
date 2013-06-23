@@ -38916,3 +38916,89 @@ Rendering hospital/index
   [4;35;1mDepartment Load (0.0ms)[0m   [0mSELECT * FROM `departments` INNER JOIN `departments_students` ON `departments`.id = `departments_students`.department_id WHERE (`departments_students`.student_id = 1 ) [0m
   [4;36;1mDepartment Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `departments`[0m
 Completed in 47ms (View: 31, DB: 0) | 200 OK [http://127.0.0.1/hospital]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoginController#logout (for 127.0.0.1 at 2013-06-23 10:50:26) [GET]
+Redirected to http://127.0.0.1:3000/
+Completed in 16ms (DB: 0) | 302 Found [http://127.0.0.1/login/logout]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoginController#index (for 127.0.0.1 at 2013-06-23 10:50:27) [GET]
+Rendering template within layouts/application
+Rendering login/index
+Completed in 188ms (View: 188, DB: 0) | 200 OK [http://127.0.0.1/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoginController#action (for 127.0.0.1 at 2013-06-23 10:50:30) [POST]
+  Parameters: {"commit"=>"登陆", "member"=>{"password"=>"111", "account"=>"fcicada"}, "authenticity_token"=>"RDvZXvr5ADjeNYCTPBAkzF4R1wa/mWH5rwdGp8W5S3k="}
+  [4;36;1mMember Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+  [4;35;1mMember Load (0.0ms)[0m   [0mSELECT * FROM `members` WHERE (`members`.`account` = 'fcicada') LIMIT 1[0m
+Redirected to http://127.0.0.1:3000/admin/index
+Completed in 47ms (DB: 0) | 302 Found [http://127.0.0.1/login/action]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AdminController#index (for 127.0.0.1 at 2013-06-23 10:50:30) [GET]
+  [4;36;1mMember Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+  [4;35;1mMember Load (0.0ms)[0m   [0mSELECT * FROM `members` WHERE (`members`.`id` = 2) [0m
+Rendering template within layouts/admin
+Rendering admin/index
+Completed in 62ms (View: 62, DB: 0) | 200 OK [http://127.0.0.1/admin/index]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GradeTypesController#index (for 127.0.0.1 at 2013-06-23 10:50:37) [GET]
+  [4;36;1mMember Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+  [4;35;1mMember Load (0.0ms)[0m   [0mSELECT * FROM `members` WHERE (`members`.`id` = 2) [0m
+  [4;36;1mGradeType Load (0.0ms)[0m   [0;1mSELECT * FROM `grade_types` [0m
+Rendering template within layouts/admin
+Rendering grade_types/index
+  [4;35;1mGradeType Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `grade_types`[0m
+Completed in 188ms (View: 94, DB: 0) | 200 OK [http://127.0.0.1/grade_types]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GradeTypesController#new (for 127.0.0.1 at 2013-06-23 10:50:39) [GET]
+  [4;36;1mMember Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+  [4;35;1mMember Load (0.0ms)[0m   [0mSELECT * FROM `members` WHERE (`members`.`id` = 2) [0m
+  [4;36;1mGradeType Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `grade_types`[0m
+Rendering template within layouts/admin
+Rendering grade_types/new
+Completed in 31ms (View: 0, DB: 0) | 200 OK [http://127.0.0.1/grade_types/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GradeTypesController#create (for 127.0.0.1 at 2013-06-23 10:50:43) [POST]
+  Parameters: {"commit"=>"添加", "authenticity_token"=>"RDvZXvr5ADjeNYCTPBAkzF4R1wa/mWH5rwdGp8W5S3k=", "grade_type"=>{"name"=>"成绩类型6"}}
+  [4;35;1mMember Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+  [4;36;1mMember Load (0.0ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`id` = 2) [0m
+  [4;35;1mGradeType Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `grade_types`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+Rendering template within layouts/admin
+Rendering grade_types/new
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://127.0.0.1/grade_types]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GradeTypesController#create (for 127.0.0.1 at 2013-06-23 10:51:20) [POST]
+  Parameters: {"commit"=>"添加", "authenticity_token"=>"RDvZXvr5ADjeNYCTPBAkzF4R1wa/mWH5rwdGp8W5S3k=", "grade_type"=>{"name"=>"成绩类型6"}}
+  [4;36;1mMember Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+  [4;35;1mMember Load (0.0ms)[0m   [0mSELECT * FROM `members` WHERE (`members`.`id` = 2) [0m
+  [4;36;1mGradeType Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `grade_types`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+Rendering template within layouts/admin
+Rendering grade_types/new
+Completed in 62ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/grade_types]
