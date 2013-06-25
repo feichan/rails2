@@ -34,7 +34,7 @@
     <td><%=h student.name %></td>
     <td><%=h student.grade %></td>
     <td><%=h student.college.name%></td>
-    <td><%=h student.profession.profession%></td>
+    <td><%=h student.prof.profession%></td>
     <td><%=h student.hospital_id.nil? ? "未分配" : student.hospital.name %></td>
     <td><%=h student.hospital_id2.nil? ? "未分配" : student.hospital_2.name %></td>
     <td><%= link_to '详细信息', :action=>:student_detials, :id=>student %></td>

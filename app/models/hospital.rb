@@ -6,5 +6,6 @@ class Hospital < ActiveRecord::Base
 	has_many :students
 	has_many :members
 	has_many :students
+	has_many :students2, :class_name => "Student", :foreign_key => "hospital_id2"
 	has_and_belongs_to_many :college
 end
