@@ -6669,3 +6669,447 @@ Processing GradeTypesController#create (for 127.0.0.1 at 2013-06-23 17:49:26) [P
 Rendering template within layouts/admin
 Rendering grade_types/new
 Completed in 16ms (View: 0, DB: 0) | 200 OK [http://localhost/grade_types]
+
+
+Processing GradeTypesController#create (for 127.0.0.1 at 2013-06-23 17:57:59) [POST]
+
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  
+
+Rendering rescues/layout (unprocessable_entity)
+
+
+Processing GradeTypesController#new (for 127.0.0.1 at 2013-06-23 17:58:11) [GET]
+Rendering template within layouts/admin
+Rendering grade_types/new
+Completed in 47ms (View: 15, DB: 0) | 200 OK [http://localhost/grade_types/new]
+
+
+Processing LoginController#index (for 127.0.0.1 at 2013-06-23 17:58:37) [GET]
+Rendering template within layouts/application
+Rendering login/index
+Completed in 1531ms (View: 1515, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing LoginController#action (for 127.0.0.1 at 2013-06-23 17:58:44) [POST]
+  Parameters: {"commit"=>"登陆", "authenticity_token"=>"fNXEvJZ+BYN8yHttTwJ4erRwZVf8O0d5tmdxlSN+7OM=", "member"=>{"account"=>"admin", "password"=>"admin"}}
+Redirected to http://localhost:3006/admin/index
+Completed in 0ms (DB: 0) | 302 Found [http://localhost/login/action]
+
+
+Processing AdminController#index (for 127.0.0.1 at 2013-06-23 17:58:44) [GET]
+Rendering template within layouts/admin
+Rendering admin/index
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://localhost/admin/index]
+
+
+Processing GradeTypesController#index (for 127.0.0.1 at 2013-06-23 17:58:46) [GET]
+Rendering template within layouts/admin
+Rendering grade_types/index
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://localhost/grade_types]
+
+
+Processing GradeTypesController#new (for 127.0.0.1 at 2013-06-23 17:58:48) [GET]
+Rendering template within layouts/admin
+Rendering grade_types/new
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://localhost/grade_types/new]
+
+
+Processing GradeTypesController#create (for 127.0.0.1 at 2013-06-23 17:59:02) [POST]
+  Parameters: {"commit"=>"添加", "grade_type"=>{"name"=>"成绩类型1"}, "authenticity_token"=>"fNXEvJZ+BYN8yHttTwJ4erRwZVf8O0d5tmdxlSN+7OM="}
+Redirected to http://localhost:3006/grade_types/1
+Completed in 31ms (DB: 16) | 302 Found [http://localhost/grade_types]
+
+
+Processing GradeTypesController#show (for 127.0.0.1 at 2013-06-23 17:59:02) [GET]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/admin
+Rendering grade_types/show
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://localhost/grade_types/1]
+
+
+Processing GradeTypesController#index (for 127.0.0.1 at 2013-06-23 17:59:04) [GET]
+Rendering template within layouts/admin
+Rendering grade_types/index
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://localhost/grade_types]
+
+
+Processing GradeTypesController#new (for 127.0.0.1 at 2013-06-23 17:59:05) [GET]
+Rendering template within layouts/admin
+Rendering grade_types/new
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/grade_types/new]
+
+
+Processing GradeTypesController#create (for 127.0.0.1 at 2013-06-23 17:59:11) [POST]
+  Parameters: {"commit"=>"添加", "grade_type"=>{"name"=>"成绩类型2"}, "authenticity_token"=>"fNXEvJZ+BYN8yHttTwJ4erRwZVf8O0d5tmdxlSN+7OM="}
+Redirected to http://localhost:3006/grade_types/2
+Completed in 16ms (DB: 16) | 302 Found [http://localhost/grade_types]
+
+
+Processing GradeTypesController#show (for 127.0.0.1 at 2013-06-23 17:59:11) [GET]
+  Parameters: {"id"=>"2"}
+Rendering template within layouts/admin
+Rendering grade_types/show
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://localhost/grade_types/2]
+
+
+Processing GradeTypesController#index (for 127.0.0.1 at 2013-06-23 17:59:12) [GET]
+Rendering template within layouts/admin
+Rendering grade_types/index
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://localhost/grade_types]
+
+
+Processing GradeTypesController#new (for 127.0.0.1 at 2013-06-23 17:59:14) [GET]
+Rendering template within layouts/admin
+Rendering grade_types/new
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://localhost/grade_types/new]
+
+
+Processing GradeTypesController#create (for 127.0.0.1 at 2013-06-23 17:59:17) [POST]
+  Parameters: {"commit"=>"添加", "grade_type"=>{"name"=>"成绩类型3"}, "authenticity_token"=>"fNXEvJZ+BYN8yHttTwJ4erRwZVf8O0d5tmdxlSN+7OM="}
+Redirected to http://localhost:3006/grade_types/3
+Completed in 16ms (DB: 16) | 302 Found [http://localhost/grade_types]
+
+
+Processing GradeTypesController#show (for 127.0.0.1 at 2013-06-23 17:59:17) [GET]
+  Parameters: {"id"=>"3"}
+Rendering template within layouts/admin
+Rendering grade_types/show
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://localhost/grade_types/3]
+
+
+Processing GradeTypesController#index (for 127.0.0.1 at 2013-06-23 17:59:19) [GET]
+Rendering template within layouts/admin
+Rendering grade_types/index
+Completed in 15ms (View: 0, DB: 0) | 200 OK [http://localhost/grade_types]
+
+
+Processing GradeTypesController#new (for 127.0.0.1 at 2013-06-23 17:59:20) [GET]
+Rendering template within layouts/admin
+Rendering grade_types/new
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://localhost/grade_types/new]
+
+
+Processing GradeTypesController#create (for 127.0.0.1 at 2013-06-23 17:59:24) [POST]
+  Parameters: {"commit"=>"添加", "grade_type"=>{"name"=>"成绩类型4"}, "authenticity_token"=>"fNXEvJZ+BYN8yHttTwJ4erRwZVf8O0d5tmdxlSN+7OM="}
+Redirected to http://localhost:3006/grade_types/4
+Completed in 16ms (DB: 16) | 302 Found [http://localhost/grade_types]
+
+
+Processing GradeTypesController#show (for 127.0.0.1 at 2013-06-23 17:59:24) [GET]
+  Parameters: {"id"=>"4"}
+Rendering template within layouts/admin
+Rendering grade_types/show
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://localhost/grade_types/4]
+
+
+Processing GradeTypesController#index (for 127.0.0.1 at 2013-06-23 17:59:26) [GET]
+Rendering template within layouts/admin
+Rendering grade_types/index
+Completed in 15ms (View: 15, DB: 0) | 200 OK [http://localhost/grade_types]
+
+
+Processing GradeTypesController#new (for 127.0.0.1 at 2013-06-23 17:59:32) [GET]
+Rendering template within layouts/admin
+Rendering grade_types/new
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://localhost/grade_types/new]
+
+
+Processing GradeTypesController#create (for 127.0.0.1 at 2013-06-23 17:59:35) [POST]
+  Parameters: {"commit"=>"添加", "grade_type"=>{"name"=>"成绩类型5"}, "authenticity_token"=>"fNXEvJZ+BYN8yHttTwJ4erRwZVf8O0d5tmdxlSN+7OM="}
+Redirected to http://localhost:3006/grade_types/5
+Completed in 31ms (DB: 31) | 302 Found [http://localhost/grade_types]
+
+
+Processing GradeTypesController#show (for 127.0.0.1 at 2013-06-23 17:59:35) [GET]
+  Parameters: {"id"=>"5"}
+Rendering template within layouts/admin
+Rendering grade_types/show
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://localhost/grade_types/5]
+
+
+Processing GradeTypesController#index (for 127.0.0.1 at 2013-06-23 17:59:36) [GET]
+Rendering template within layouts/admin
+Rendering grade_types/index
+Completed in 31ms (View: 31, DB: 0) | 200 OK [http://localhost/grade_types]
+
+
+Processing AdminController#index (for 127.0.0.1 at 2013-06-23 17:59:37) [GET]
+Rendering template within layouts/admin
+Rendering admin/index
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/admin/index]
+
+
+Processing StudentsController#index (for 127.0.0.1 at 2013-06-23 17:59:39) [GET]
+Rendering template within layouts/admin
+Rendering students/index
+Completed in 31ms (View: 31, DB: 0) | 200 OK [http://localhost/students]
+
+
+Processing AdminController#index (for 127.0.0.1 at 2013-06-23 17:59:43) [GET]
+Rendering template within layouts/admin
+Rendering admin/index
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://localhost/admin/index]
+
+
+Processing CollegesController#index (for 127.0.0.1 at 2013-06-23 17:59:47) [GET]
+Rendering template within layouts/admin
+Rendering colleges/index
+Completed in 47ms (View: 47, DB: 0) | 200 OK [http://localhost/colleges]
+
+
+Processing AdminController#index (for 127.0.0.1 at 2013-06-23 17:59:49) [GET]
+Rendering template within layouts/admin
+Rendering admin/index
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://localhost/admin/index]
+
+
+Processing LoginController#logout (for 127.0.0.1 at 2013-06-23 17:59:53) [GET]
+Redirected to http://localhost:3006/
+Completed in 0ms (DB: 0) | 302 Found [http://localhost/login/logout]
+
+
+Processing LoginController#index (for 127.0.0.1 at 2013-06-23 17:59:53) [GET]
+Rendering template within layouts/application
+Rendering login/index
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing LoginController#action (for 127.0.0.1 at 2013-06-23 18:00:15) [POST]
+  Parameters: {"commit"=>"登陆", "authenticity_token"=>"jegOSqGMhQ+r0+BCDocA2YMHeuSC5gxo7TzRJLC5rKw=", "member"=>{"account"=>"shiyanzhongxin", "password"=>"shiyanzhongxin"}}
+Redirected to http://localhost:3006/
+Completed in 0ms (DB: 0) | 302 Found [http://localhost/login/action]
+
+
+Processing LoginController#index (for 127.0.0.1 at 2013-06-23 18:00:15) [GET]
+Rendering template within layouts/application
+Rendering login/index
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing LoginController#action (for 127.0.0.1 at 2013-06-23 18:00:24) [POST]
+  Parameters: {"commit"=>"登陆", "authenticity_token"=>"jegOSqGMhQ+r0+BCDocA2YMHeuSC5gxo7TzRJLC5rKw=", "member"=>{"account"=>"shiyanzhongxin", "password"=>"shiyanzhongxin"}}
+Redirected to http://localhost:3006/
+Completed in 0ms (DB: 0) | 302 Found [http://localhost/login/action]
+
+
+Processing LoginController#index (for 127.0.0.1 at 2013-06-23 18:00:24) [GET]
+Rendering template within layouts/application
+Rendering login/index
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing LoginController#action (for 127.0.0.1 at 2013-06-23 18:00:30) [POST]
+  Parameters: {"commit"=>"登陆", "authenticity_token"=>"jegOSqGMhQ+r0+BCDocA2YMHeuSC5gxo7TzRJLC5rKw=", "member"=>{"account"=>"jiaowuchu", "password"=>"jiaowuchu"}}
+Redirected to http://localhost:3006/
+Completed in 0ms (DB: 0) | 302 Found [http://localhost/login/action]
+
+
+Processing LoginController#index (for 127.0.0.1 at 2013-06-23 18:00:30) [GET]
+Rendering template within layouts/application
+Rendering login/index
+Completed in 78ms (View: 78, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing LoginController#action (for 127.0.0.1 at 2013-06-23 18:00:36) [POST]
+  Parameters: {"commit"=>"登陆", "authenticity_token"=>"jegOSqGMhQ+r0+BCDocA2YMHeuSC5gxo7TzRJLC5rKw=", "member"=>{"account"=>"admin", "password"=>"admin"}}
+Redirected to http://localhost:3006/admin/index
+Completed in 0ms (DB: 0) | 302 Found [http://localhost/login/action]
+
+
+Processing AdminController#index (for 127.0.0.1 at 2013-06-23 18:00:36) [GET]
+Rendering template within layouts/admin
+Rendering admin/index
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://localhost/admin/index]
+
+
+Processing MembersController#index (for 127.0.0.1 at 2013-06-23 18:00:38) [GET]
+Rendering template within layouts/admin
+Rendering members/index
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://localhost/members]
+
+
+Processing LoginController#logout (for 127.0.0.1 at 2013-06-23 18:00:52) [GET]
+Redirected to http://localhost:3006/
+Completed in 0ms (DB: 0) | 302 Found [http://localhost/login/logout]
+
+
+Processing LoginController#index (for 127.0.0.1 at 2013-06-23 18:00:52) [GET]
+Rendering template within layouts/application
+Rendering login/index
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing LoginController#action (for 127.0.0.1 at 2013-06-23 18:00:56) [POST]
+  Parameters: {"commit"=>"登陆", "authenticity_token"=>"JBNO0D1ojQ4MQvFQKNnsaeyEov+EiH5se9eOPlvkiDw=", "member"=>{"account"=>"cuilirui", "password"=>"cuilirui"}}
+Redirected to http://localhost:3006/dean
+Completed in 0ms (DB: 0) | 302 Found [http://localhost/login/action]
+
+
+Processing DeanController#index (for 127.0.0.1 at 2013-06-23 18:00:56) [GET]
+Rendering template within layouts/dean
+Rendering dean/index
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://localhost/dean]
+
+
+Processing DeanController#college_list (for 127.0.0.1 at 2013-06-23 18:00:58) [GET]
+Rendering template within layouts/dean
+Rendering dean/college_list
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/dean/college_list]
+
+
+Processing DeanController#select_profession (for 127.0.0.1 at 2013-06-23 18:01:01) [GET]
+  Parameters: {"type"=>"hospital", "id"=>"5"}
+Rendering template within layouts/dean
+Rendering dean/select_profession
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://localhost/dean/select_profession/5?type=hospital]
+
+
+Processing DeanController#hospital_assign (for 127.0.0.1 at 2013-06-23 18:01:03) [GET]
+  Parameters: {"id"=>"15"}
+Rendering template within layouts/dean
+Rendering dean/hospital_assign
+Completed in 16ms (View: 0, DB: 16) | 200 OK [http://localhost/dean/hospital_assign/15]
+
+
+Processing DeanController#confirm_hospital_assin (for 127.0.0.1 at 2013-06-23 18:01:07) [POST]
+  Parameters: {"hostpital"=>["3", "4", "5"], "commit"=>"确认分配", "authenticity_token"=>"JBNO0D1ojQ4MQvFQKNnsaeyEov+EiH5se9eOPlvkiDw=", "college_id"=>"15"}
+Redirected to http://localhost:3006/dean/select_profession/5?type=hospital
+Completed in 47ms (DB: 32) | 302 Found [http://localhost/dean/confirm_hospital_assin]
+
+
+Processing DeanController#select_profession (for 127.0.0.1 at 2013-06-23 18:01:07) [GET]
+  Parameters: {"type"=>"hospital", "id"=>"5"}
+Rendering template within layouts/dean
+Rendering dean/select_profession
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://localhost/dean/select_profession/5?type=hospital]
+
+
+Processing DeanController#index (for 127.0.0.1 at 2013-06-23 18:01:11) [GET]
+Rendering template within layouts/dean
+Rendering dean/index
+Completed in 15ms (View: 0, DB: 0) | 200 OK [http://localhost/dean]
+
+
+Processing DeanController#college_list (for 127.0.0.1 at 2013-06-23 18:01:13) [GET]
+Rendering template within layouts/dean
+Rendering dean/college_list
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://localhost/dean/college_list]
+
+
+Processing DeanController#select_profession (for 127.0.0.1 at 2013-06-23 18:01:16) [GET]
+  Parameters: {"type"=>"department", "id"=>"6"}
+Rendering template within layouts/dean
+Rendering dean/select_profession
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/dean/select_profession/6?type=department]
+
+
+Processing DeanController#index (for 127.0.0.1 at 2013-06-23 18:01:25) [GET]
+Rendering template within layouts/dean
+Rendering dean/index
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://localhost/dean]
+
+
+Processing DeanController#college_list (for 127.0.0.1 at 2013-06-23 18:01:26) [GET]
+Rendering template within layouts/dean
+Rendering dean/college_list
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/dean/college_list]
+
+
+Processing DeanController#select_profession (for 127.0.0.1 at 2013-06-23 18:01:28) [GET]
+  Parameters: {"type"=>"department", "id"=>"5"}
+Rendering template within layouts/dean
+Rendering dean/select_profession
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://localhost/dean/select_profession/5?type=department]
+
+
+Processing DeanController#department_assign (for 127.0.0.1 at 2013-06-23 18:01:30) [GET]
+  Parameters: {"id"=>"15"}
+Rendering template within layouts/dean
+Rendering dean/department_assign
+Completed in 16ms (View: 0, DB: 16) | 200 OK [http://localhost/dean/department_assign/15]
+
+
+Processing DeanController#confirm_department_assign (for 127.0.0.1 at 2013-06-23 18:01:34) [POST]
+  Parameters: {"department"=>["2", "3"], "profession_id"=>"15", "commit"=>"确认分配", "authenticity_token"=>"JBNO0D1ojQ4MQvFQKNnsaeyEov+EiH5se9eOPlvkiDw="}
+Redirected to http://localhost:3006/dean/select_profession/5?type=department
+Completed in 47ms (DB: 31) | 302 Found [http://localhost/dean/confirm_department_assign]
+
+
+Processing DeanController#select_profession (for 127.0.0.1 at 2013-06-23 18:01:34) [GET]
+  Parameters: {"type"=>"department", "id"=>"5"}
+Rendering template within layouts/dean
+Rendering dean/select_profession
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://localhost/dean/select_profession/5?type=department]
+
+
+Processing DeanController#index (for 127.0.0.1 at 2013-06-23 18:01:36) [GET]
+Rendering template within layouts/dean
+Rendering dean/index
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://localhost/dean]
+
+
+Processing DeanController#student_list (for 127.0.0.1 at 2013-06-23 18:02:30) [GET]
+Rendering template within layouts/dean
+Rendering dean/student_list
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/dean/student_list]
+
+
+Processing DeanController#index (for 127.0.0.1 at 2013-06-23 18:02:36) [GET]
+Rendering template within layouts/dean
+Rendering dean/index
+Completed in 15ms (View: 0, DB: 0) | 200 OK [http://localhost/dean]
+
+
+Processing LoginController#index (for 111.37.0.40 at 2013-06-23 18:05:13) [GET]
+Rendering template within layouts/application
+Rendering login/index
+Completed in 15ms (View: 15, DB: 0) | 200 OK [http://www.lixuebo.com/]
+
+
+Processing LoginController#action (for 111.37.0.40 at 2013-06-23 18:05:19) [POST]
+  Parameters: {"commit"=>"登陆", "authenticity_token"=>"WTC0csKC3XdtnaZYQbKvm4960rhllSj1uqLZVWojm0A=", "member"=>{"account"=>"admin", "password"=>"admin"}}
+Redirected to http://www.lixuebo.com/admin/index
+Completed in 0ms (DB: 0) | 302 Found [http://www.lixuebo.com/login/action]
+
+
+Processing AdminController#index (for 111.37.0.40 at 2013-06-23 18:05:19) [GET]
+Rendering template within layouts/admin
+Rendering admin/index
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://www.lixuebo.com/admin/index]
+
+
+Processing LoginController#index (for 210.44.163.22 at 2013-06-23 18:05:33) [GET]
+Rendering template within layouts/application
+Rendering login/index
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://www.lixuebo.com/]
+
+
+Processing LoginController#index (for 220.181.127.233 at 2013-06-23 18:08:35) [GET]
+Rendering template within layouts/application
+Rendering login/index
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://www.lixuebo.com/]
+
+
+Processing LoginController#index (for 180.153.163.191 at 2013-06-23 18:35:33) [GET]
+Rendering template within layouts/application
+Rendering login/index
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://www.lixuebo.com/]
+
+
+Processing LoginController#index (for 184.106.144.62 at 2013-06-26 02:24:34) [GET]
+Rendering template within layouts/application
+Rendering login/index
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://www.LIXUEBO.COM/]
+
+
+Processing LoginController#index (for 184.106.144.62 at 2013-06-26 02:24:35) [GET]
+Rendering template within layouts/application
+Rendering login/index
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://www.LIXUEBO.COM/]
+
+
+Processing LoginController#index (for 65.181.120.179 at 2013-06-26 06:24:14) [GET]
+Rendering template within layouts/application
+Rendering login/index
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://www.lixuebo.com/]
