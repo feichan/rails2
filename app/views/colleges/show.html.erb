@@ -7,7 +7,11 @@
   <b>专业名称:</b>
   <ul>
 	  <% College.find_all_by_parent_id(@college.id).each do |prof|%>
-	  	<li><%= prof.profession %>&nbsp;<%= link_to '编辑专业', edit_college_path(prof) %></li>
+	  	<li>
+        <%= prof.profession %>&nbsp;
+        <%= link_to '编辑专业', edit_college_path(prof) %>&nbsp;
+        <%= link_to '删除', prof, :confirm => '确定要删除吗？', :method => :delete %>
+      </li>
 	  <% end -%>
 	</ul>
 </p>

@@ -21,7 +21,7 @@ development:
   database: internship
   pool: 5
   username: root
-  password: feichan
+  password: xiao423kkk
   host: localhost
 
 # Warning: The database defined as "test" will be erased and
@@ -44,5 +44,5 @@ production:
   database: internship
   pool: 5
   username: root
-  password: feichan
+  password: xiao423kkk
   host: localhost

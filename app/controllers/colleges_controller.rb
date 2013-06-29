@@ -76,16 +76,16 @@ class CollegesController < AdminController
   # DELETE /colleges/1.xml
   def destroy
     @college = College.find(params[:id])
-    if @college.parent_id == 0
+    parent_id = @college.parent_id
+    if parent_id == 0
       College.find_all_by_parent_id(@college.id).each do |prof|
         prof.destroy
       end
-    end
-    @college.destroy
-
-    respond_to do |format|
-      format.html { redirect_to(colleges_url) }
-      format.xml  { head :ok }
+      @college.destroy
+      redirect_to colleges_path
+    else
+      @college.destroy
+      redirect_to college_path(@college.parent_id)
     end
   end
 end
